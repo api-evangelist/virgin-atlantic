@@ -1,0 +1,338 @@
+aid: virgin-atlantic
+url: https://raw.githubusercontent.com/api-evangelist/virgin-atlantic/refs/heads/main/apis.yml
+name: Virgin Atlantic
+kind: company
+description: Virgin Atlantic Airways is a United Kingdom long-haul carrier (IATA code
+  VS) based at London Heathrow and Manchester, operating a transatlantic joint venture
+  with Delta Air Lines, Air France-KLM and SkyTeam, and a SkyTeam member since 2023.
+  In the distribution chain it sits as an airline supplier that reaches travel sellers
+  through three routes at once - the legacy GDSs (Amadeus, Sabre, Travelport, all
+  under renewed multi-year content agreements), its own IATA NDC direct connect, and
+  its own consumer channels. Its API posture is distribution-only and honestly gated.
+  Virgin Atlantic publishes no consumer, flight-status or loyalty API, and no OpenAPI
+  or machine-readable API description of any kind. What it does publish, openly and
+  without a login, is the VS NDC Connect portal at ndc.virginatlantic.com - full request
+  and response reference documentation for twelve IATA NDC 21.3 messages, XML samples,
+  workflow diagrams, a certification programme, and downloadable IATA NDC 21.3.3 XSD
+  schema assets. The contract itself is the IATA NDC standard rather than a Virgin-specific
+  shape, but getting a key is not self-serve - production access requires valid IATA
+  accreditation and Virgin Atlantic ticketing authority (or a service-provider connection),
+  a signed Technical User Agreement, Data Processing Agreement and Agency Sales Agreement,
+  and at minimum RED tier certification. There is no bulk export operation and no published
+  base URL - public docs, accreditation required, no exit path.
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Accreditation required · Application approval
+  confidence: high
+  source:
+  - https://ndc.virginatlantic.com/help/how-to-access-ndc-apis
+  - https://ndc.virginatlantic.com/certification
+  generated: '2026-07-28'
+  method: manual
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Travel
+- United Kingdom
+- Aviation
+- Airline
+- Distribution
+- NDC
+- Booking
+- GDS
+created: '2026-07-28'
+modified: '2026-07-28'
+specificationVersion: '0.19'
+apis:
+- aid: virgin-atlantic:virgin-atlantic-ndc-airshopping-api
+  name: Virgin Atlantic NDC AirShopping API
+  description: IATA NDC 21.3 AirShopping message. Flight shopping and availability
+    search returning Virgin Atlantic offers, including calendar and multi-city itineraries.
+    Documented publicly on VS NDC Connect; no base URL is published and a production
+    key requires IATA accreditation plus certification.
+  humanURL: https://ndc.virginatlantic.com/docs/airshopping
+  tags:
+  - NDC
+  - Shopping
+  - Offers
+  properties:
+  - type: Documentation
+    url: https://ndc.virginatlantic.com/docs/airshopping
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/airshopping/rq
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/airshopping/rs
+  - type: Examples
+    url: https://ndc.virginatlantic.com/docs/airshopping/samples
+  - type: XMLSchema
+    url: schemas/IATA_AirShoppingRQ.xsd
+  - type: XMLSchema
+    url: schemas/IATA_AirShoppingRS.xsd
+- aid: virgin-atlantic:virgin-atlantic-ndc-offerprice-api
+  name: Virgin Atlantic NDC OfferPrice API
+  description: IATA NDC 21.3 OfferPrice message. Prices a selected offer and returns
+    the firm, bookable price with applicable rules before an order is created.
+  humanURL: https://ndc.virginatlantic.com/docs/offerprice
+  tags:
+  - NDC
+  - Pricing
+  - Offers
+  properties:
+  - type: Documentation
+    url: https://ndc.virginatlantic.com/docs/offerprice
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/offerprice/rq
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/offerprice/rs
+  - type: Examples
+    url: https://ndc.virginatlantic.com/docs/offerprice/samples
+  - type: XMLSchema
+    url: schemas/IATA_OfferPriceRQ.xsd
+  - type: XMLSchema
+    url: schemas/IATA_OfferPriceRS.xsd
+- aid: virgin-atlantic:virgin-atlantic-ndc-ordercreate-api
+  name: Virgin Atlantic NDC OrderCreate API
+  description: IATA NDC 21.3 OrderCreate message. Creates the Virgin Atlantic Order
+    and PNR from a priced offer, including passenger details and form of payment,
+    and returns an OrderView response.
+  humanURL: https://ndc.virginatlantic.com/docs/ordercreate
+  tags:
+  - NDC
+  - Orders
+  - Booking
+  properties:
+  - type: Documentation
+    url: https://ndc.virginatlantic.com/docs/ordercreate
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/ordercreate/rq
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/ordercreate/rs
+  - type: Examples
+    url: https://ndc.virginatlantic.com/docs/ordercreate/samples
+  - type: XMLSchema
+    url: schemas/IATA_OrderCreateRQ.xsd
+  - type: XMLSchema
+    url: schemas/IATA_OrderViewRS.xsd
+- aid: virgin-atlantic:virgin-atlantic-ndc-seatavailability-api
+  name: Virgin Atlantic NDC SeatAvailability API
+  description: IATA NDC 21.3 SeatAvailability message. Returns the seat map and seat
+    pricing for an offer or an existing order.
+  humanURL: https://ndc.virginatlantic.com/docs/seatavailability
+  tags:
+  - NDC
+  - Seats
+  - Ancillaries
+  properties:
+  - type: Documentation
+    url: https://ndc.virginatlantic.com/docs/seatavailability
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/seatavailability/rq
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/seatavailability/rs
+  - type: Examples
+    url: https://ndc.virginatlantic.com/docs/seatavailability/samples
+  - type: XMLSchema
+    url: schemas/IATA_SeatAvailabilityRQ.xsd
+  - type: XMLSchema
+    url: schemas/IATA_SeatAvailabilityRS.xsd
+- aid: virgin-atlantic:virgin-atlantic-ndc-servicelist-api
+  name: Virgin Atlantic NDC ServiceList API
+  description: IATA NDC 21.3 ServiceList message. Returns the ancillary services available
+    against an offer or an order, such as bags and paid services.
+  humanURL: https://ndc.virginatlantic.com/docs/servicelist
+  tags:
+  - NDC
+  - Ancillaries
+  - Services
+  properties:
+  - type: Documentation
+    url: https://ndc.virginatlantic.com/docs/servicelist
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/servicelist/rq
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/servicelist/rs
+  - type: Examples
+    url: https://ndc.virginatlantic.com/docs/servicelist/samples
+- aid: virgin-atlantic:virgin-atlantic-ndc-orderretrieve-api
+  name: Virgin Atlantic NDC OrderRetrieve API
+  description: IATA NDC 21.3 OrderRetrieve message. Retrieves a single Virgin Atlantic
+    Order by order identifier or PNR record locator and returns an OrderView response.
+  humanURL: https://ndc.virginatlantic.com/docs/orderretrieve
+  tags:
+  - NDC
+  - Orders
+  - Servicing
+  properties:
+  - type: Documentation
+    url: https://ndc.virginatlantic.com/docs/orderretrieve
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/orderretrieve/rq
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/orderretrieve/rs
+  - type: Examples
+    url: https://ndc.virginatlantic.com/docs/orderretrieve/samples
+  - type: XMLSchema
+    url: schemas/IATA_OrderRetrieveRQ.xsd
+  - type: XMLSchema
+    url: schemas/IATA_OrderViewRS.xsd
+- aid: virgin-atlantic:virgin-atlantic-ndc-orderreshop-api
+  name: Virgin Atlantic NDC OrderReshop API
+  description: IATA NDC 21.3 OrderReshop message. Searches for alternative offers against
+    an existing order, used for voluntary date and time changes and passenger servicing.
+  humanURL: https://ndc.virginatlantic.com/docs/orderreshop
+  tags:
+  - NDC
+  - Servicing
+  - Changes
+  properties:
+  - type: Documentation
+    url: https://ndc.virginatlantic.com/docs/orderreshop
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/orderreshop/rq
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/orderreshop/rs
+  - type: Examples
+    url: https://ndc.virginatlantic.com/docs/orderreshop/samples
+  - type: XMLSchema
+    url: schemas/IATA_OrderReshopRQ.xsd
+  - type: XMLSchema
+    url: schemas/IATA_OrderReshopRS.xsd
+- aid: virgin-atlantic:virgin-atlantic-ndc-orderquote-api
+  name: Virgin Atlantic NDC OrderQuote API
+  description: IATA NDC 21.3 OrderQuote message. Quotes the price of a proposed change
+    to an existing order, including requote and confirm of a held booking.
+  humanURL: https://ndc.virginatlantic.com/docs/orderquote
+  tags:
+  - NDC
+  - Pricing
+  - Changes
+  properties:
+  - type: Documentation
+    url: https://ndc.virginatlantic.com/docs/orderquote
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/orderquote/rq
+  - type: Examples
+    url: https://ndc.virginatlantic.com/docs/orderquote/samples
+  - type: XMLSchema
+    url: schemas/IATA_OrderQuoteRQ.xsd
+- aid: virgin-atlantic:virgin-atlantic-ndc-orderchange-api
+  name: Virgin Atlantic NDC OrderChange API
+  description: IATA NDC 21.3 OrderChange message. Applies changes to an existing order
+    - APIS information amendment, name correction, split order, post-sale seat and
+    service purchase, and voluntary cancellation.
+  humanURL: https://ndc.virginatlantic.com/docs/orderchange
+  tags:
+  - NDC
+  - Orders
+  - Servicing
+  properties:
+  - type: Documentation
+    url: https://ndc.virginatlantic.com/docs/orderchange
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/orderchange/rq
+  - type: Examples
+    url: https://ndc.virginatlantic.com/docs/orderchange/samples
+  - type: XMLSchema
+    url: schemas/IATA_OrderChangeRQ.xsd
+  - type: XMLSchema
+    url: schemas/IATA_OrderViewRS.xsd
+- aid: virgin-atlantic:virgin-atlantic-ndc-orderchangenotif-api
+  name: Virgin Atlantic NDC OrderChangeNotif API
+  description: IATA NDC 21.3 OrderChangeNotif message. Notifies the seller of airline-initiated
+    changes to an order, such as schedule changes.
+  humanURL: https://ndc.virginatlantic.com/docs/orderchangenotif
+  tags:
+  - NDC
+  - Notifications
+  - Schedule Changes
+  properties:
+  - type: Documentation
+    url: https://ndc.virginatlantic.com/docs/orderchangenotif
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/orderchangenotif/rq
+  - type: Examples
+    url: https://ndc.virginatlantic.com/docs/orderchangenotif/samples
+  - type: XMLSchema
+    url: schemas/IATA_OrderChangeNotifRQ.xsd
+- aid: virgin-atlantic:virgin-atlantic-ndc-orderlist-api
+  name: Virgin Atlantic NDC OrderList API
+  description: IATA NDC 21.3 OrderList message. Returns a list of orders matching search
+    criteria for the authenticated seller.
+  humanURL: https://ndc.virginatlantic.com/docs/orderlist
+  tags:
+  - NDC
+  - Orders
+  - Reporting
+  properties:
+  - type: Documentation
+    url: https://ndc.virginatlantic.com/docs/orderlist
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/orderlist/rq
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/orderlist/rs
+  - type: Examples
+    url: https://ndc.virginatlantic.com/docs/orderlist/samples
+  - type: XMLSchema
+    url: schemas/IATA_OrderListRQ.xsd
+  - type: XMLSchema
+    url: schemas/IATA_OrderListRS.xsd
+- aid: virgin-atlantic:virgin-atlantic-ndc-orderhistory-api
+  name: Virgin Atlantic NDC OrderHistory API
+  description: IATA NDC 21.3 OrderHistory message. Returns the change history of an
+    order. This is the closest thing Virgin Atlantic publishes to a data-retrieval
+    operation; it is per-order and is not a bulk export.
+  humanURL: https://ndc.virginatlantic.com/docs/orderhistory
+  tags:
+  - NDC
+  - Orders
+  - History
+  properties:
+  - type: Documentation
+    url: https://ndc.virginatlantic.com/docs/orderhistory
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/orderhistory/rq
+  - type: APIReference
+    url: https://ndc.virginatlantic.com/docs/orderhistory/rs
+  - type: Examples
+    url: https://ndc.virginatlantic.com/docs/orderhistory/samples
+common:
+- type: Website
+  url: https://www.virginatlantic.com/
+- type: Portal
+  url: https://ndc.virginatlantic.com/
+- type: Documentation
+  url: https://ndc.virginatlantic.com/docs
+- type: SignUp
+  url: https://ndc.virginatlantic.com/account/register
+- type: Authentication
+  url: https://ndc.virginatlantic.com/help/how-to-start-your-build
+- type: GettingStarted
+  url: https://ndc.virginatlantic.com/help/how-to-access-ndc-apis
+- type: Certification
+  url: https://ndc.virginatlantic.com/certification
+- type: Roadmap
+  url: https://ndc.virginatlantic.com/capability/ndc-roadmap
+- type: ChangeLog
+  url: https://ndc.virginatlantic.com/product-release
+- type: Support
+  url: https://ndc.virginatlantic.com/support
+- type: Blog
+  url: https://ndc.virginatlantic.com/news
+- type: XMLSchema
+  url: schemas/21_3_3_NDC_Schema.zip
+- type: TermsOfService
+  url: https://flywith.virginatlantic.com/gb/en/partner-hub/policies.html
+- type: Policy
+  url: https://flywith.virginatlantic.com/gb/en/partner-hub/policies/distribution-policy.html
+- type: Policy
+  url: https://flywith.virginatlantic.com/gb/en/partner-hub/policies/NDC_Novation_Policy.html
+- type: Policy
+  url: https://flywith.virginatlantic.com/gb/en/partner-hub/policies/booking-policy.html
+- type: Privacy
+  url: https://www.virginatlantic.com/policies/virgin-atlantic-airways-and-virgin-atlantic-holidays-privacy-notice
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

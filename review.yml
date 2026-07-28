@@ -1,0 +1,574 @@
+aid: virgin-atlantic
+name: Virgin Atlantic
+review:
+  question: Does Virgin Atlantic publish a real, reachable public API surface, and
+    what would it cost a customer to leave it?
+  answer: true
+  date: '2026-07-28'
+  reviewer: API Evangelist
+  tier: airline
+  homeMarket: United Kingdom
+  scope: |
+    Bootstrap review. Two surfaces were probed and must not be conflated. The
+    CONSUMER surface (flight status, Flying Club loyalty, check-in, booking on
+    virginatlantic.com) has NO published API of any kind - no developer portal,
+    no OpenAPI, no documented endpoints. The DISTRIBUTION surface is real and
+    documented in the open: VS NDC Connect at https://ndc.virginatlantic.com
+    publishes full IATA NDC 21.3 reference documentation for twelve messages,
+    XML samples, workflow diagrams, a certification programme, and downloadable
+    IATA NDC 21.3.3 XSD schema assets, all without a login.
+findings:
+  summary: |
+    Virgin Atlantic Airways (IATA airline code VS, ICAO VIR) is a United Kingdom
+    long-haul carrier based at London Heathrow and Manchester, majority owned by
+    Virgin Group with Delta Air Lines holding a minority stake, operating a
+    transatlantic joint venture with Delta, Air France-KLM and Virgin Atlantic,
+    and a SkyTeam member.
+
+    Its API posture is distribution-only, standards-based, and gated behind
+    accreditation. The published contract is IATA NDC 21.3 - not a Virgin-specific
+    message shape - and the XSDs Virgin Atlantic hands out are the IATA schemas
+    themselves (targetNamespace
+    http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage, schema
+    version 9.001, id IATA2021.3). That is the single most important switching-cost
+    fact here: a seller who builds against Virgin Atlantic's NDC connection is
+    building against an industry message set that other NDC carriers also
+    implement, so the integration code is substantially portable even though
+    Virgin's inventory is not.
+
+    No OpenAPI, Swagger, AsyncAPI, GraphQL schema, Postman collection, or
+    .well-known catalog was found anywhere on virginatlantic.com or
+    ndc.virginatlantic.com. Transport is HTTP POST with XML request and response
+    bodies over what the portal calls "a RESTful connection". No production or
+    test base URL is published anywhere in the public documentation; endpoints
+    are supplied with the API key after approval.
+  transports:
+  - protocol: REST/XML over HTTPS
+    scheme: https
+    baseURL: null
+    documented: true
+    note: >-
+      "We make a POST call to all of our API endpoints" and "We utilise a RESTful
+      connection for API communication" per
+      https://ndc.virginatlantic.com/help/how-to-start-your-build. Request and
+      response bodies are IATA NDC 21.3 XML (Accept: application/xml,
+      Content-Type: application/xml). No base URL is published.
+  - protocol: WebSocket
+    scheme: wss
+    documented: false
+    note: No WebSocket or SSE surface is documented anywhere on VS NDC Connect.
+  - protocol: Push notification
+    scheme: https
+    documented: true
+    note: >-
+      OrderChangeNotif is an IATA NDC message for airline-initiated change
+      notification. The portal documents the message, not a subscription
+      mechanism or callback registration endpoint, so no AsyncAPI was authored.
+  authentication:
+    scheme: API key in HTTP header
+    header: 'Ocp-Apim-Subscription-Key: [API-KEY-VALUE]'
+    note: >-
+      The Ocp-Apim-Subscription-Key header name and the Azure Front Door DNS for
+      ndc.virginatlantic.com (avahfrontdoorprod.azurefd.net) indicate the gateway
+      is Microsoft Azure API Management. Verbatim from
+      https://ndc.virginatlantic.com/help/how-to-start-your-build.
+  messagesDocumented:
+  - AirShopping
+  - OfferPrice
+  - OrderCreate
+  - SeatAvailability
+  - ServiceList
+  - OrderRetrieve
+  - OrderReshop
+  - OrderQuote
+  - OrderChange
+  - OrderChangeNotif
+  - OrderList
+  - OrderHistory
+  workflowsDocumented:
+  - Prime Sale Without Seat
+  - Prime Sale With Seat
+  - Prime Sale With Service
+  - Private/Corporate Fares
+  - Amend APIS Info
+  - Hold Booking Creation Flow
+  - Name Correction
+  - Post Sale Seat Purchase
+  - Post Sale Service Purchase
+  - Requote/Confirm Held Booking
+  - Split Order
+  - Voluntary Cancellation Flow
+  - Voluntary Change Date/Time
+  - IATA BSP Cash
+  - IATA BSP EasyPay
+switchingCost:
+  interfaceShape:
+    value: standard-plus-proprietary
+    standard: IATA NDC 21.3 (schema assets published as release 21.3.3, XSD version
+      9.001, id IATA2021.3)
+    evidence: >-
+      The message set, element names and namespaces are IATA's, not Virgin's -
+      the downloadable XSDs in schemas/ carry targetNamespace
+      http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage and the
+      portal links directly to IATA's own XSD viewer at
+      https://retailing.iata.org/tools/xsd_viewer/. The proprietary layer sits
+      around the standard rather than inside it: an Azure API Management
+      subscription key header (Ocp-Apim-Subscription-Key) rather than OAuth, an
+      unpublished base URL, a Virgin-specific certification programme (RED /
+      SILVER / GOLD tiers) that gates production access, Virgin-specific data
+      lists and error-response documentation, and the IATA AugmentationPoint
+      extension element present throughout the schemas. Rated
+      standard-plus-proprietary rather than open-standard for that reason.
+    counterEvidence: >-
+      No OpenAPI, Swagger, AsyncAPI, GraphQL SDL, Postman collection or
+      .well-known descriptor exists. A machine-readable API description of the
+      Virgin-specific binding does not exist; only the IATA XSDs do.
+  secondSource:
+    value: no-alternative
+    evidence: >-
+      For Virgin Atlantic's own seat inventory there is no second source. VS
+      metal on VS flight numbers can only be sold by Virgin Atlantic or by an
+      intermediary that Virgin Atlantic has authorised. The alternatives
+      considered, and why each is not a substitute for the airline itself:
+    alternativesConsidered:
+    - name: Amadeus, Sabre, Travelport (GDS)
+      note: >-
+        All three hold renewed multi-year Virgin Atlantic content agreements
+        (Travelport December 2023 renewal including future NDC distribution
+        through Travelport+; Sabre renewal announced 2023; Amadeus partnership
+        extension announced 2023 per
+        https://ndc.virginatlantic.com/news/2023/news-virgin-atlantic-amadeus-extend-partnership).
+        These are a different route to the same inventory, not a different
+        supplier. They swap one intermediation cost for another.
+    - name: Duffel, and other API-first aggregators
+      note: >-
+        Duffel resells Virgin Atlantic content through its own single REST API
+        (see all/duffel). Using Duffel instead of a direct VS NDC connection is a
+        genuine interface substitution and materially reduces build cost, but it
+        does not create a second source of Virgin Atlantic seats - Duffel is
+        itself an Access Party under Virgin's NDC Novation Policy.
+    - name: Delta Air Lines and Air France-KLM (joint venture partners)
+      note: >-
+        Codeshare and JV partners can sell some of the same transatlantic
+        itineraries, but not Virgin Atlantic's own inventory, fares, Upper Class
+        product or Flying Club accrual. Not a substitute.
+    - name: British Airways, other UK long-haul carriers
+      note: >-
+        Route-level competitors, not inventory-level substitutes. Switching
+        carrier is a commercial decision, not an integration migration.
+  exitPath:
+    value: no-export-published
+    evidence: >-
+      No export, dump, bulk or data-portability operation appears anywhere in the
+      twelve documented NDC messages. The closest operations are OrderList
+      (returns orders matching search criteria) and OrderHistory (returns the
+      change history of one order) - both per-seller or per-order retrieval, not
+      an export. The NDC Novation Policy runs the opposite direction: on exit it
+      obliges the departing party to give data BACK to Virgin Atlantic, not to
+      take it away. Verbatim, section 11.2 Data return and deletion - "Access
+      Parties must securely return or delete Virgin Data in accordance with the
+      DPA and provide certification of completion where requested."
+    consumerPortability: >-
+      Section 6.5 states "Virgin Atlantic remains the primary contact for
+      passenger data subject requests" and that Access Parties must assist with
+      requests relating to "access, rectification, erasure, portability,
+      objection or other applicable privacy rights". UK GDPR portability
+      therefore exists as a request path for an individual passenger, but it is
+      prose in a policy, not an implemented endpoint, and it is not available to
+      the integrating business at all.
+    operationCited: null
+  identifierPortability:
+    value: >-
+      Shared IATA industry identifiers throughout, with Virgin-controlled order
+      state on top.
+    identifiersFound:
+    - IATA airline designator VS and IATA/ICAO airport codes, carried in the NDC
+      messages
+    - PNR record locators, named explicitly and repeatedly in the NDC Novation
+      Policy and the Global Booking Policy
+    - IATA accreditation numbers and TIDS numbers, required at onboarding ("How to
+      Add IATA Number?")
+    - IATA BSP settlement identifiers and ticket numbers (BSP Cash and BSP EasyPay
+      payment workflows are documented)
+    - NDC OrderID, the IATA-standard order identifier introduced by 21.3
+    note: >-
+      The keys are industry keys, which is a genuine portability advantage over
+      a wholly proprietary scheme - a PNR, a ticket number and an IATA number all
+      mean the same thing to another carrier or another GDS. What does not travel
+      is authority over the record. Section 3 of the Novation Policy states
+      "Virgin Atlantic remains the system of record for Orders and PNRs", and
+      section 5.2 requires that "Access Parties must not maintain any
+      authoritative servicing or lifecycle state outside Virgin Atlantic
+      systems." The identifiers are portable; the record they point at is not.
+  contractualLockIn:
+    value: >-
+      Substantial, and unusually explicit for an airline. Access is personal,
+      revocable, non-transferable and survives no corporate event without written
+      consent.
+    agreementsNamed:
+    - Terms for the Provision of Travel Platform Services (Technical User Agreement,
+      TUA)
+    - Data Processing Agreement (DPA)
+    - Agency Sales Agreement (ASA), with Commercial Terms versions published for
+      2015, 2016, 2017, 2019, 2021, 2023, 2024, 2025 and 2026
+    - Global Distribution Policy, Global Booking Policy, Global Ticketing Policy,
+      ADM Policy, Agent Code of Conduct, NDC Novation Policy
+    verbatim:
+    - source: https://flywith.virginatlantic.com/gb/en/partner-hub/policies/NDC_Novation_Policy.html
+      section: 8.1 No automatic transfer of access
+      quote: >-
+        "Access to Virgin Atlantic NDC content and systems is personal to the
+        approved Access Party and does not automatically transfer as part of: a
+        merger; acquisition; outsourcing arrangement; insolvency process; sale of
+        assets; restructuring; or platform migration."
+    - source: https://flywith.virginatlantic.com/gb/en/partner-hub/policies/NDC_Novation_Policy.html
+      section: 8.2 Novation and assignment
+      quote: >-
+        "Access Parties may not novate, assign, transfer or otherwise dispose of
+        any rights or obligations under the TUA, DPA or related agreements
+        without Virgin Atlantic's prior written consent."
+    - source: https://flywith.virginatlantic.com/gb/en/partner-hub/policies/NDC_Novation_Policy.html
+      section: 5.1 Ownership
+      quote: >-
+        "Access Parties receive a limited, revocable, non-exclusive and
+        non-transferable licence to use Virgin Materials solely for the purposes
+        authorised under the TUA and related agreements."
+    - source: https://flywith.virginatlantic.com/gb/en/partner-hub/policies/NDC_Novation_Policy.html
+      section: 6.2 Purpose limitation and minimisation
+      quote: >-
+        Virgin Data must not be used for "resale; benchmarking; analytics
+        unrelated to the approved services; AI or model training; cross-carrier
+        intelligence; or any other unauthorised commercial purpose, unless
+        expressly authorised by Virgin Atlantic in writing."
+    - source: https://flywith.virginatlantic.com/gb/en/partner-hub/policies/NDC_Novation_Policy.html
+      section: 11.1 Revocation of access
+      quote: >-
+        "Upon termination, expiry or suspension of access: credentials may be
+        revoked or rotated; system access may be disabled; APIs and connectivity
+        permissions may be withdrawn; and additional technical controls may be
+        implemented to protect systems and data."
+    - source: https://flywith.virginatlantic.com/gb/en/partner-hub/policies/booking-policy.html
+      section: Global Booking Policy
+      quote: >-
+        "All agents with Virgin Atlantic Ticketing Authority, must adhere to the
+        Global Ticketing Policy." "Unless specified all clauses apply to New
+        Distribution Capability (NDC)." "Booking practices that are considered a
+        violation of Virgin's policies will be subject to ADM and/or restrictions
+        in booking Virgin Atlantic." "Churn will be counted from the 3rd 'book'
+        (5th transaction)." "Virgin Atlantic reserves the right to collect any
+        amount of inappropriately retained base commissions and terminate the
+        Virgin Atlantic ticketing authority."
+    - source: https://flywith.virginatlantic.com/gb/en/partner-hub/policies/distribution-policy.html
+      section: Global Distribution Policy
+      quote: >-
+        Agents must "use its best endeavours to reduce the Airlines distribution
+        cost: GDS cost (see Global Booking Policy), credit card cost and fraud
+        prevention methods." "To be granted access to NDC, you must apply on the
+        VS NDC Connect Portal where there are additional terms and conditions."
+    notPublished: >-
+      No minimum term, no termination notice period, no exclusivity clause, no
+      full-content agreement, no per-segment distribution fee and no NDC or GDS
+      surcharge amount is published on any page probed. Signed ASA Commercial
+      Terms PDFs are linked from the partner hub but the specific commercial
+      figures were not opened or asserted here. Do not infer a surcharge - the
+      one concrete money clause found is in the Global Booking Policy: "Any costs
+      incurred by passive sectors created for the use of an NDC booking, will be
+      reverted to the seller."
+  accessGate:
+    value: accredited-or-licensed
+    whatADeveloperMustDo: >-
+      Register on VS NDC Connect (self-serve account creation at
+      https://ndc.virginatlantic.com/account/register), add an IATA or TIDS
+      number to the organisation, then apply for an API connection under one of
+      two models. Direct Connection requires the seller to hold "valid IATA
+      accreditation" and Virgin Atlantic ticketing authority - "Sellers without
+      Virgin Atlantic ticketing authority will be rejected." Service Provider
+      Connection is for aggregators and technology providers acting on behalf of
+      agents. An API key is issued on approval. To move from test to production
+      the partner must additionally certify: "To be eligible to apply for a
+      Production API Key, partners must be certified to at least RED Tier",
+      which requires submitting "sample implementations for these use cases to be
+      certified at that level". Tiers published are RED and SILVER, with GOLD
+      launching February 2026. Contractually the partner sits under the TUA, the
+      DPA and (for agents) the ASA.
+    documentationGate: >-
+      None. The entire reference documentation set, the workflow diagrams, the
+      error responses, the XML samples and the XSD downloads are readable and
+      downloadable anonymously. The gate is on credentials, not on knowledge.
+  distributionModel:
+    value: gds-intermediated
+    note: >-
+      Coded gds-intermediated because that remains the dominant path and all
+      three GDSs hold current Virgin Atlantic content agreements, but this is
+      genuinely a hybrid - Virgin Atlantic simultaneously runs a first-party NDC
+      direct connect, sells through the GDSs, sells through NDC aggregators, and
+      sells direct on virginatlantic.com. It is not a low-cost carrier: unlike
+      easyJet or Jet2 in its home market, which never used a GDS at all, Virgin
+      Atlantic is a full-service carrier whose agency channel was built on GDS
+      intermediation and is being migrated, not abandoned.
+  ndcPosture:
+    value: >-
+      IATA NDC 21.3 certified and live, with a public API reference and public
+      XSDs, but no public endpoint - certification (RED tier minimum) plus IATA
+      accreditation required for production.
+    certification: >-
+      Certified under the IATA Airline Retailing Maturity (ARM) Index using 21.3
+      NDC schema capability, announced 21 April 2023 across 18 capabilities
+      (https://ndc.virginatlantic.com/news/2023/news-virgin-atlantic-iata-certification).
+      Previously the first airline to achieve NDC Level 3 certification on the
+      18.1 standard.
+    apiPublished: true
+    endpointPublished: false
+    gdsSurcharge: >-
+      Not published. No Virgin Atlantic GDS booking surcharge or NDC segment fee
+      amount was found on any Virgin Atlantic page probed. Recorded as unverified
+      rather than assumed.
+    incentive: >-
+      The portal states "Connected NDC partners are exempt from card surcharge
+      fees when paying with an agency card" and offers "a free to use dedicated
+      sales support desk for connected NDC sellers" - a carrot for NDC adoption
+      rather than a documented stick against the GDS.
+    roadmap: >-
+      Section 14 of the Novation Policy describes an in-flight "transition to
+      Offers & Orders retailing models", and the portal publishes an NDC roadmap
+      at https://ndc.virginatlantic.com/capability/ndc-roadmap.
+consumerSurface:
+  publicAPI: false
+  note: >-
+    No consumer-facing API. Flight status, Flying Club loyalty, check-in and
+    booking are delivered through virginatlantic.com and the mobile apps only.
+    No flight-status API, no loyalty API, no schedule feed, no .well-known
+    catalog. Third-party aviation data vendors (for example AirLabs) sell VS
+    flight data, but that is their product, not Virgin Atlantic's. Notably,
+    www.virginatlantic.com/api 302s and the redirect chain terminates at
+    http://www.delta.com/ with a 403, and robots.txt contains Delta-platform
+    paths (/dlhome/..., TealeafTarget.jsp), reflecting that the consumer web
+    estate runs on Delta Air Lines infrastructure under the joint venture.
+probes:
+- url: https://www.virginatlantic.com/
+  status: 200
+  note: Redirects to https://www.virginatlantic.com/en-US.
+- url: https://virginatlantic.com/
+  status: 200
+  note: Redirects to www.
+- url: https://developer.virginatlantic.com/
+  status: 404
+  note: >-
+    Resolves to the same Azure Front Door as the NDC portal
+    (avahfrontdoorprod.azurefd.net) but presents a TLS certificate that does not
+    match the hostname, and returns a generic "Page not found" when the name
+    check is bypassed. A dead subdomain, not a portal. Search engines still index
+    an old "Virgin Atlantic API Developer Portal" here; it does not exist.
+- url: https://developers.virginatlantic.com/
+  status: 0
+  note: NXDOMAIN, no DNS record.
+- url: https://docs.virginatlantic.com/
+  status: 0
+  note: No DNS record.
+- url: https://api.virginatlantic.com/
+  status: 200
+  note: >-
+    Resolves via Akamai (api.virginatlantic.com.edgekey.net) but any request
+    lands on the consumer marketing site at /en-US. No API is served from this
+    host publicly.
+- url: https://www.virginatlantic.com/developers
+  status: 404
+- url: https://www.virginatlantic.com/api
+  status: 403
+  note: 302 then a cross-host hop terminating at http://www.delta.com/ with 403.
+- url: https://www.virginatlantic.com/docs
+  status: 404
+- url: https://www.virginatlantic.com/openapi.json
+  status: 404
+- url: https://www.virginatlantic.com/swagger.json
+  status: 404
+- url: https://www.virginatlantic.com/api-docs
+  status: 404
+- url: https://www.virginatlantic.com/.well-known/security.txt
+  status: 403
+- url: https://www.virginatlantic.com/robots.txt
+  status: 200
+  note: Delta-platform paths present; no API or sitemap-of-specs signal.
+- url: https://ndc.virginatlantic.com/
+  status: 200
+  note: VS NDC Connect portal. Public, no login required to read.
+- url: https://ndc.virginatlantic.com/docs
+  status: 200
+  note: Full 21.3 API reference index, twelve messages.
+- url: https://ndc.virginatlantic.com/openapi.json
+  status: 404
+- url: https://ndc.virginatlantic.com/swagger.json
+  status: 404
+- url: https://ndc.virginatlantic.com/robots.txt
+  status: 404
+- url: https://ndc.virginatlantic.com/sitemap.xml
+  status: 404
+- url: https://ndc.virginatlantic.com/help/how-to-access-ndc-apis
+  status: 200
+- url: https://ndc.virginatlantic.com/help/how-to-start-your-build
+  status: 200
+- url: https://ndc.virginatlantic.com/certification
+  status: 200
+- url: https://ndc.virginatlantic.com/product-release
+  status: 200
+- url: https://ndc.virginatlantic.com/support
+  status: 200
+- url: https://ndc.virginatlantic.com/news
+  status: 200
+- url: https://ndc.virginatlantic.com/account/register
+  status: 200
+- url: https://ndc.virginatlantic.com/file-lists/schema-assets
+  status: 200
+  note: Public download page for the IATA NDC 21.3.3 XSD assets.
+- url: https://flywith.virginatlantic.com/gb/en/partner-hub/policies.html
+  status: 200
+- url: https://flywith.virginatlantic.com/gb/en/partner-hub/policies/NDC_Novation_Policy.html
+  status: 200
+- url: https://flywith.virginatlantic.com/gb/en/partner-hub/policies/distribution-policy.html
+  status: 200
+- url: https://flywith.virginatlantic.com/gb/en/partner-hub/policies/booking-policy.html
+  status: 200
+- url: https://www.virginatlanticcargo.com/gb/en.html
+  status: 200
+  note: Cargo site is live; no cargo API or developer documentation was found on it.
+artifacts:
+  openapi:
+    harvested: false
+    count: 0
+    note: >-
+      No OpenAPI, Swagger or any other machine-readable API description exists
+      for the Virgin Atlantic NDC binding. No openapi/ directory was created
+      because inventing one would be fabrication.
+  schemas:
+    harvested: true
+    count: 19
+    directory: schemas/
+    format: W3C XML Schema (XSD)
+    standard: IATA NDC 21.3.3
+    sourceBase: https://ndc.virginatlantic.com/SiteRoot/virgin/fileassets/21_3_3_NDC_Schema/
+    sourcePage: https://ndc.virginatlantic.com/file-lists/schema-assets
+    fetchDate: '2026-07-28'
+    validation: All 18 XSD files parse as XML; the zip extracts cleanly.
+    files:
+    - file: schemas/IATA_AirShoppingRQ.xsd
+      status: 200
+      bytes: 2543
+    - file: schemas/IATA_AirShoppingRS.xsd
+      status: 200
+      bytes: 2360
+    - file: schemas/IATA_OfferPriceRQ.xsd
+      status: 200
+      bytes: 2224
+    - file: schemas/IATA_OfferPriceRS.xsd
+      status: 200
+      bytes: 2025
+    - file: schemas/IATA_OffersAndOrdersCommonTypes.xsd
+      status: 200
+      bytes: 1064841
+    - file: schemas/IATA_OrderChangeNotifRQ.xsd
+      status: 200
+      bytes: 1931
+    - file: schemas/IATA_OrderChangeRQ.xsd
+      status: 200
+      bytes: 2389
+    - file: schemas/IATA_OrderCreateRQ.xsd
+      status: 200
+      bytes: 2531
+    - file: schemas/IATA_OrderListRQ.xsd
+      status: 200
+      bytes: 2023
+    - file: schemas/IATA_OrderListRS.xsd
+      status: 200
+      bytes: 1792
+    - file: schemas/IATA_OrderQuoteRQ.xsd
+      status: 200
+      bytes: 2227
+    - file: schemas/IATA_OrderReshopRQ.xsd
+      status: 200
+      bytes: 2205
+    - file: schemas/IATA_OrderReshopRS.xsd
+      status: 200
+      bytes: 2393
+    - file: schemas/IATA_OrderRetrieveRQ.xsd
+      status: 200
+      bytes: 3364
+    - file: schemas/IATA_OrderViewRS.xsd
+      status: 200
+      bytes: 2771
+    - file: schemas/IATA_SeatAvailabilityRQ.xsd
+      status: 200
+      bytes: 2221
+    - file: schemas/IATA_SeatAvailabilityRS.xsd
+      status: 200
+      bytes: 2042
+    - file: schemas/xmldsig-core-schema.xsd
+      status: 200
+      bytes: 11242
+    - file: schemas/21_3_3_NDC_Schema.zip
+      status: 200
+      bytes: 168272
+    notFound:
+    - file: IATA_OrderViewRSRQ.xsd
+      status: 404
+      note: Linked from the schema assets page but returns 404. Reported as a broken
+        link, not saved.
+sources:
+- url: https://ndc.virginatlantic.com/
+  type: Portal
+  note: VS NDC Connect. Register / Build & Test / Get Certified journey; ARM Index
+    certification claim; NDC partner card-surcharge exemption.
+- url: https://ndc.virginatlantic.com/docs
+  type: APIReference
+  note: Index of all twelve documented NDC 21.3 messages plus data lists and workflows.
+- url: https://ndc.virginatlantic.com/help/how-to-start-your-build
+  type: Documentation
+  note: Transport, headers, authentication, UTF-8 requirement, schema asset pointer.
+    Source of the Ocp-Apim-Subscription-Key evidence.
+- url: https://ndc.virginatlantic.com/help/how-to-access-ndc-apis
+  type: Documentation
+  note: Direct Connection vs Service Provider Connection; IATA accreditation and
+    ticketing authority requirement.
+- url: https://ndc.virginatlantic.com/certification
+  type: Documentation
+  note: RED / SILVER / GOLD tiers; RED required for a production API key.
+- url: https://ndc.virginatlantic.com/file-lists/schema-assets
+  type: XMLSchema
+  note: Public XSD downloads harvested into schemas/.
+- url: https://ndc.virginatlantic.com/news/2023/news-virgin-atlantic-iata-certification
+  type: Blog
+  note: IATA Airline Retailing Maturity certification, 21 April 2023, 18 capabilities,
+    21.3 schema.
+- url: https://flywith.virginatlantic.com/gb/en/partner-hub/policies/NDC_Novation_Policy.html
+  type: Policy
+  note: The single richest switching-cost document found. Ownership of Orders and
+    PNRs, system-of-record protection, no automatic transfer of access, exit and
+    offboarding.
+- url: https://flywith.virginatlantic.com/gb/en/partner-hub/policies/distribution-policy.html
+  type: Policy
+  note: Global Distribution Policy; NDC access requires application on VS NDC Connect
+    under additional terms and conditions.
+- url: https://flywith.virginatlantic.com/gb/en/partner-hub/policies/booking-policy.html
+  type: Policy
+  note: Global Booking Policy; ticketing authority, ADMs, churn thresholds, passive
+    segment costs reverting to the seller.
+- url: https://flywith.virginatlantic.com/gb/en/partner-hub/policies.html
+  type: TermsOfService
+  note: Index of all partner policies and the Agency Sales Agreement Commercial Terms
+    by year.
+- url: https://www.travelport.com/press-releases/virgin-atlantic-signs-renewed-distribution-agreement-with-travelport-including-ndc-content-and-servicing
+  type: PressRelease
+  note: Third-party confirmation of the Travelport renewal including future NDC
+    distribution through Travelport+.
+actions:
+  openapiHarvested: false
+  schemasHarvested: true
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: >-
+    Twelve real, publicly documented NDC messages were listed in apis.yml with
+    their documentation, reference, sample and schema properties. No baseURL was
+    set on any of them because Virgin Atlantic publishes none. No OpenAPI was
+    authored from the XSDs - deriving one would be fabricating a contract Virgin
+    Atlantic has not published. The harvested IATA XSDs are stored verbatim in
+    schemas/ rather than openapi/ so they are never mistaken for an OpenAPI
+    artifact.
