@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IATA_OrderListRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage">
+    <Response>
+        <MatchedOrder xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+            <OrderRefID>VS932OADDUU25</OrderRefID>
+        </MatchedOrder>
+        <MatchedOrder xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+            <OrderRefID>VS932OACVQE25</OrderRefID>
+        </MatchedOrder>
+    </Response>
+</IATA_OrderListRS>

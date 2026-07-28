@@ -1,0 +1,1486 @@
+<IATA_OrderViewRS xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage">
+	<Response>
+		<DataLists xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<BaggageAllowanceList>
+				<BaggageAllowance>
+					<BaggageAllowanceID>BAGA1</BaggageAllowanceID>
+					<MaximumDimensionAllowance>
+						<HeightMeasure>75</HeightMeasure>
+						<LengthMeasure>90</LengthMeasure>
+						<LengthUnitOfMeasurement>CMT</LengthUnitOfMeasurement>
+						<LinearMeasure>208</LinearMeasure>
+						<WidthMeasure>43</WidthMeasure>
+					</MaximumDimensionAllowance>
+					<MaximumDimensionAllowance>
+						<HeightMeasure>29.5</HeightMeasure>
+						<LengthMeasure>35.5</LengthMeasure>
+						<LengthUnitOfMeasurement>INH</LengthUnitOfMeasurement>
+						<LinearMeasure>81</LinearMeasure>
+						<WidthMeasure>16</WidthMeasure>
+					</MaximumDimensionAllowance>
+					<PieceAllowance>
+						<TotalQty>1</TotalQty>
+					</PieceAllowance>
+					<TypeCode>Checked</TypeCode>
+					<WeightAllowance>
+						<MaximumWeightMeasure>23</MaximumWeightMeasure>
+						<TotalMaximumWeightMeasure>23</TotalMaximumWeightMeasure>
+						<WeightUnitOfMeasurement>KGM</WeightUnitOfMeasurement>
+					</WeightAllowance>
+					<WeightAllowance>
+						<MaximumWeightMeasure>50</MaximumWeightMeasure>
+						<TotalMaximumWeightMeasure>50</TotalMaximumWeightMeasure>
+						<WeightUnitOfMeasurement>LBR</WeightUnitOfMeasurement>
+					</WeightAllowance>
+				</BaggageAllowance>
+				<BaggageAllowance>
+					<BaggageAllowanceID>CAB1</BaggageAllowanceID>
+					<MaximumDimensionAllowance>
+						<HeightMeasure>56</HeightMeasure>
+						<LengthMeasure>36</LengthMeasure>
+						<LengthUnitOfMeasurement>CMT</LengthUnitOfMeasurement>
+						<LinearMeasure>10</LinearMeasure>
+						<WidthMeasure>23</WidthMeasure>
+					</MaximumDimensionAllowance>
+					<MaximumDimensionAllowance>
+						<HeightMeasure>22</HeightMeasure>
+						<LengthMeasure>14</LengthMeasure>
+						<LengthUnitOfMeasurement>INH</LengthUnitOfMeasurement>
+						<LinearMeasure>22</LinearMeasure>
+						<WidthMeasure>9</WidthMeasure>
+					</MaximumDimensionAllowance>
+					<PieceAllowance>
+						<TotalQty>1</TotalQty>
+					</PieceAllowance>
+					<TypeCode>CarryOn</TypeCode>
+					<WeightAllowance>
+						<MaximumWeightMeasure>10</MaximumWeightMeasure>
+						<TotalMaximumWeightMeasure>10</TotalMaximumWeightMeasure>
+						<WeightUnitOfMeasurement>KGM</WeightUnitOfMeasurement>
+					</WeightAllowance>
+					<WeightAllowance>
+						<MaximumWeightMeasure>22</MaximumWeightMeasure>
+						<TotalMaximumWeightMeasure>22</TotalMaximumWeightMeasure>
+						<WeightUnitOfMeasurement>LBR</WeightUnitOfMeasurement>
+					</WeightAllowance>
+				</BaggageAllowance>
+			</BaggageAllowanceList>
+			<ContactInfoList>
+				<ContactInfo>
+					<ContactInfoID>CI1</ContactInfoID>
+					<EmailAddress>
+						<EmailAddressText>TEST.SKYSCANNER@FLY.VIRGIN.COM</EmailAddressText>
+					</EmailAddress>
+					<Phone>
+						<ContactTypeText>HOME</ContactTypeText>
+						<CountryDialingCode>44</CountryDialingCode>
+						<PhoneNumber>123456</PhoneNumber>
+					</Phone>
+				</ContactInfo>
+			</ContactInfoList>
+			<DatedMarketingSegmentList>
+				<DatedMarketingSegment>
+					<Arrival>
+						<AircraftScheduledDateTime>2025-05-08T10:00:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>JNB</IATA_LocationCode>
+					</Arrival>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedMarketingSegmentId>DMS1</DatedMarketingSegmentId>
+					<DatedOperatingSegmentRefId>DOS1</DatedOperatingSegmentRefId>
+					<Dep>
+						<AircraftScheduledDateTime>2025-05-07T22:00:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>LHR</IATA_LocationCode>
+					</Dep>
+					<MarketingCarrierFlightNumberText>449</MarketingCarrierFlightNumberText>
+				</DatedMarketingSegment>
+				<DatedMarketingSegment>
+					<Arrival>
+						<AircraftScheduledDateTime>2025-05-15T05:00:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>LHR</IATA_LocationCode>
+					</Arrival>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedMarketingSegmentId>DMS2</DatedMarketingSegmentId>
+					<DatedOperatingSegmentRefId>DOS2</DatedOperatingSegmentRefId>
+					<Dep>
+						<AircraftScheduledDateTime>2025-05-14T18:55:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>JNB</IATA_LocationCode>
+					</Dep>
+					<MarketingCarrierFlightNumberText>450</MarketingCarrierFlightNumberText>
+				</DatedMarketingSegment>
+			</DatedMarketingSegmentList>
+			<DatedOperatingLegList>
+				<DatedOperatingLeg>
+					<Arrival>
+						<AircraftScheduledDateTime>2025-05-08T10:00:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>JNB</IATA_LocationCode>
+					</Arrival>
+					<CarrierAircraftType>
+						<CarrierAircraftTypeCode>787</CarrierAircraftTypeCode>
+						<CarrierAircraftTypeName>787 (widebody)</CarrierAircraftTypeName>
+					</CarrierAircraftType>
+					<DatedOperatingLegID>DOL1</DatedOperatingLegID>
+					<Dep>
+						<AircraftScheduledDateTime>2025-05-07T22:00:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>LHR</IATA_LocationCode>
+					</Dep>
+					<IATA_AircraftType>
+						<IATA_AircraftTypeCode>789</IATA_AircraftTypeCode>
+					</IATA_AircraftType>
+				</DatedOperatingLeg>
+				<DatedOperatingLeg>
+					<Arrival>
+						<AircraftScheduledDateTime>2025-05-15T05:00:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>LHR</IATA_LocationCode>
+					</Arrival>
+					<CarrierAircraftType>
+						<CarrierAircraftTypeCode>787</CarrierAircraftTypeCode>
+						<CarrierAircraftTypeName>787 (widebody)</CarrierAircraftTypeName>
+					</CarrierAircraftType>
+					<DatedOperatingLegID>DOL2</DatedOperatingLegID>
+					<Dep>
+						<AircraftScheduledDateTime>2025-05-14T18:55:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>JNB</IATA_LocationCode>
+					</Dep>
+					<IATA_AircraftType>
+						<IATA_AircraftTypeCode>789</IATA_AircraftTypeCode>
+					</IATA_AircraftType>
+				</DatedOperatingLeg>
+			</DatedOperatingLegList>
+			<DatedOperatingSegmentList>
+				<DatedOperatingSegment>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedOperatingLegRefID>DOL1</DatedOperatingLegRefID>
+					<DatedOperatingSegmentId>DOS1</DatedOperatingSegmentId>
+					<Duration>PT11H0M0S</Duration>
+					<OperatingCarrierFlightNumberText>449</OperatingCarrierFlightNumberText>
+				</DatedOperatingSegment>
+				<DatedOperatingSegment>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedOperatingLegRefID>DOL2</DatedOperatingLegRefID>
+					<DatedOperatingSegmentId>DOS2</DatedOperatingSegmentId>
+					<Duration>PT11H5M0S</Duration>
+					<OperatingCarrierFlightNumberText>450</OperatingCarrierFlightNumberText>
+				</DatedOperatingSegment>
+			</DatedOperatingSegmentList>
+			<OriginDestList>
+				<OriginDest>
+					<DestCode>JNB</DestCode>
+					<OriginCode>LHR</OriginCode>
+					<OriginDestID>OD1</OriginDestID>
+					<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+				</OriginDest>
+				<OriginDest>
+					<DestCode>LHR</DestCode>
+					<OriginCode>JNB</OriginCode>
+					<OriginDestID>OD2</OriginDestID>
+					<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+				</OriginDest>
+			</OriginDestList>
+			<PaxJourneyList>
+				<PaxJourney>
+					<Duration>PT11H0M0S</Duration>
+					<PaxJourneyID>JOUR1</PaxJourneyID>
+					<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+				</PaxJourney>
+				<PaxJourney>
+					<Duration>PT11H5M0S</Duration>
+					<PaxJourneyID>JOUR2</PaxJourneyID>
+					<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+				</PaxJourney>
+			</PaxJourneyList>
+			<PaxList>
+				<Pax>
+					<ContactInfoRefID>CI1</ContactInfoRefID>
+					<Individual>
+						<Birthdate>1993-08-16</Birthdate>
+						<GenderCode>X</GenderCode>
+						<GivenName>DAVID</GivenName>
+						<Surname>SMITH</Surname>
+					</Individual>
+					<PaxID>ADULT_1</PaxID>
+					<PTC>ADT</PTC>
+				</Pax>
+				<Pax>
+					<Individual>
+						<Birthdate>2012-08-16</Birthdate>
+						<GenderCode>X</GenderCode>
+						<GivenName>DAVIDKXMQF</GivenName>
+						<Surname>SMITHKOQDY</Surname>
+					</Individual>
+					<PaxID>YOUNG_1</PaxID>
+					<PTC>GBE</PTC>
+				</Pax>
+				<Pax>
+					<Individual>
+						<Birthdate>2020-08-16</Birthdate>
+						<GenderCode>M</GenderCode>
+						<GivenName>DAVIDTPZPR</GivenName>
+						<Surname>SMITHXTPCW</Surname>
+					</Individual>
+					<PaxID>CHILD_1</PaxID>
+					<PTC>CHD</PTC>
+				</Pax>
+			</PaxList>
+			<PaxSegmentList>
+				<PaxSegment>
+					<CabinTypeAssociationChoice>
+						<SegmentCabinType>
+							<CabinTypeCode>5</CabinTypeCode>
+							<CabinTypeName>Economy</CabinTypeName>
+						</SegmentCabinType>
+					</CabinTypeAssociationChoice>
+					<DatedMarketingSegmentRefId>DMS1</DatedMarketingSegmentRefId>
+					<MarketingCarrierRBD_Code>O</MarketingCarrierRBD_Code>
+					<PaxSegmentID>SEG1</PaxSegmentID>
+				</PaxSegment>
+				<PaxSegment>
+					<CabinTypeAssociationChoice>
+						<SegmentCabinType>
+							<CabinTypeCode>5</CabinTypeCode>
+							<CabinTypeName>Economy</CabinTypeName>
+						</SegmentCabinType>
+					</CabinTypeAssociationChoice>
+					<DatedMarketingSegmentRefId>DMS2</DatedMarketingSegmentRefId>
+					<MarketingCarrierRBD_Code>O</MarketingCarrierRBD_Code>
+					<PaxSegmentID>SEG2</PaxSegmentID>
+				</PaxSegment>
+			</PaxSegmentList>
+			<PriceClassList>
+				<PriceClass>
+					<FareBasisCode>OG0571FA</FareBasisCode>
+					<Name>Economy Classic Flex</Name>
+					<PriceClassID>PC1</PriceClassID>
+				</PriceClass>
+				<PriceClass>
+					<FareBasisCode>OG15D1FA</FareBasisCode>
+					<Name>Economy Classic Flex</Name>
+					<PriceClassID>PC2</PriceClassID>
+				</PriceClass>
+			</PriceClassList>
+			<ServiceDefinitionList>
+				<ServiceDefinition>
+					<Name>Free Checked Bag Allowance</Name>
+					<OwnerCode>VS</OwnerCode>
+					<ServiceDefinitionAssociation>
+						<BaggageAllowanceRef>
+							<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						</BaggageAllowanceRef>
+					</ServiceDefinitionAssociation>
+					<ServiceDefinitionID>SRV1</ServiceDefinitionID>
+				</ServiceDefinition>
+				<ServiceDefinition>
+					<Name>Free Cabin Bag Allowance</Name>
+					<OwnerCode>VS</OwnerCode>
+					<ServiceDefinitionAssociation>
+						<BaggageAllowanceRef>
+							<BaggageAllowanceRefID>CAB1</BaggageAllowanceRefID>
+						</BaggageAllowanceRef>
+					</ServiceDefinitionAssociation>
+					<ServiceDefinitionID>SRV2</ServiceDefinitionID>
+				</ServiceDefinition>
+				<ServiceDefinition>
+					<Desc>
+						<DescText>787 (widebody)</DescText>
+					</Desc>
+					<Desc>
+						<DescText>Alcohol &amp; beverages provided</DescText>
+					</Desc>
+					<Desc>
+						<DescText>Seatback on-demand video</DescText>
+					</Desc>
+					<Desc>
+						<DescText>Meals and drinks included</DescText>
+					</Desc>
+					<Desc>
+						<DescText>3-3-3 seat layout</DescText>
+					</Desc>
+					<Desc>
+						<DescText>Power &amp; USB outlets</DescText>
+					</Desc>
+					<Desc>
+						<DescText>Standard seat (31" pitch)</DescText>
+					</Desc>
+					<Desc>
+						<DescText>Basic web browsing (fee)</DescText>
+					</Desc>
+					<Name>Amenity</Name>
+					<OwnerCode>VS</OwnerCode>
+					<ServiceDefinitionID>SRV3</ServiceDefinitionID>
+				</ServiceDefinition>
+				<ServiceDefinition>
+					<Name>Asian Vegetarian Meal</Name>
+					<OwnerCode>VS</OwnerCode>
+					<ServiceCode>AVML</ServiceCode>
+					<ServiceDefinitionID>Meal1</ServiceDefinitionID>
+				</ServiceDefinition>
+			</ServiceDefinitionList>
+		</DataLists>
+		<Order xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<OrderID>VS932DA7I9W24</OrderID>
+			<OrderItem>
+				<FareDetail>
+					<FareComponent>
+						<CancelRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>Prior To Departure</JourneyStageCode>
+						</CancelRestrictions>
+						<CancelRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>After Departure</JourneyStageCode>
+						</CancelRestrictions>
+						<ChangeRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>Prior To Departure</JourneyStageCode>
+						</ChangeRestrictions>
+						<ChangeRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>After Departure</JourneyStageCode>
+						</ChangeRestrictions>
+						<FareBasisCode>OG0571FA</FareBasisCode>
+						<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+						<PriceClassRefID>PC1</PriceClassRefID>
+					</FareComponent>
+					<FareComponent>
+						<CancelRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>Prior To Departure</JourneyStageCode>
+						</CancelRestrictions>
+						<CancelRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>After Departure</JourneyStageCode>
+						</CancelRestrictions>
+						<ChangeRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>Prior To Departure</JourneyStageCode>
+						</ChangeRestrictions>
+						<ChangeRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>After Departure</JourneyStageCode>
+						</ChangeRestrictions>
+						<FareBasisCode>OG15D1FA</FareBasisCode>
+						<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+						<PriceClassRefID>PC2</PriceClassRefID>
+					</FareComponent>
+					<PaxRefID>ADULT_1</PaxRefID>
+				</FareDetail>
+				<OrderItemID>VS932DA7I9W24-1</OrderItemID>
+				<OwnerCode>VS</OwnerCode>
+				<Price>
+					<BaseAmount CurCode="GBP">605.00</BaseAmount>
+					<TaxSummary>
+						<Tax>
+							<Amount CurCode="GBP">48.89</Amount>
+							<DescText>United Kingdom Passenger Service Charge Departures</DescText>
+							<TaxCode>UB</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">94.00</Amount>
+							<DescText>United Kingdom Air Passenger Duty APD</DescText>
+							<TaxCode>GB</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">250.00</Amount>
+							<DescText>VS YQ surcharge</DescText>
+							<TaxCode>YQ</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">8.00</Amount>
+							<DescText>VS YR surcharge</DescText>
+							<TaxCode>YR</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">12.60</Amount>
+							<DescText>South Africa Passenger Service Charge</DescText>
+							<TaxCode>ZA</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">1.30</Amount>
+							<DescText>South Africa Passenger Safety Charge</DescText>
+							<TaxCode>EV</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">8.20</Amount>
+							<DescText>South Africa Air Passenger Tax</DescText>
+							<TaxCode>WC</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">1.10</Amount>
+							<DescText>South Africa Asc Charge</DescText>
+							<TaxCode>UM</TaxCode>
+						</Tax>
+						<TotalTaxAmount CurCode="GBP">424.09</TotalTaxAmount>
+					</TaxSummary>
+					<TotalAmount CurCode="GBP">1029.09</TotalAmount>
+				</Price>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<PaxSegmentRef>
+							<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+						</PaxSegmentRef>
+					</OrderServiceAssociation>
+					<PaxRefID>ADULT_1</PaxRefID>
+					<ServiceID>SV1</ServiceID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<PaxSegmentRef>
+							<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+						</PaxSegmentRef>
+					</OrderServiceAssociation>
+					<PaxRefID>ADULT_1</PaxRefID>
+					<ServiceID>SV2</ServiceID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>SRV1</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>ADULT_1</PaxRefID>
+					<ServiceID>SV3</ServiceID>
+					<ServiceRefID>SV1</ServiceRefID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>SRV2</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>ADULT_1</PaxRefID>
+					<ServiceID>SV4</ServiceID>
+					<ServiceRefID>SV1</ServiceRefID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>SRV1</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>ADULT_1</PaxRefID>
+					<ServiceID>SV5</ServiceID>
+					<ServiceRefID>SV2</ServiceRefID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>SRV2</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>ADULT_1</PaxRefID>
+					<ServiceID>SV6</ServiceID>
+					<ServiceRefID>SV2</ServiceRefID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>SRV3</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>ADULT_1</PaxRefID>
+					<ServiceID>SV7</ServiceID>
+					<ServiceRefID>SV1</ServiceRefID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<StatusCode>ACTIVE</StatusCode>
+			</OrderItem>
+			<OrderItem>
+				<FareDetail>
+					<FareComponent>
+						<CancelRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>Prior To Departure</JourneyStageCode>
+						</CancelRestrictions>
+						<CancelRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>After Departure</JourneyStageCode>
+						</CancelRestrictions>
+						<ChangeRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>Prior To Departure</JourneyStageCode>
+						</ChangeRestrictions>
+						<ChangeRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>After Departure</JourneyStageCode>
+						</ChangeRestrictions>
+						<FareBasisCode>OG0571FA</FareBasisCode>
+						<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+						<PriceClassRefID>PC1</PriceClassRefID>
+					</FareComponent>
+					<FareComponent>
+						<CancelRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>Prior To Departure</JourneyStageCode>
+						</CancelRestrictions>
+						<CancelRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>After Departure</JourneyStageCode>
+						</CancelRestrictions>
+						<ChangeRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>Prior To Departure</JourneyStageCode>
+						</ChangeRestrictions>
+						<ChangeRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>After Departure</JourneyStageCode>
+						</ChangeRestrictions>
+						<FareBasisCode>OG15D1FA</FareBasisCode>
+						<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+						<PriceClassRefID>PC2</PriceClassRefID>
+					</FareComponent>
+					<PaxRefID>YOUNG_1</PaxRefID>
+				</FareDetail>
+				<OrderItemID>VS932DA7I9W24-2</OrderItemID>
+				<OwnerCode>VS</OwnerCode>
+				<Price>
+					<BaseAmount CurCode="GBP">605.00</BaseAmount>
+					<TaxSummary>
+						<Tax>
+							<Amount CurCode="GBP">48.89</Amount>
+							<DescText>United Kingdom Passenger Service Charge Departures</DescText>
+							<TaxCode>UB</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">250.00</Amount>
+							<DescText>VS YQ surcharge</DescText>
+							<TaxCode>YQ</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">8.00</Amount>
+							<DescText>VS YR surcharge</DescText>
+							<TaxCode>YR</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">12.60</Amount>
+							<DescText>South Africa Passenger Service Charge</DescText>
+							<TaxCode>ZA</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">1.30</Amount>
+							<DescText>South Africa Passenger Safety Charge</DescText>
+							<TaxCode>EV</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">8.20</Amount>
+							<DescText>South Africa Air Passenger Tax</DescText>
+							<TaxCode>WC</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">1.10</Amount>
+							<DescText>South Africa Asc Charge</DescText>
+							<TaxCode>UM</TaxCode>
+						</Tax>
+						<TotalTaxAmount CurCode="GBP">330.09</TotalTaxAmount>
+					</TaxSummary>
+					<TotalAmount CurCode="GBP">935.09</TotalAmount>
+				</Price>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<PaxSegmentRef>
+							<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+						</PaxSegmentRef>
+					</OrderServiceAssociation>
+					<PaxRefID>YOUNG_1</PaxRefID>
+					<ServiceID>SV1</ServiceID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<PaxSegmentRef>
+							<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+						</PaxSegmentRef>
+					</OrderServiceAssociation>
+					<PaxRefID>YOUNG_1</PaxRefID>
+					<ServiceID>SV2</ServiceID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>SRV1</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>YOUNG_1</PaxRefID>
+					<ServiceID>SV3</ServiceID>
+					<ServiceRefID>SV1</ServiceRefID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>SRV2</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>YOUNG_1</PaxRefID>
+					<ServiceID>SV4</ServiceID>
+					<ServiceRefID>SV1</ServiceRefID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>SRV1</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>YOUNG_1</PaxRefID>
+					<ServiceID>SV5</ServiceID>
+					<ServiceRefID>SV2</ServiceRefID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>SRV2</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>YOUNG_1</PaxRefID>
+					<ServiceID>SV6</ServiceID>
+					<ServiceRefID>SV2</ServiceRefID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>SRV3</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>YOUNG_1</PaxRefID>
+					<ServiceID>SV7</ServiceID>
+					<ServiceRefID>SV1</ServiceRefID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<StatusCode>ACTIVE</StatusCode>
+			</OrderItem>
+			<OrderItem>
+				<FareDetail>
+					<FareComponent>
+						<CancelRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>Prior To Departure</JourneyStageCode>
+						</CancelRestrictions>
+						<CancelRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>After Departure</JourneyStageCode>
+						</CancelRestrictions>
+						<ChangeRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>Prior To Departure</JourneyStageCode>
+						</ChangeRestrictions>
+						<ChangeRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>After Departure</JourneyStageCode>
+						</ChangeRestrictions>
+						<FareBasisCode>OG0571FA</FareBasisCode>
+						<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+						<PriceClassRefID>PC1</PriceClassRefID>
+					</FareComponent>
+					<FareComponent>
+						<CancelRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>Prior To Departure</JourneyStageCode>
+						</CancelRestrictions>
+						<CancelRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>After Departure</JourneyStageCode>
+						</CancelRestrictions>
+						<ChangeRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>Prior To Departure</JourneyStageCode>
+						</ChangeRestrictions>
+						<ChangeRestrictions>
+							<AllowedModificationInd>true</AllowedModificationInd>
+							<Fee>
+								<Amount CurCode="GBP">0.00</Amount>
+							</Fee>
+							<JourneyStageCode>After Departure</JourneyStageCode>
+						</ChangeRestrictions>
+						<FareBasisCode>OG15D1FA</FareBasisCode>
+						<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+						<PriceClassRefID>PC2</PriceClassRefID>
+					</FareComponent>
+					<PaxRefID>CHILD_1</PaxRefID>
+				</FareDetail>
+				<OrderItemID>VS932DA7I9W24-3</OrderItemID>
+				<OwnerCode>VS</OwnerCode>
+				<Price>
+					<BaseAmount CurCode="GBP">454.00</BaseAmount>
+					<TaxSummary>
+						<Tax>
+							<Amount CurCode="GBP">48.89</Amount>
+							<DescText>United Kingdom Passenger Service Charge Departures</DescText>
+							<TaxCode>UB</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">250.00</Amount>
+							<DescText>VS YQ surcharge</DescText>
+							<TaxCode>YQ</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">8.00</Amount>
+							<DescText>VS YR surcharge</DescText>
+							<TaxCode>YR</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">12.60</Amount>
+							<DescText>South Africa Passenger Service Charge</DescText>
+							<TaxCode>ZA</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">1.30</Amount>
+							<DescText>South Africa Passenger Safety Charge</DescText>
+							<TaxCode>EV</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">8.20</Amount>
+							<DescText>South Africa Air Passenger Tax</DescText>
+							<TaxCode>WC</TaxCode>
+						</Tax>
+						<Tax>
+							<Amount CurCode="GBP">1.10</Amount>
+							<DescText>South Africa Asc Charge</DescText>
+							<TaxCode>UM</TaxCode>
+						</Tax>
+						<TotalTaxAmount CurCode="GBP">330.09</TotalTaxAmount>
+					</TaxSummary>
+					<TotalAmount CurCode="GBP">784.09</TotalAmount>
+				</Price>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<PaxSegmentRef>
+							<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+						</PaxSegmentRef>
+					</OrderServiceAssociation>
+					<PaxRefID>CHILD_1</PaxRefID>
+					<ServiceID>SV1</ServiceID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<PaxSegmentRef>
+							<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+						</PaxSegmentRef>
+					</OrderServiceAssociation>
+					<PaxRefID>CHILD_1</PaxRefID>
+					<ServiceID>SV2</ServiceID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>SRV1</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>CHILD_1</PaxRefID>
+					<ServiceID>SV3</ServiceID>
+					<ServiceRefID>SV1</ServiceRefID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>SRV2</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>CHILD_1</PaxRefID>
+					<ServiceID>SV4</ServiceID>
+					<ServiceRefID>SV1</ServiceRefID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>SRV1</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>CHILD_1</PaxRefID>
+					<ServiceID>SV5</ServiceID>
+					<ServiceRefID>SV2</ServiceRefID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>SRV2</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>CHILD_1</PaxRefID>
+					<ServiceID>SV6</ServiceID>
+					<ServiceRefID>SV2</ServiceRefID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>SRV3</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>CHILD_1</PaxRefID>
+					<ServiceID>SV7</ServiceID>
+					<ServiceRefID>SV1</ServiceRefID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<StatusCode>ACTIVE</StatusCode>
+			</OrderItem>
+			<OrderItem>
+				<OrderItemID>VS932DA7I9W24-4</OrderItemID>
+				<OwnerCode>VS</OwnerCode>
+				<Price>
+					<TotalAmount>0.00</TotalAmount>
+				</Price>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>Meal1</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>ADULT_1</PaxRefID>
+					<ServiceID>SV1</ServiceID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<StatusCode>ACTIVE</StatusCode>
+			</OrderItem>
+			<OrderItem>
+				<OrderItemID>VS932DA7I9W24-5</OrderItemID>
+				<OwnerCode>VS</OwnerCode>
+				<Price>
+					<TotalAmount>0.00</TotalAmount>
+				</Price>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>Meal1</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>YOUNG_1</PaxRefID>
+					<ServiceID>SV1</ServiceID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<StatusCode>ACTIVE</StatusCode>
+			</OrderItem>
+			<OrderItem>
+				<OrderItemID>VS932DA7I9W24-6</OrderItemID>
+				<OwnerCode>VS</OwnerCode>
+				<Price>
+					<TotalAmount>0.00</TotalAmount>
+				</Price>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>Meal1</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>CHILD_1</PaxRefID>
+					<ServiceID>SV1</ServiceID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<StatusCode>ACTIVE</StatusCode>
+			</OrderItem>
+			<OrderItem>
+				<OrderItemID>VS932DA7I9W24-7</OrderItemID>
+				<OwnerCode>VS</OwnerCode>
+				<Price>
+					<TotalAmount>0.00</TotalAmount>
+				</Price>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>Meal1</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>ADULT_1</PaxRefID>
+					<ServiceID>SV1</ServiceID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<StatusCode>ACTIVE</StatusCode>
+			</OrderItem>
+			<OrderItem>
+				<OrderItemID>VS932DA7I9W24-8</OrderItemID>
+				<OwnerCode>VS</OwnerCode>
+				<Price>
+					<TotalAmount>0.00</TotalAmount>
+				</Price>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>Meal1</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>YOUNG_1</PaxRefID>
+					<ServiceID>SV1</ServiceID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<StatusCode>ACTIVE</StatusCode>
+			</OrderItem>
+			<OrderItem>
+				<OrderItemID>VS932DA7I9W24-9</OrderItemID>
+				<OwnerCode>VS</OwnerCode>
+				<Price>
+					<TotalAmount>0.00</TotalAmount>
+				</Price>
+				<Service>
+					<BookingRef>
+						<BookingEntity>
+							<Carrier>
+								<AirlineDesigCode>VS</AirlineDesigCode>
+							</Carrier>
+						</BookingEntity>
+						<BookingID>DA7I9W</BookingID>
+					</BookingRef>
+					<DeliveryStatusCode>READY TO PROCEED</DeliveryStatusCode>
+					<OrderServiceAssociation>
+						<ServiceDefinitionRef>
+							<OrderFlightAssociations>
+								<PaxSegmentRef>
+									<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+								</PaxSegmentRef>
+							</OrderFlightAssociations>
+							<ServiceDefinitionRefID>Meal1</ServiceDefinitionRefID>
+						</ServiceDefinitionRef>
+					</OrderServiceAssociation>
+					<PaxRefID>CHILD_1</PaxRefID>
+					<ServiceID>SV1</ServiceID>
+					<StatusCode>CONFIRMED</StatusCode>
+				</Service>
+				<StatusCode>ACTIVE</StatusCode>
+			</OrderItem>
+			<OwnerCode>VS</OwnerCode>
+			<StatusCode>OPENED</StatusCode>
+			<TotalPrice>
+				<TotalAmount CurCode="GBP">2748.27</TotalAmount>
+			</TotalPrice>
+		</Order>
+		<TicketDocInfo xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<BookletQty>1</BookletQty>
+			<IssueInfo>
+				<IssueDate>2024-08-16</IssueDate>
+				<IssuingCarrier>
+					<AirlineDesigCode>VS</AirlineDesigCode>
+				</IssuingCarrier>
+			</IssueInfo>
+			<PaxRefID>ADULT_1</PaxRefID>
+			<PaymentRefID>93225207804459736</PaymentRefID>
+			<Ticket>
+				<Coupon>
+					<CouponNumber>1</CouponNumber>
+					<CouponStatusCode>OPE</CouponStatusCode>
+					<FareBasisCode>OG0571FA</FareBasisCode>
+					<SoldAirlineInfo>
+						<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+					</SoldAirlineInfo>
+				</Coupon>
+				<Coupon>
+					<CouponNumber>2</CouponNumber>
+					<CouponStatusCode>OPE</CouponStatusCode>
+					<FareBasisCode>OG15D1FA</FareBasisCode>
+					<SoldAirlineInfo>
+						<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+					</SoldAirlineInfo>
+				</Coupon>
+				<ReportingTypeCode>Airline</ReportingTypeCode>
+				<TicketDocTypeCode>T</TicketDocTypeCode>
+				<TicketNumber>9322520780443</TicketNumber>
+			</Ticket>
+		</TicketDocInfo>
+		<TicketDocInfo xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<BookletQty>1</BookletQty>
+			<IssueInfo>
+				<IssueDate>2024-08-16</IssueDate>
+				<IssuingCarrier>
+					<AirlineDesigCode>VS</AirlineDesigCode>
+				</IssuingCarrier>
+			</IssueInfo>
+			<PaxRefID>YOUNG_1</PaxRefID>
+			<PaymentRefID>93225207804459736</PaymentRefID>
+			<Ticket>
+				<Coupon>
+					<CouponNumber>1</CouponNumber>
+					<CouponStatusCode>OPE</CouponStatusCode>
+					<FareBasisCode>OG0571FA</FareBasisCode>
+					<SoldAirlineInfo>
+						<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+					</SoldAirlineInfo>
+				</Coupon>
+				<Coupon>
+					<CouponNumber>2</CouponNumber>
+					<CouponStatusCode>OPE</CouponStatusCode>
+					<FareBasisCode>OG15D1FA</FareBasisCode>
+					<SoldAirlineInfo>
+						<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+					</SoldAirlineInfo>
+				</Coupon>
+				<ReportingTypeCode>Airline</ReportingTypeCode>
+				<TicketDocTypeCode>T</TicketDocTypeCode>
+				<TicketNumber>9322520780444</TicketNumber>
+			</Ticket>
+		</TicketDocInfo>
+		<TicketDocInfo xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<BookletQty>1</BookletQty>
+			<IssueInfo>
+				<IssueDate>2024-08-16</IssueDate>
+				<IssuingCarrier>
+					<AirlineDesigCode>VS</AirlineDesigCode>
+				</IssuingCarrier>
+			</IssueInfo>
+			<PaxRefID>CHILD_1</PaxRefID>
+			<PaymentRefID>93225207804459736</PaymentRefID>
+			<Ticket>
+				<Coupon>
+					<CouponNumber>1</CouponNumber>
+					<CouponStatusCode>OPE</CouponStatusCode>
+					<FareBasisCode>OG0571FA</FareBasisCode>
+					<SoldAirlineInfo>
+						<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+					</SoldAirlineInfo>
+				</Coupon>
+				<Coupon>
+					<CouponNumber>2</CouponNumber>
+					<CouponStatusCode>OPE</CouponStatusCode>
+					<FareBasisCode>OG15D1FA</FareBasisCode>
+					<SoldAirlineInfo>
+						<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+					</SoldAirlineInfo>
+				</Coupon>
+				<ReportingTypeCode>Airline</ReportingTypeCode>
+				<TicketDocTypeCode>T</TicketDocTypeCode>
+				<TicketNumber>9322520780445</TicketNumber>
+			</Ticket>
+		</TicketDocInfo>
+	</Response>
+	<PaymentFunctions>
+		<OrderAssociation xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<OrderItemRefID>VS932DA7I9W24-1</OrderItemRefID>
+			<OrderItemRefID>VS932DA7I9W24-2</OrderItemRefID>
+			<OrderItemRefID>VS932DA7I9W24-3</OrderItemRefID>
+			<OrderItemRefID>VS932DA7I9W24-4</OrderItemRefID>
+			<OrderItemRefID>VS932DA7I9W24-5</OrderItemRefID>
+			<OrderItemRefID>VS932DA7I9W24-6</OrderItemRefID>
+			<OrderItemRefID>VS932DA7I9W24-7</OrderItemRefID>
+			<OrderItemRefID>VS932DA7I9W24-8</OrderItemRefID>
+			<OrderItemRefID>VS932DA7I9W24-9</OrderItemRefID>
+			<OrderRefID>VS932DA7I9W24</OrderRefID>
+		</OrderAssociation>
+		<PaymentProcessingSummary xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<Amount CurCode="GBP">2748.27</Amount>
+			<PaymentID>93225207804459736</PaymentID>
+			<PaymentProcessingSummaryPaymentMethod>
+				<PaymentCard>
+					<CardBrandCode>CA</CardBrandCode>
+					<ExpirationDate>1226</ExpirationDate>
+					<MaskedCardID>************9736</MaskedCardID>
+				</PaymentCard>
+			</PaymentProcessingSummaryPaymentMethod>
+		</PaymentProcessingSummary>
+	</PaymentFunctions>
+</IATA_OrderViewRS>

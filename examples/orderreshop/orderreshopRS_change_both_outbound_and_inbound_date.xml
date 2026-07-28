@@ -1,0 +1,1085 @@
+<!-- edited with XMLSpy v2019 rel. 3 sp1 (x64) (http://www.altova.com) by Mahendar Thooyamani (Virgin Atlantic Airways Ltd) -->
+<IATA_OrderReshopRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage">
+	<Response>
+		<DataLists xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<BaggageAllowanceList>
+				<BaggageAllowance>
+					<BaggageAllowanceID>BAGA1</BaggageAllowanceID>
+					<DescText>23KG 90X75X43CM TOTAL 208LICM</DescText>
+					<DescText>SPORTING EQUIPMENT 23KG 330LCM</DescText>
+					<MaximumDimensionAllowance>
+						<HeightMeasure>75</HeightMeasure>
+						<LengthMeasure>90</LengthMeasure>
+						<LengthUnitOfMeasurement>CMT</LengthUnitOfMeasurement>
+						<LinearMeasure>208</LinearMeasure>
+						<WidthMeasure>43</WidthMeasure>
+					</MaximumDimensionAllowance>
+					<MaximumDimensionAllowance>
+						<HeightMeasure>29.5</HeightMeasure>
+						<LengthMeasure>35.5</LengthMeasure>
+						<LengthUnitOfMeasurement>INH</LengthUnitOfMeasurement>
+						<LinearMeasure>81</LinearMeasure>
+						<WidthMeasure>16</WidthMeasure>
+					</MaximumDimensionAllowance>
+					<PieceAllowance>
+						<TotalQty>2</TotalQty>
+					</PieceAllowance>
+					<TypeCode>Checked</TypeCode>
+				</BaggageAllowance>
+				<BaggageAllowance>
+					<BaggageAllowanceID>CAB1</BaggageAllowanceID>
+					<DescText>HAND BAGGAGE 10KG UP TO 115LCM</DescText>
+					<MaximumDimensionAllowance>
+						<HeightMeasure>56</HeightMeasure>
+						<LengthMeasure>36</LengthMeasure>
+						<LengthUnitOfMeasurement>CMT</LengthUnitOfMeasurement>
+						<LinearMeasure>45</LinearMeasure>
+						<WidthMeasure>23</WidthMeasure>
+					</MaximumDimensionAllowance>
+					<MaximumDimensionAllowance>
+						<HeightMeasure>22</HeightMeasure>
+						<LengthMeasure>14</LengthMeasure>
+						<LengthUnitOfMeasurement>INH</LengthUnitOfMeasurement>
+						<LinearMeasure>115</LinearMeasure>
+						<WidthMeasure>9</WidthMeasure>
+					</MaximumDimensionAllowance>
+					<PieceAllowance>
+						<TotalQty>1</TotalQty>
+					</PieceAllowance>
+					<TypeCode>CarryOn</TypeCode>
+					<WeightAllowance>
+						<MaximumWeightMeasure>10</MaximumWeightMeasure>
+						<WeightUnitOfMeasurement>KGM</WeightUnitOfMeasurement>
+					</WeightAllowance>
+					<WeightAllowance>
+						<MaximumWeightMeasure>22</MaximumWeightMeasure>
+						<WeightUnitOfMeasurement>LBR</WeightUnitOfMeasurement>
+					</WeightAllowance>
+				</BaggageAllowance>
+			</BaggageAllowanceList>
+			<DatedMarketingSegmentList>
+				<DatedMarketingSegment>
+					<Arrival>
+						<AircraftScheduledDateTime>2023-09-04T05:05:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>TLV</IATA_LocationCode>
+					</Arrival>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedMarketingSegmentId>DMS1</DatedMarketingSegmentId>
+					<DatedOperatingSegmentRefId>DOS1</DatedOperatingSegmentRefId>
+					<Dep>
+						<AircraftScheduledDateTime>2023-09-03T22:10:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>LHR</IATA_LocationCode>
+					</Dep>
+					<MarketingCarrierFlightNumberText>453</MarketingCarrierFlightNumberText>
+				</DatedMarketingSegment>
+				<DatedMarketingSegment>
+					<Arrival>
+						<AircraftScheduledDateTime>2023-09-12T10:30:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>LHR</IATA_LocationCode>
+					</Arrival>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedMarketingSegmentId>DMS2</DatedMarketingSegmentId>
+					<DatedOperatingSegmentRefId>DOS2</DatedOperatingSegmentRefId>
+					<Dep>
+						<AircraftScheduledDateTime>2023-09-12T06:55:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>TLV</IATA_LocationCode>
+					</Dep>
+					<MarketingCarrierFlightNumberText>454</MarketingCarrierFlightNumberText>
+				</DatedMarketingSegment>
+				<DatedMarketingSegment>
+					<Arrival>
+						<AircraftScheduledDateTime>2023-09-03T15:40:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>TLV</IATA_LocationCode>
+					</Arrival>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedMarketingSegmentId>DMS3</DatedMarketingSegmentId>
+					<DatedOperatingSegmentRefId>DOS3</DatedOperatingSegmentRefId>
+					<Dep>
+						<AircraftScheduledDateTime>2023-09-03T08:20:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>LHR</IATA_LocationCode>
+					</Dep>
+					<MarketingCarrierFlightNumberText>457</MarketingCarrierFlightNumberText>
+				</DatedMarketingSegment>
+			</DatedMarketingSegmentList>
+			<DatedOperatingSegmentList>
+				<DatedOperatingSegment>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedOperatingSegmentId>DOS1</DatedOperatingSegmentId>
+					<Duration>PT4H55M0S</Duration>
+					<OperatingCarrierFlightNumberText>453</OperatingCarrierFlightNumberText>
+				</DatedOperatingSegment>
+				<DatedOperatingSegment>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedOperatingSegmentId>DOS2</DatedOperatingSegmentId>
+					<Duration>PT5H35M0S</Duration>
+					<OperatingCarrierFlightNumberText>454</OperatingCarrierFlightNumberText>
+				</DatedOperatingSegment>
+				<DatedOperatingSegment>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedOperatingSegmentId>DOS3</DatedOperatingSegmentId>
+					<Duration>PT5H20M0S</Duration>
+					<OperatingCarrierFlightNumberText>457</OperatingCarrierFlightNumberText>
+				</DatedOperatingSegment>
+			</DatedOperatingSegmentList>
+			<OriginDestList>
+				<OriginDest>
+					<DestCode>TLV</DestCode>
+					<OriginCode>LHR</OriginCode>
+					<OriginDestID>OD1</OriginDestID>
+					<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+					<PaxJourneyRefID>JOUR3</PaxJourneyRefID>
+				</OriginDest>
+				<OriginDest>
+					<DestCode>LHR</DestCode>
+					<OriginCode>TLV</OriginCode>
+					<OriginDestID>OD2</OriginDestID>
+					<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+				</OriginDest>
+			</OriginDestList>
+			<PaxJourneyList>
+				<PaxJourney>
+					<Duration>PT4H55M0S</Duration>
+					<PaxJourneyID>JOUR1</PaxJourneyID>
+					<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+				</PaxJourney>
+				<PaxJourney>
+					<Duration>PT5H35M0S</Duration>
+					<PaxJourneyID>JOUR2</PaxJourneyID>
+					<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+				</PaxJourney>
+				<PaxJourney>
+					<Duration>PT5H20M0S</Duration>
+					<PaxJourneyID>JOUR3</PaxJourneyID>
+					<PaxSegmentRefID>SEG3</PaxSegmentRefID>
+				</PaxJourney>
+			</PaxJourneyList>
+			<PaxList>
+				<Pax>
+					<PaxID>ADULT_1</PaxID>
+					<PTC>ADT</PTC>
+				</Pax>
+				<Pax>
+					<PaxID>CHILD_1</PaxID>
+					<PTC>CHD</PTC>
+				</Pax>
+				<Pax>
+					<PaxID>YOUNG_1</PaxID>
+					<PTC>GBE</PTC>
+				</Pax>
+			</PaxList>
+			<PaxSegmentList>
+				<PaxSegment>
+					<CabinTypeAssociationChoice>
+						<SegmentCabinType>
+							<CabinTypeCode>4</CabinTypeCode>
+							<CabinTypeName>Premium Economy</CabinTypeName>
+						</SegmentCabinType>
+					</CabinTypeAssociationChoice>
+					<DatedMarketingSegmentRefId>DMS1</DatedMarketingSegmentRefId>
+					<MarketingCarrierRBD_Code>K</MarketingCarrierRBD_Code>
+					<PaxSegmentID>SEG1</PaxSegmentID>
+				</PaxSegment>
+				<PaxSegment>
+					<CabinTypeAssociationChoice>
+						<SegmentCabinType>
+							<CabinTypeCode>4</CabinTypeCode>
+							<CabinTypeName>Premium Economy</CabinTypeName>
+						</SegmentCabinType>
+					</CabinTypeAssociationChoice>
+					<DatedMarketingSegmentRefId>DMS2</DatedMarketingSegmentRefId>
+					<MarketingCarrierRBD_Code>K</MarketingCarrierRBD_Code>
+					<PaxSegmentID>SEG2</PaxSegmentID>
+				</PaxSegment>
+				<PaxSegment>
+					<CabinTypeAssociationChoice>
+						<SegmentCabinType>
+							<CabinTypeCode>4</CabinTypeCode>
+							<CabinTypeName>Premium Economy</CabinTypeName>
+						</SegmentCabinType>
+					</CabinTypeAssociationChoice>
+					<DatedMarketingSegmentRefId>DMS3</DatedMarketingSegmentRefId>
+					<MarketingCarrierRBD_Code>K</MarketingCarrierRBD_Code>
+					<PaxSegmentID>SEG3</PaxSegmentID>
+				</PaxSegment>
+			</PaxSegmentList>
+			<PriceClassList>
+				<PriceClass>
+					<Name>Premium Flex</Name>
+					<PriceClassID>PC1</PriceClassID>
+				</PriceClass>
+			</PriceClassList>
+		</DataLists>
+		<Order xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<OrderID>VS932C66PHV23</OrderID>
+			<OwnerCode>VS</OwnerCode>
+		</Order>
+		<ReshopResults xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<ReshopOffers>
+				<Offer>
+					<AddedOfferItem>
+						<OfferItemID>60a019c1-949e-4ea5-a9f9-130230081d62|9mUz6gOd5q1Nsftlbw6tyR001-1</OfferItemID>
+						<ReshopPrice>
+							<PriceDifferential>
+								<DifferentialTypeCode>EvenExchange</DifferentialTypeCode>
+								<DiffPrice>
+									<FareDetail>
+										<PaxRefID>ADULT_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">0.00</BaseAmount>
+											<DueToAirlineAmount CurCode="GBP">0.00</DueToAirlineAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">0.00</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">0.00</TotalAmount>
+										</Price>
+									</FareDetail>
+								</DiffPrice>
+								<NewPrice>
+									<FareDetail>
+										<FareComponent>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<FareBasisCode>KS04IEKB</FareBasisCode>
+											<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+											<PriceClassRefID>PC1</PriceClassRefID>
+										</FareComponent>
+										<FareComponent>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<FareBasisCode>KS04IEKB</FareBasisCode>
+											<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+											<PriceClassRefID>PC1</PriceClassRefID>
+										</FareComponent>
+										<PaxRefID>ADULT_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">415.00</BaseAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">350.51</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">765.51</TotalAmount>
+										</Price>
+									</FareDetail>
+								</NewPrice>
+								<OldPrice>
+									<FareDetail>
+										<PaxRefID>ADULT_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">415.00</BaseAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">350.51</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">765.51</TotalAmount>
+										</Price>
+									</FareDetail>
+								</OldPrice>
+							</PriceDifferential>
+						</ReshopPrice>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+									<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV1</ServiceID>
+						</Service>
+					</AddedOfferItem>
+					<AddedOfferItem>
+						<OfferItemID>60a019c1-949e-4ea5-a9f9-130230081d62|9mUz6gOd5q1Nsftlbw6tyR001-2</OfferItemID>
+						<ReshopPrice>
+							<PriceDifferential>
+								<DifferentialTypeCode>EvenExchange</DifferentialTypeCode>
+								<DiffPrice>
+									<FareDetail>
+										<PaxRefID>CHILD_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">0.00</BaseAmount>
+											<DueToAirlineAmount CurCode="GBP">0.00</DueToAirlineAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">0.00</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">0.00</TotalAmount>
+										</Price>
+									</FareDetail>
+								</DiffPrice>
+								<NewPrice>
+									<FareDetail>
+										<FareComponent>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<FareBasisCode>KS04IEKB</FareBasisCode>
+											<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+											<PriceClassRefID>PC1</PriceClassRefID>
+										</FareComponent>
+										<FareComponent>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<FareBasisCode>KS04IEKB</FareBasisCode>
+											<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+											<PriceClassRefID>PC1</PriceClassRefID>
+										</FareComponent>
+										<PaxRefID>CHILD_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">311.00</BaseAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">350.51</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">661.51</TotalAmount>
+										</Price>
+									</FareDetail>
+								</NewPrice>
+								<OldPrice>
+									<FareDetail>
+										<PaxRefID>CHILD_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">311.00</BaseAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">350.51</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">661.51</TotalAmount>
+										</Price>
+									</FareDetail>
+								</OldPrice>
+							</PriceDifferential>
+						</ReshopPrice>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+									<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>CHILD_1</PaxRefID>
+							<ServiceID>SV2</ServiceID>
+						</Service>
+					</AddedOfferItem>
+					<AddedOfferItem>
+						<OfferItemID>60a019c1-949e-4ea5-a9f9-130230081d62|9mUz6gOd5q1Nsftlbw6tyR001-3</OfferItemID>
+						<ReshopPrice>
+							<PriceDifferential>
+								<DifferentialTypeCode>EvenExchange</DifferentialTypeCode>
+								<DiffPrice>
+									<FareDetail>
+										<PaxRefID>YOUNG_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">0.00</BaseAmount>
+											<DueToAirlineAmount CurCode="GBP">0.00</DueToAirlineAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">0.00</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">0.00</TotalAmount>
+										</Price>
+									</FareDetail>
+								</DiffPrice>
+								<NewPrice>
+									<FareDetail>
+										<FareComponent>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<FareBasisCode>KS04IEKB</FareBasisCode>
+											<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+											<PriceClassRefID>PC1</PriceClassRefID>
+										</FareComponent>
+										<FareComponent>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<FareBasisCode>KS04IEKB</FareBasisCode>
+											<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+											<PriceClassRefID>PC1</PriceClassRefID>
+										</FareComponent>
+										<PaxRefID>YOUNG_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">415.00</BaseAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">350.51</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">765.51</TotalAmount>
+										</Price>
+									</FareDetail>
+								</NewPrice>
+								<OldPrice>
+									<FareDetail>
+										<PaxRefID>YOUNG_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">415.00</BaseAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">350.51</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">765.51</TotalAmount>
+										</Price>
+									</FareDetail>
+								</OldPrice>
+							</PriceDifferential>
+						</ReshopPrice>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+									<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>YOUNG_1</PaxRefID>
+							<ServiceID>SV3</ServiceID>
+						</Service>
+					</AddedOfferItem>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+								<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+						<PaxRefID>CHILD_1</PaxRefID>
+						<PaxRefID>YOUNG_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+								<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+						<PaxRefID>CHILD_1</PaxRefID>
+						<PaxRefID>YOUNG_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-17T14:49:30Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>60a019c1-949e-4ea5-a9f9-130230081d62|9mUz6gOd5q1Nsftlbw6tyR001</OfferID>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">0.00</TotalAmount>
+					</TotalPrice>
+				</Offer>
+				<Offer>
+					<AddedOfferItem>
+						<OfferItemID>60a019c1-949e-4ea5-a9f9-130230081d62|9mUz6gOd5q1Nsftlbw6tyR002-1</OfferItemID>
+						<ReshopPrice>
+							<PriceDifferential>
+								<DifferentialTypeCode>EvenExchange</DifferentialTypeCode>
+								<DiffPrice>
+									<FareDetail>
+										<PaxRefID>ADULT_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">0.00</BaseAmount>
+											<DueToAirlineAmount CurCode="GBP">0.00</DueToAirlineAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">0.00</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">0.00</TotalAmount>
+										</Price>
+									</FareDetail>
+								</DiffPrice>
+								<NewPrice>
+									<FareDetail>
+										<FareComponent>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<FareBasisCode>KS04IEKB</FareBasisCode>
+											<PaxSegmentRefID>SEG3</PaxSegmentRefID>
+											<PriceClassRefID>PC1</PriceClassRefID>
+										</FareComponent>
+										<FareComponent>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<FareBasisCode>KS04IEKB</FareBasisCode>
+											<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+											<PriceClassRefID>PC1</PriceClassRefID>
+										</FareComponent>
+										<PaxRefID>ADULT_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">415.00</BaseAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">350.51</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">765.51</TotalAmount>
+										</Price>
+									</FareDetail>
+								</NewPrice>
+								<OldPrice>
+									<FareDetail>
+										<PaxRefID>ADULT_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">415.00</BaseAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">350.51</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">765.51</TotalAmount>
+										</Price>
+									</FareDetail>
+								</OldPrice>
+							</PriceDifferential>
+						</ReshopPrice>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR3</PaxJourneyRefID>
+									<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV4</ServiceID>
+						</Service>
+					</AddedOfferItem>
+					<AddedOfferItem>
+						<OfferItemID>60a019c1-949e-4ea5-a9f9-130230081d62|9mUz6gOd5q1Nsftlbw6tyR002-2</OfferItemID>
+						<ReshopPrice>
+							<PriceDifferential>
+								<DifferentialTypeCode>EvenExchange</DifferentialTypeCode>
+								<DiffPrice>
+									<FareDetail>
+										<PaxRefID>CHILD_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">0.00</BaseAmount>
+											<DueToAirlineAmount CurCode="GBP">0.00</DueToAirlineAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">0.00</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">0.00</TotalAmount>
+										</Price>
+									</FareDetail>
+								</DiffPrice>
+								<NewPrice>
+									<FareDetail>
+										<FareComponent>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<FareBasisCode>KS04IEKB</FareBasisCode>
+											<PaxSegmentRefID>SEG3</PaxSegmentRefID>
+											<PriceClassRefID>PC1</PriceClassRefID>
+										</FareComponent>
+										<FareComponent>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<FareBasisCode>KS04IEKB</FareBasisCode>
+											<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+											<PriceClassRefID>PC1</PriceClassRefID>
+										</FareComponent>
+										<PaxRefID>CHILD_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">311.00</BaseAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">350.51</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">661.51</TotalAmount>
+										</Price>
+									</FareDetail>
+								</NewPrice>
+								<OldPrice>
+									<FareDetail>
+										<PaxRefID>CHILD_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">311.00</BaseAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">350.51</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">661.51</TotalAmount>
+										</Price>
+									</FareDetail>
+								</OldPrice>
+							</PriceDifferential>
+						</ReshopPrice>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR3</PaxJourneyRefID>
+									<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>CHILD_1</PaxRefID>
+							<ServiceID>SV5</ServiceID>
+						</Service>
+					</AddedOfferItem>
+					<AddedOfferItem>
+						<OfferItemID>60a019c1-949e-4ea5-a9f9-130230081d62|9mUz6gOd5q1Nsftlbw6tyR002-3</OfferItemID>
+						<ReshopPrice>
+							<PriceDifferential>
+								<DifferentialTypeCode>EvenExchange</DifferentialTypeCode>
+								<DiffPrice>
+									<FareDetail>
+										<PaxRefID>YOUNG_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">0.00</BaseAmount>
+											<DueToAirlineAmount CurCode="GBP">0.00</DueToAirlineAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">0.00</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">0.00</TotalAmount>
+										</Price>
+									</FareDetail>
+								</DiffPrice>
+								<NewPrice>
+									<FareDetail>
+										<FareComponent>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>LHR-TLV</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<FareBasisCode>KS04IEKB</FareBasisCode>
+											<PaxSegmentRefID>SEG3</PaxSegmentRefID>
+											<PriceClassRefID>PC1</PriceClassRefID>
+										</FareComponent>
+										<FareComponent>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<CancelRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</CancelRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>Prior To Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<ChangeRestrictions>
+												<AllowedModificationInd>true</AllowedModificationInd>
+												<DescText>TLV-LHR</DescText>
+												<Fee>
+													<Amount CurCode="GBP">0.00</Amount>
+												</Fee>
+												<JourneyStageCode>After Departure</JourneyStageCode>
+											</ChangeRestrictions>
+											<FareBasisCode>KS04IEKB</FareBasisCode>
+											<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+											<PriceClassRefID>PC1</PriceClassRefID>
+										</FareComponent>
+										<PaxRefID>YOUNG_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">415.00</BaseAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">350.51</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">765.51</TotalAmount>
+										</Price>
+									</FareDetail>
+								</NewPrice>
+								<OldPrice>
+									<FareDetail>
+										<PaxRefID>YOUNG_1</PaxRefID>
+										<Price>
+											<BaseAmount CurCode="GBP">415.00</BaseAmount>
+											<TaxSummary>
+												<TotalTaxAmount CurCode="GBP">350.51</TotalTaxAmount>
+											</TaxSummary>
+											<TotalAmount CurCode="GBP">765.51</TotalAmount>
+										</Price>
+									</FareDetail>
+								</OldPrice>
+							</PriceDifferential>
+						</ReshopPrice>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR3</PaxJourneyRefID>
+									<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>YOUNG_1</PaxRefID>
+							<ServiceID>SV6</ServiceID>
+						</Service>
+					</AddedOfferItem>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR3</PaxJourneyRefID>
+								<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+						<PaxRefID>CHILD_1</PaxRefID>
+						<PaxRefID>YOUNG_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR3</PaxJourneyRefID>
+								<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+						<PaxRefID>CHILD_1</PaxRefID>
+						<PaxRefID>YOUNG_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR3</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-17T14:49:30Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>60a019c1-949e-4ea5-a9f9-130230081d62|9mUz6gOd5q1Nsftlbw6tyR002</OfferID>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">0.00</TotalAmount>
+					</TotalPrice>
+				</Offer>
+			</ReshopOffers>
+		</ReshopResults>
+	</Response>
+</IATA_OrderReshopRS>

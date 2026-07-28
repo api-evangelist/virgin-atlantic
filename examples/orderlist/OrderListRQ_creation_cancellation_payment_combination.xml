@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IATA_OrderListRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage">
+	<DistributionChain>
+		<DistributionChainLink xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<ContactInfo>
+				<ContactInfoID>AgentContactInfoID</ContactInfoID>
+				<EmailAddress>
+					<EmailAddressText>agentemail@gmail.com</EmailAddressText>
+				</EmailAddress>
+			</ContactInfo>
+			<Ordinal>1</Ordinal>
+			<OrgRole>Seller</OrgRole>
+			<ParticipatingOrg>
+				<Name>Test-Agent</Name>
+				<OrgID>12345678</OrgID>
+			</ParticipatingOrg>
+		</DistributionChainLink>
+		<DistributionChainLink xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<Ordinal>2</Ordinal>
+			<OrgRole>Carrier</OrgRole>
+			<ParticipatingOrg>
+				<Name>VIRGIN ATLANTIC</Name>
+				<OrgID>VS</OrgID>
+			</ParticipatingOrg>
+		</DistributionChainLink>
+	</DistributionChain>
+	<Request>
+		<OrderSearchFilterCriteria xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<CreationDateTimeFilterCriteria>
+				<FromDateTime>2025-09-18T14:30:47Z</FromDateTime>
+				<ToDateTime>2025-12-18T14:30:47Z</ToDateTime>
+			</CreationDateTimeFilterCriteria>
+			<OrderCancellationDateFilterCriteria>
+				<ExpirationDate>2025-10-12</ExpirationDate>
+			</OrderCancellationDateFilterCriteria>
+			<PaymentFilterCriteria>
+				<PaymentStatusCode>UnPaid</PaymentStatusCode>
+			</PaymentFilterCriteria>
+		</OrderSearchFilterCriteria>
+	</Request>
+</IATA_OrderListRQ>

@@ -1,0 +1,1949 @@
+<!-- edited with XMLSpy v2019 rel. 3 sp1 (x64) (http://www.altova.com) by Mahendar Thooyamani (Virgin Atlantic Airways Ltd) -->
+<IATA_AirShoppingRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage">
+	<Response>
+		<DataLists xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<BaggageAllowanceList>
+				<BaggageAllowance>
+					<BaggageAllowanceID>BAGA1</BaggageAllowanceID>
+					<DescText>UPTO70LB 32KG AND81LI 208LCM</DescText>
+					<DescText>SPORTING EQUIPMENT 32KG 330LCM</DescText>
+					<MaximumDimensionAllowance>
+						<HeightMeasure>75</HeightMeasure>
+						<LengthMeasure>90</LengthMeasure>
+						<LengthUnitOfMeasurement>CMT</LengthUnitOfMeasurement>
+						<LinearMeasure>208</LinearMeasure>
+						<WidthMeasure>43</WidthMeasure>
+					</MaximumDimensionAllowance>
+					<MaximumDimensionAllowance>
+						<HeightMeasure>29.5</HeightMeasure>
+						<LengthMeasure>35.5</LengthMeasure>
+						<LengthUnitOfMeasurement>INH</LengthUnitOfMeasurement>
+						<LinearMeasure>81</LinearMeasure>
+						<WidthMeasure>16</WidthMeasure>
+					</MaximumDimensionAllowance>
+					<PieceAllowance>
+						<TotalQty>2</TotalQty>
+					</PieceAllowance>
+					<TypeCode>Checked</TypeCode>
+				</BaggageAllowance>
+				<BaggageAllowance>
+					<BaggageAllowanceID>CAB1</BaggageAllowanceID>
+					<DescText>HAND BAGGAGE 12KG MAX 16KG</DescText>
+					<MaximumDimensionAllowance>
+						<HeightMeasure>56</HeightMeasure>
+						<LengthMeasure>36</LengthMeasure>
+						<LengthUnitOfMeasurement>CMT</LengthUnitOfMeasurement>
+						<LinearMeasure>45</LinearMeasure>
+						<WidthMeasure>23</WidthMeasure>
+					</MaximumDimensionAllowance>
+					<MaximumDimensionAllowance>
+						<HeightMeasure>22</HeightMeasure>
+						<LengthMeasure>14</LengthMeasure>
+						<LengthUnitOfMeasurement>INH</LengthUnitOfMeasurement>
+						<LinearMeasure>115</LinearMeasure>
+						<WidthMeasure>9</WidthMeasure>
+					</MaximumDimensionAllowance>
+					<PieceAllowance>
+						<TotalQty>2</TotalQty>
+					</PieceAllowance>
+					<TypeCode>CarryOn</TypeCode>
+					<WeightAllowance>
+						<MaximumWeightMeasure>12</MaximumWeightMeasure>
+						<WeightUnitOfMeasurement>KGM</WeightUnitOfMeasurement>
+					</WeightAllowance>
+					<WeightAllowance>
+						<MaximumWeightMeasure>26</MaximumWeightMeasure>
+						<WeightUnitOfMeasurement>LBR</WeightUnitOfMeasurement>
+					</WeightAllowance>
+				</BaggageAllowance>
+				<BaggageAllowance>
+					<BaggageAllowanceID>CAB2</BaggageAllowanceID>
+					<DescText>The baggage information displayed applies to Virgin Atlantic Marketed codeshare flights.For partner airline baggage, please visit our partners website for further information</DescText>
+					<PieceAllowance>
+						<TotalQty>1</TotalQty>
+					</PieceAllowance>
+					<TypeCode>CarryOn</TypeCode>
+				</BaggageAllowance>
+			</BaggageAllowanceList>
+			<DatedMarketingSegmentList>
+				<DatedMarketingSegment>
+					<Arrival>
+						<AircraftScheduledDateTime>2023-06-08T21:10:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>JFK</IATA_LocationCode>
+					</Arrival>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedMarketingSegmentId>DMS1</DatedMarketingSegmentId>
+					<DatedOperatingSegmentRefId>DOS1</DatedOperatingSegmentRefId>
+					<Dep>
+						<AircraftScheduledDateTime>2023-06-08T18:35:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>LHR</IATA_LocationCode>
+					</Dep>
+					<MarketingCarrierFlightNumberText>137</MarketingCarrierFlightNumberText>
+				</DatedMarketingSegment>
+				<DatedMarketingSegment>
+					<Arrival>
+						<AircraftScheduledDateTime>2023-06-08T12:05:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>JFK</IATA_LocationCode>
+					</Arrival>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedMarketingSegmentId>DMS2</DatedMarketingSegmentId>
+					<DatedOperatingSegmentRefId>DOS2</DatedOperatingSegmentRefId>
+					<Dep>
+						<AircraftScheduledDateTime>2023-06-08T09:20:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>LHR</IATA_LocationCode>
+					</Dep>
+					<MarketingCarrierFlightNumberText>3</MarketingCarrierFlightNumberText>
+				</DatedMarketingSegment>
+				<DatedMarketingSegment>
+					<Arrival>
+						<AircraftScheduledDateTime>2023-06-08T19:10:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>JFK</IATA_LocationCode>
+					</Arrival>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedMarketingSegmentId>DMS3</DatedMarketingSegmentId>
+					<DatedOperatingSegmentRefId>DOS3</DatedOperatingSegmentRefId>
+					<Dep>
+						<AircraftScheduledDateTime>2023-06-08T16:25:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>LHR</IATA_LocationCode>
+					</Dep>
+					<MarketingCarrierFlightNumberText>153</MarketingCarrierFlightNumberText>
+				</DatedMarketingSegment>
+				<DatedMarketingSegment>
+					<Arrival>
+						<AircraftScheduledDateTime>2023-06-08T20:45:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>JFK</IATA_LocationCode>
+					</Arrival>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedMarketingSegmentId>DMS4</DatedMarketingSegmentId>
+					<DatedOperatingSegmentRefId>DOS4</DatedOperatingSegmentRefId>
+					<Dep>
+						<AircraftScheduledDateTime>2023-06-08T17:50:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>LHR</IATA_LocationCode>
+					</Dep>
+					<MarketingCarrierFlightNumberText>4007</MarketingCarrierFlightNumberText>
+				</DatedMarketingSegment>
+				<DatedMarketingSegment>
+					<Arrival>
+						<AircraftScheduledDateTime>2023-06-08T14:10:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>JFK</IATA_LocationCode>
+					</Arrival>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedMarketingSegmentId>DMS5</DatedMarketingSegmentId>
+					<DatedOperatingSegmentRefId>DOS5</DatedOperatingSegmentRefId>
+					<Dep>
+						<AircraftScheduledDateTime>2023-06-08T11:15:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>LHR</IATA_LocationCode>
+					</Dep>
+					<MarketingCarrierFlightNumberText>4029</MarketingCarrierFlightNumberText>
+				</DatedMarketingSegment>
+				<DatedMarketingSegment>
+					<Arrival>
+						<AircraftScheduledDateTime>2023-06-08T17:45:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>JFK</IATA_LocationCode>
+					</Arrival>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedMarketingSegmentId>DMS6</DatedMarketingSegmentId>
+					<DatedOperatingSegmentRefId>DOS6</DatedOperatingSegmentRefId>
+					<Dep>
+						<AircraftScheduledDateTime>2023-06-08T14:40:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>LHR</IATA_LocationCode>
+					</Dep>
+					<MarketingCarrierFlightNumberText>9</MarketingCarrierFlightNumberText>
+				</DatedMarketingSegment>
+				<DatedMarketingSegment>
+					<Arrival>
+						<AircraftScheduledDateTime>2023-06-08T23:20:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>JFK</IATA_LocationCode>
+					</Arrival>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedMarketingSegmentId>DMS7</DatedMarketingSegmentId>
+					<DatedOperatingSegmentRefId>DOS7</DatedOperatingSegmentRefId>
+					<Dep>
+						<AircraftScheduledDateTime>2023-06-08T20:15:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>LHR</IATA_LocationCode>
+					</Dep>
+					<MarketingCarrierFlightNumberText>25</MarketingCarrierFlightNumberText>
+				</DatedMarketingSegment>
+				<DatedMarketingSegment>
+					<Arrival>
+						<AircraftScheduledDateTime>2023-06-08T16:25:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>JFK</IATA_LocationCode>
+					</Arrival>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedMarketingSegmentId>DMS8</DatedMarketingSegmentId>
+					<DatedOperatingSegmentRefId>DOS8</DatedOperatingSegmentRefId>
+					<Dep>
+						<AircraftScheduledDateTime>2023-06-08T13:20:00</AircraftScheduledDateTime>
+						<IATA_LocationCode>LHR</IATA_LocationCode>
+					</Dep>
+					<MarketingCarrierFlightNumberText>45</MarketingCarrierFlightNumberText>
+				</DatedMarketingSegment>
+			</DatedMarketingSegmentList>
+			<DatedOperatingSegmentList>
+				<DatedOperatingSegment>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedOperatingSegmentId>DOS1</DatedOperatingSegmentId>
+					<Duration>PT7H35M0S</Duration>
+					<OperatingCarrierFlightNumberText>137</OperatingCarrierFlightNumberText>
+				</DatedOperatingSegment>
+				<DatedOperatingSegment>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedOperatingSegmentId>DOS2</DatedOperatingSegmentId>
+					<Duration>PT7H45M0S</Duration>
+					<OperatingCarrierFlightNumberText>3</OperatingCarrierFlightNumberText>
+				</DatedOperatingSegment>
+				<DatedOperatingSegment>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedOperatingSegmentId>DOS3</DatedOperatingSegmentId>
+					<Duration>PT7H45M0S</Duration>
+					<OperatingCarrierFlightNumberText>153</OperatingCarrierFlightNumberText>
+				</DatedOperatingSegment>
+				<DatedOperatingSegment>
+					<CarrierDesigCode>DL</CarrierDesigCode>
+					<CarrierName>Delta Air Lines</CarrierName>
+					<DatedOperatingSegmentId>DOS4</DatedOperatingSegmentId>
+					<Duration>PT7H55M0S</Duration>
+					<OperatingCarrierFlightNumberText>4</OperatingCarrierFlightNumberText>
+				</DatedOperatingSegment>
+				<DatedOperatingSegment>
+					<CarrierDesigCode>DL</CarrierDesigCode>
+					<CarrierName>Delta Air Lines</CarrierName>
+					<DatedOperatingSegmentId>DOS5</DatedOperatingSegmentId>
+					<Duration>PT7H55M0S</Duration>
+					<OperatingCarrierFlightNumberText>2</OperatingCarrierFlightNumberText>
+				</DatedOperatingSegment>
+				<DatedOperatingSegment>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedOperatingSegmentId>DOS6</DatedOperatingSegmentId>
+					<Duration>PT8H5M0S</Duration>
+					<OperatingCarrierFlightNumberText>9</OperatingCarrierFlightNumberText>
+				</DatedOperatingSegment>
+				<DatedOperatingSegment>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedOperatingSegmentId>DOS7</DatedOperatingSegmentId>
+					<Duration>PT8H5M0S</Duration>
+					<OperatingCarrierFlightNumberText>25</OperatingCarrierFlightNumberText>
+				</DatedOperatingSegment>
+				<DatedOperatingSegment>
+					<CarrierDesigCode>VS</CarrierDesigCode>
+					<CarrierName>Virgin Atlantic Airways</CarrierName>
+					<DatedOperatingSegmentId>DOS8</DatedOperatingSegmentId>
+					<Duration>PT8H5M0S</Duration>
+					<OperatingCarrierFlightNumberText>45</OperatingCarrierFlightNumberText>
+				</DatedOperatingSegment>
+			</DatedOperatingSegmentList>
+			<OriginDestList>
+				<OriginDest>
+					<DestCode>JFK</DestCode>
+					<OriginCode>LHR</OriginCode>
+					<OriginDestID>OD1</OriginDestID>
+					<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+					<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+					<PaxJourneyRefID>JOUR3</PaxJourneyRefID>
+					<PaxJourneyRefID>JOUR4</PaxJourneyRefID>
+					<PaxJourneyRefID>JOUR5</PaxJourneyRefID>
+					<PaxJourneyRefID>JOUR6</PaxJourneyRefID>
+					<PaxJourneyRefID>JOUR7</PaxJourneyRefID>
+					<PaxJourneyRefID>JOUR8</PaxJourneyRefID>
+				</OriginDest>
+			</OriginDestList>
+			<PaxJourneyList>
+				<PaxJourney>
+					<Duration>PT7H35M0S</Duration>
+					<PaxJourneyID>JOUR1</PaxJourneyID>
+					<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+				</PaxJourney>
+				<PaxJourney>
+					<Duration>PT7H45M0S</Duration>
+					<PaxJourneyID>JOUR2</PaxJourneyID>
+					<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+				</PaxJourney>
+				<PaxJourney>
+					<Duration>PT7H45M0S</Duration>
+					<PaxJourneyID>JOUR3</PaxJourneyID>
+					<PaxSegmentRefID>SEG3</PaxSegmentRefID>
+				</PaxJourney>
+				<PaxJourney>
+					<Duration>PT7H55M0S</Duration>
+					<PaxJourneyID>JOUR4</PaxJourneyID>
+					<PaxSegmentRefID>SEG4</PaxSegmentRefID>
+				</PaxJourney>
+				<PaxJourney>
+					<Duration>PT7H55M0S</Duration>
+					<PaxJourneyID>JOUR5</PaxJourneyID>
+					<PaxSegmentRefID>SEG5</PaxSegmentRefID>
+				</PaxJourney>
+				<PaxJourney>
+					<Duration>PT8H5M0S</Duration>
+					<PaxJourneyID>JOUR6</PaxJourneyID>
+					<PaxSegmentRefID>SEG6</PaxSegmentRefID>
+				</PaxJourney>
+				<PaxJourney>
+					<Duration>PT8H5M0S</Duration>
+					<PaxJourneyID>JOUR7</PaxJourneyID>
+					<PaxSegmentRefID>SEG7</PaxSegmentRefID>
+				</PaxJourney>
+				<PaxJourney>
+					<Duration>PT8H5M0S</Duration>
+					<PaxJourneyID>JOUR8</PaxJourneyID>
+					<PaxSegmentRefID>SEG8</PaxSegmentRefID>
+				</PaxJourney>
+			</PaxJourneyList>
+			<PaxList>
+				<Pax>
+					<PaxID>ADULT_1</PaxID>
+					<PTC>ADT</PTC>
+				</Pax>
+			</PaxList>
+			<PaxSegmentList>
+				<PaxSegment>
+					<CabinTypeAssociationChoice>
+						<SegmentCabinType>
+							<CabinTypeCode>2</CabinTypeCode>
+							<CabinTypeName>Business</CabinTypeName>
+						</SegmentCabinType>
+					</CabinTypeAssociationChoice>
+					<DatedMarketingSegmentRefId>DMS1</DatedMarketingSegmentRefId>
+					<MarketingCarrierRBD_Code>D</MarketingCarrierRBD_Code>
+					<PaxSegmentID>SEG1</PaxSegmentID>
+				</PaxSegment>
+				<PaxSegment>
+					<CabinTypeAssociationChoice>
+						<SegmentCabinType>
+							<CabinTypeCode>2</CabinTypeCode>
+							<CabinTypeName>Business</CabinTypeName>
+						</SegmentCabinType>
+					</CabinTypeAssociationChoice>
+					<DatedMarketingSegmentRefId>DMS2</DatedMarketingSegmentRefId>
+					<MarketingCarrierRBD_Code>D</MarketingCarrierRBD_Code>
+					<PaxSegmentID>SEG2</PaxSegmentID>
+				</PaxSegment>
+				<PaxSegment>
+					<CabinTypeAssociationChoice>
+						<SegmentCabinType>
+							<CabinTypeCode>2</CabinTypeCode>
+							<CabinTypeName>Business</CabinTypeName>
+						</SegmentCabinType>
+					</CabinTypeAssociationChoice>
+					<DatedMarketingSegmentRefId>DMS3</DatedMarketingSegmentRefId>
+					<MarketingCarrierRBD_Code>D</MarketingCarrierRBD_Code>
+					<PaxSegmentID>SEG3</PaxSegmentID>
+				</PaxSegment>
+				<PaxSegment>
+					<CabinTypeAssociationChoice>
+						<SegmentCabinType>
+							<CabinTypeCode>2</CabinTypeCode>
+							<CabinTypeName>Business</CabinTypeName>
+						</SegmentCabinType>
+					</CabinTypeAssociationChoice>
+					<DatedMarketingSegmentRefId>DMS4</DatedMarketingSegmentRefId>
+					<MarketingCarrierRBD_Code>D</MarketingCarrierRBD_Code>
+					<PaxSegmentID>SEG4</PaxSegmentID>
+				</PaxSegment>
+				<PaxSegment>
+					<CabinTypeAssociationChoice>
+						<SegmentCabinType>
+							<CabinTypeCode>2</CabinTypeCode>
+							<CabinTypeName>Business</CabinTypeName>
+						</SegmentCabinType>
+					</CabinTypeAssociationChoice>
+					<DatedMarketingSegmentRefId>DMS5</DatedMarketingSegmentRefId>
+					<MarketingCarrierRBD_Code>D</MarketingCarrierRBD_Code>
+					<PaxSegmentID>SEG5</PaxSegmentID>
+				</PaxSegment>
+				<PaxSegment>
+					<CabinTypeAssociationChoice>
+						<SegmentCabinType>
+							<CabinTypeCode>2</CabinTypeCode>
+							<CabinTypeName>Business</CabinTypeName>
+						</SegmentCabinType>
+					</CabinTypeAssociationChoice>
+					<DatedMarketingSegmentRefId>DMS6</DatedMarketingSegmentRefId>
+					<MarketingCarrierRBD_Code>D</MarketingCarrierRBD_Code>
+					<PaxSegmentID>SEG6</PaxSegmentID>
+				</PaxSegment>
+				<PaxSegment>
+					<CabinTypeAssociationChoice>
+						<SegmentCabinType>
+							<CabinTypeCode>2</CabinTypeCode>
+							<CabinTypeName>Business</CabinTypeName>
+						</SegmentCabinType>
+					</CabinTypeAssociationChoice>
+					<DatedMarketingSegmentRefId>DMS7</DatedMarketingSegmentRefId>
+					<MarketingCarrierRBD_Code>D</MarketingCarrierRBD_Code>
+					<PaxSegmentID>SEG7</PaxSegmentID>
+				</PaxSegment>
+				<PaxSegment>
+					<CabinTypeAssociationChoice>
+						<SegmentCabinType>
+							<CabinTypeCode>2</CabinTypeCode>
+							<CabinTypeName>Business</CabinTypeName>
+						</SegmentCabinType>
+					</CabinTypeAssociationChoice>
+					<DatedMarketingSegmentRefId>DMS8</DatedMarketingSegmentRefId>
+					<MarketingCarrierRBD_Code>D</MarketingCarrierRBD_Code>
+					<PaxSegmentID>SEG8</PaxSegmentID>
+				</PaxSegment>
+			</PaxSegmentList>
+			<PriceClassList>
+				<PriceClass>
+					<Name>Upper Flex</Name>
+					<PriceClassID>PC1</PriceClassID>
+				</PriceClass>
+			</PriceClassList>
+		</DataLists>
+		<OffersGroup xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<CarrierOffers>
+				<Offer>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-14T17:40:24Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>9SwMabrZSISOq5rctEBOF8001|6f84bd0d-3b77-45c5-99b4-13ecfc614c62</OfferID>
+					<OfferItem>
+						<FareDetail>
+							<FareComponent>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<FareBasisCode>DS04BENX</FareBasisCode>
+								<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+								<PriceClassRefID>PC1</PriceClassRefID>
+							</FareComponent>
+							<PaxRefID>ADULT_1</PaxRefID>
+						</FareDetail>
+						<OfferItemID>9SwMabrZSISOq5rctEBOF8001|6f84bd0d-3b77-45c5-99b4-13ecfc614c62-1</OfferItemID>
+						<PaymentTimeLimit>
+							<PaymentTimeLimitDate>
+								<PaymentTimeLimitDateTime>2023-04-17T23:59:00Z</PaymentTimeLimitDateTime>
+							</PaymentTimeLimitDate>
+						</PaymentTimeLimit>
+						<Price>
+							<BaseAmount CurCode="GBP">5747.00</BaseAmount>
+							<TaxSummary>
+								<TotalTaxAmount CurCode="GBP">727.61</TotalTaxAmount>
+							</TaxSummary>
+							<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+						</Price>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV1</ServiceID>
+						</Service>
+					</OfferItem>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+					</TotalPrice>
+				</Offer>
+				<Offer>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-14T17:40:24Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>9SwMabrZSISOq5rctEBOF8002|6f84bd0d-3b77-45c5-99b4-13ecfc614c62</OfferID>
+					<OfferItem>
+						<FareDetail>
+							<FareComponent>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<FareBasisCode>DS04BENX</FareBasisCode>
+								<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+								<PriceClassRefID>PC1</PriceClassRefID>
+							</FareComponent>
+							<PaxRefID>ADULT_1</PaxRefID>
+						</FareDetail>
+						<OfferItemID>9SwMabrZSISOq5rctEBOF8002|6f84bd0d-3b77-45c5-99b4-13ecfc614c62-1</OfferItemID>
+						<PaymentTimeLimit>
+							<PaymentTimeLimitDate>
+								<PaymentTimeLimitDateTime>2023-04-17T23:59:00Z</PaymentTimeLimitDateTime>
+							</PaymentTimeLimitDate>
+						</PaymentTimeLimit>
+						<Price>
+							<BaseAmount CurCode="GBP">5747.00</BaseAmount>
+							<TaxSummary>
+								<TotalTaxAmount CurCode="GBP">727.61</TotalTaxAmount>
+							</TaxSummary>
+							<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+						</Price>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV2</ServiceID>
+						</Service>
+					</OfferItem>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+					</TotalPrice>
+				</Offer>
+				<Offer>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR3</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR3</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR3</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-14T17:40:24Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>9SwMabrZSISOq5rctEBOF8003|6f84bd0d-3b77-45c5-99b4-13ecfc614c62</OfferID>
+					<OfferItem>
+						<FareDetail>
+							<FareComponent>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<FareBasisCode>DS04BENX</FareBasisCode>
+								<PaxSegmentRefID>SEG3</PaxSegmentRefID>
+								<PriceClassRefID>PC1</PriceClassRefID>
+							</FareComponent>
+							<PaxRefID>ADULT_1</PaxRefID>
+						</FareDetail>
+						<OfferItemID>9SwMabrZSISOq5rctEBOF8003|6f84bd0d-3b77-45c5-99b4-13ecfc614c62-1</OfferItemID>
+						<PaymentTimeLimit>
+							<PaymentTimeLimitDate>
+								<PaymentTimeLimitDateTime>2023-04-17T23:59:00Z</PaymentTimeLimitDateTime>
+							</PaymentTimeLimitDate>
+						</PaymentTimeLimit>
+						<Price>
+							<BaseAmount CurCode="GBP">5747.00</BaseAmount>
+							<TaxSummary>
+								<TotalTaxAmount CurCode="GBP">727.61</TotalTaxAmount>
+							</TaxSummary>
+							<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+						</Price>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR3</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV3</ServiceID>
+						</Service>
+					</OfferItem>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+					</TotalPrice>
+				</Offer>
+				<Offer>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR4</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB2</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR4</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR4</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-14T17:40:24Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>9SwMabrZSISOq5rctEBOF8004|6f84bd0d-3b77-45c5-99b4-13ecfc614c62</OfferID>
+					<OfferItem>
+						<FareDetail>
+							<FareComponent>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<FareBasisCode>DS04BENX</FareBasisCode>
+								<PaxSegmentRefID>SEG4</PaxSegmentRefID>
+								<PriceClassRefID>PC1</PriceClassRefID>
+							</FareComponent>
+							<PaxRefID>ADULT_1</PaxRefID>
+						</FareDetail>
+						<OfferItemID>9SwMabrZSISOq5rctEBOF8004|6f84bd0d-3b77-45c5-99b4-13ecfc614c62-1</OfferItemID>
+						<PaymentTimeLimit>
+							<PaymentTimeLimitDate>
+								<PaymentTimeLimitDateTime>2023-04-17T23:59:00Z</PaymentTimeLimitDateTime>
+							</PaymentTimeLimitDate>
+						</PaymentTimeLimit>
+						<Price>
+							<BaseAmount CurCode="GBP">5747.00</BaseAmount>
+							<TaxSummary>
+								<TotalTaxAmount CurCode="GBP">727.61</TotalTaxAmount>
+							</TaxSummary>
+							<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+						</Price>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR4</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV4</ServiceID>
+						</Service>
+					</OfferItem>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+					</TotalPrice>
+				</Offer>
+				<Offer>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR5</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB2</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR5</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR5</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-14T17:40:24Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>9SwMabrZSISOq5rctEBOF8005|6f84bd0d-3b77-45c5-99b4-13ecfc614c62</OfferID>
+					<OfferItem>
+						<FareDetail>
+							<FareComponent>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<FareBasisCode>DS04BENX</FareBasisCode>
+								<PaxSegmentRefID>SEG5</PaxSegmentRefID>
+								<PriceClassRefID>PC1</PriceClassRefID>
+							</FareComponent>
+							<PaxRefID>ADULT_1</PaxRefID>
+						</FareDetail>
+						<OfferItemID>9SwMabrZSISOq5rctEBOF8005|6f84bd0d-3b77-45c5-99b4-13ecfc614c62-1</OfferItemID>
+						<PaymentTimeLimit>
+							<PaymentTimeLimitDate>
+								<PaymentTimeLimitDateTime>2023-04-17T23:59:00Z</PaymentTimeLimitDateTime>
+							</PaymentTimeLimitDate>
+						</PaymentTimeLimit>
+						<Price>
+							<BaseAmount CurCode="GBP">5747.00</BaseAmount>
+							<TaxSummary>
+								<TotalTaxAmount CurCode="GBP">727.61</TotalTaxAmount>
+							</TaxSummary>
+							<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+						</Price>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR5</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV5</ServiceID>
+						</Service>
+					</OfferItem>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+					</TotalPrice>
+				</Offer>
+				<Offer>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR6</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR6</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR6</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-14T17:40:24Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>9SwMabrZSISOq5rctEBOF8006|6f84bd0d-3b77-45c5-99b4-13ecfc614c62</OfferID>
+					<OfferItem>
+						<FareDetail>
+							<FareComponent>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<FareBasisCode>DS04BENX</FareBasisCode>
+								<PaxSegmentRefID>SEG6</PaxSegmentRefID>
+								<PriceClassRefID>PC1</PriceClassRefID>
+							</FareComponent>
+							<PaxRefID>ADULT_1</PaxRefID>
+						</FareDetail>
+						<OfferItemID>9SwMabrZSISOq5rctEBOF8006|6f84bd0d-3b77-45c5-99b4-13ecfc614c62-1</OfferItemID>
+						<PaymentTimeLimit>
+							<PaymentTimeLimitDate>
+								<PaymentTimeLimitDateTime>2023-04-17T23:59:00Z</PaymentTimeLimitDateTime>
+							</PaymentTimeLimitDate>
+						</PaymentTimeLimit>
+						<Price>
+							<BaseAmount CurCode="GBP">5747.00</BaseAmount>
+							<TaxSummary>
+								<TotalTaxAmount CurCode="GBP">727.61</TotalTaxAmount>
+							</TaxSummary>
+							<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+						</Price>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR6</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV6</ServiceID>
+						</Service>
+					</OfferItem>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+					</TotalPrice>
+				</Offer>
+				<Offer>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR7</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR7</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR7</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-14T17:40:24Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>9SwMabrZSISOq5rctEBOF8007|6f84bd0d-3b77-45c5-99b4-13ecfc614c62</OfferID>
+					<OfferItem>
+						<FareDetail>
+							<FareComponent>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<FareBasisCode>DS04BENX</FareBasisCode>
+								<PaxSegmentRefID>SEG7</PaxSegmentRefID>
+								<PriceClassRefID>PC1</PriceClassRefID>
+							</FareComponent>
+							<PaxRefID>ADULT_1</PaxRefID>
+						</FareDetail>
+						<OfferItemID>9SwMabrZSISOq5rctEBOF8007|6f84bd0d-3b77-45c5-99b4-13ecfc614c62-1</OfferItemID>
+						<PaymentTimeLimit>
+							<PaymentTimeLimitDate>
+								<PaymentTimeLimitDateTime>2023-04-17T23:59:00Z</PaymentTimeLimitDateTime>
+							</PaymentTimeLimitDate>
+						</PaymentTimeLimit>
+						<Price>
+							<BaseAmount CurCode="GBP">5747.00</BaseAmount>
+							<TaxSummary>
+								<TotalTaxAmount CurCode="GBP">727.61</TotalTaxAmount>
+							</TaxSummary>
+							<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+						</Price>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR7</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV7</ServiceID>
+						</Service>
+					</OfferItem>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+					</TotalPrice>
+				</Offer>
+				<Offer>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR8</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR8</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR8</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-14T17:40:24Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>9SwMabrZSISOq5rctEBOF8008|6f84bd0d-3b77-45c5-99b4-13ecfc614c62</OfferID>
+					<OfferItem>
+						<FareDetail>
+							<FareComponent>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<FareBasisCode>DS04BENX</FareBasisCode>
+								<PaxSegmentRefID>SEG8</PaxSegmentRefID>
+								<PriceClassRefID>PC1</PriceClassRefID>
+							</FareComponent>
+							<PaxRefID>ADULT_1</PaxRefID>
+						</FareDetail>
+						<OfferItemID>9SwMabrZSISOq5rctEBOF8008|6f84bd0d-3b77-45c5-99b4-13ecfc614c62-1</OfferItemID>
+						<PaymentTimeLimit>
+							<PaymentTimeLimitDate>
+								<PaymentTimeLimitDateTime>2023-04-17T23:59:00Z</PaymentTimeLimitDateTime>
+							</PaymentTimeLimitDate>
+						</PaymentTimeLimit>
+						<Price>
+							<BaseAmount CurCode="GBP">5747.00</BaseAmount>
+							<TaxSummary>
+								<TotalTaxAmount CurCode="GBP">727.61</TotalTaxAmount>
+							</TaxSummary>
+							<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+						</Price>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR8</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV8</ServiceID>
+						</Service>
+					</OfferItem>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+					</TotalPrice>
+				</Offer>
+				<Offer>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-14T17:40:24Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>VDrvCoF3GvGOI3juxp5KS3001|6f84bd0d-3b77-45c5-99b4-13ecfc614c62</OfferID>
+					<OfferItem>
+						<FareDetail>
+							<FareComponent>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<FareBasisCode>DS04BENX</FareBasisCode>
+								<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+								<PriceClassRefID>PC1</PriceClassRefID>
+							</FareComponent>
+							<PaxRefID>ADULT_1</PaxRefID>
+						</FareDetail>
+						<OfferItemID>VDrvCoF3GvGOI3juxp5KS3001|6f84bd0d-3b77-45c5-99b4-13ecfc614c62-1</OfferItemID>
+						<PaymentTimeLimit>
+							<PaymentTimeLimitDate>
+								<PaymentTimeLimitDateTime>2023-04-17T23:59:00Z</PaymentTimeLimitDateTime>
+							</PaymentTimeLimitDate>
+						</PaymentTimeLimit>
+						<Price>
+							<BaseAmount CurCode="GBP">5747.00</BaseAmount>
+							<TaxSummary>
+								<TotalTaxAmount CurCode="GBP">727.61</TotalTaxAmount>
+							</TaxSummary>
+							<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+						</Price>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV9</ServiceID>
+						</Service>
+					</OfferItem>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+					</TotalPrice>
+				</Offer>
+				<Offer>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-14T17:40:24Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>VDrvCoF3GvGOI3juxp5KS3002|6f84bd0d-3b77-45c5-99b4-13ecfc614c62</OfferID>
+					<OfferItem>
+						<FareDetail>
+							<FareComponent>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<FareBasisCode>DS04BENX</FareBasisCode>
+								<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+								<PriceClassRefID>PC1</PriceClassRefID>
+							</FareComponent>
+							<PaxRefID>ADULT_1</PaxRefID>
+						</FareDetail>
+						<OfferItemID>VDrvCoF3GvGOI3juxp5KS3002|6f84bd0d-3b77-45c5-99b4-13ecfc614c62-1</OfferItemID>
+						<PaymentTimeLimit>
+							<PaymentTimeLimitDate>
+								<PaymentTimeLimitDateTime>2023-04-17T23:59:00Z</PaymentTimeLimitDateTime>
+							</PaymentTimeLimitDate>
+						</PaymentTimeLimit>
+						<Price>
+							<BaseAmount CurCode="GBP">5747.00</BaseAmount>
+							<TaxSummary>
+								<TotalTaxAmount CurCode="GBP">727.61</TotalTaxAmount>
+							</TaxSummary>
+							<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+						</Price>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR2</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV10</ServiceID>
+						</Service>
+					</OfferItem>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+					</TotalPrice>
+				</Offer>
+				<Offer>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR3</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR3</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR3</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-14T17:40:24Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>VDrvCoF3GvGOI3juxp5KS3003|6f84bd0d-3b77-45c5-99b4-13ecfc614c62</OfferID>
+					<OfferItem>
+						<FareDetail>
+							<FareComponent>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<FareBasisCode>DS04BENX</FareBasisCode>
+								<PaxSegmentRefID>SEG3</PaxSegmentRefID>
+								<PriceClassRefID>PC1</PriceClassRefID>
+							</FareComponent>
+							<PaxRefID>ADULT_1</PaxRefID>
+						</FareDetail>
+						<OfferItemID>VDrvCoF3GvGOI3juxp5KS3003|6f84bd0d-3b77-45c5-99b4-13ecfc614c62-1</OfferItemID>
+						<PaymentTimeLimit>
+							<PaymentTimeLimitDate>
+								<PaymentTimeLimitDateTime>2023-04-17T23:59:00Z</PaymentTimeLimitDateTime>
+							</PaymentTimeLimitDate>
+						</PaymentTimeLimit>
+						<Price>
+							<BaseAmount CurCode="GBP">5747.00</BaseAmount>
+							<TaxSummary>
+								<TotalTaxAmount CurCode="GBP">727.61</TotalTaxAmount>
+							</TaxSummary>
+							<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+						</Price>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR3</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV11</ServiceID>
+						</Service>
+					</OfferItem>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+					</TotalPrice>
+				</Offer>
+				<Offer>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR4</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB2</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR4</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR4</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-14T17:40:24Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>VDrvCoF3GvGOI3juxp5KS3004|6f84bd0d-3b77-45c5-99b4-13ecfc614c62</OfferID>
+					<OfferItem>
+						<FareDetail>
+							<FareComponent>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<FareBasisCode>DS04BENX</FareBasisCode>
+								<PaxSegmentRefID>SEG4</PaxSegmentRefID>
+								<PriceClassRefID>PC1</PriceClassRefID>
+							</FareComponent>
+							<PaxRefID>ADULT_1</PaxRefID>
+						</FareDetail>
+						<OfferItemID>VDrvCoF3GvGOI3juxp5KS3004|6f84bd0d-3b77-45c5-99b4-13ecfc614c62-1</OfferItemID>
+						<PaymentTimeLimit>
+							<PaymentTimeLimitDate>
+								<PaymentTimeLimitDateTime>2023-04-17T23:59:00Z</PaymentTimeLimitDateTime>
+							</PaymentTimeLimitDate>
+						</PaymentTimeLimit>
+						<Price>
+							<BaseAmount CurCode="GBP">5747.00</BaseAmount>
+							<TaxSummary>
+								<TotalTaxAmount CurCode="GBP">727.61</TotalTaxAmount>
+							</TaxSummary>
+							<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+						</Price>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR4</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV12</ServiceID>
+						</Service>
+					</OfferItem>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+					</TotalPrice>
+				</Offer>
+				<Offer>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR5</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB2</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR5</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR5</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-14T17:40:24Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>VDrvCoF3GvGOI3juxp5KS3005|6f84bd0d-3b77-45c5-99b4-13ecfc614c62</OfferID>
+					<OfferItem>
+						<FareDetail>
+							<FareComponent>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<FareBasisCode>DS04BENX</FareBasisCode>
+								<PaxSegmentRefID>SEG5</PaxSegmentRefID>
+								<PriceClassRefID>PC1</PriceClassRefID>
+							</FareComponent>
+							<PaxRefID>ADULT_1</PaxRefID>
+						</FareDetail>
+						<OfferItemID>VDrvCoF3GvGOI3juxp5KS3005|6f84bd0d-3b77-45c5-99b4-13ecfc614c62-1</OfferItemID>
+						<PaymentTimeLimit>
+							<PaymentTimeLimitDate>
+								<PaymentTimeLimitDateTime>2023-04-17T23:59:00Z</PaymentTimeLimitDateTime>
+							</PaymentTimeLimitDate>
+						</PaymentTimeLimit>
+						<Price>
+							<BaseAmount CurCode="GBP">5747.00</BaseAmount>
+							<TaxSummary>
+								<TotalTaxAmount CurCode="GBP">727.61</TotalTaxAmount>
+							</TaxSummary>
+							<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+						</Price>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR5</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV13</ServiceID>
+						</Service>
+					</OfferItem>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+					</TotalPrice>
+				</Offer>
+				<Offer>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR6</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR6</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR6</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-14T17:40:24Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>VDrvCoF3GvGOI3juxp5KS3006|6f84bd0d-3b77-45c5-99b4-13ecfc614c62</OfferID>
+					<OfferItem>
+						<FareDetail>
+							<FareComponent>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<FareBasisCode>DS04BENX</FareBasisCode>
+								<PaxSegmentRefID>SEG6</PaxSegmentRefID>
+								<PriceClassRefID>PC1</PriceClassRefID>
+							</FareComponent>
+							<PaxRefID>ADULT_1</PaxRefID>
+						</FareDetail>
+						<OfferItemID>VDrvCoF3GvGOI3juxp5KS3006|6f84bd0d-3b77-45c5-99b4-13ecfc614c62-1</OfferItemID>
+						<PaymentTimeLimit>
+							<PaymentTimeLimitDate>
+								<PaymentTimeLimitDateTime>2023-04-17T23:59:00Z</PaymentTimeLimitDateTime>
+							</PaymentTimeLimitDate>
+						</PaymentTimeLimit>
+						<Price>
+							<BaseAmount CurCode="GBP">5747.00</BaseAmount>
+							<TaxSummary>
+								<TotalTaxAmount CurCode="GBP">727.61</TotalTaxAmount>
+							</TaxSummary>
+							<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+						</Price>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR6</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV14</ServiceID>
+						</Service>
+					</OfferItem>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+					</TotalPrice>
+				</Offer>
+				<Offer>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR7</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR7</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR7</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-14T17:40:24Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>VDrvCoF3GvGOI3juxp5KS3007|6f84bd0d-3b77-45c5-99b4-13ecfc614c62</OfferID>
+					<OfferItem>
+						<FareDetail>
+							<FareComponent>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<FareBasisCode>DS04BENX</FareBasisCode>
+								<PaxSegmentRefID>SEG7</PaxSegmentRefID>
+								<PriceClassRefID>PC1</PriceClassRefID>
+							</FareComponent>
+							<PaxRefID>ADULT_1</PaxRefID>
+						</FareDetail>
+						<OfferItemID>VDrvCoF3GvGOI3juxp5KS3007|6f84bd0d-3b77-45c5-99b4-13ecfc614c62-1</OfferItemID>
+						<PaymentTimeLimit>
+							<PaymentTimeLimitDate>
+								<PaymentTimeLimitDateTime>2023-04-17T23:59:00Z</PaymentTimeLimitDateTime>
+							</PaymentTimeLimitDate>
+						</PaymentTimeLimit>
+						<Price>
+							<BaseAmount CurCode="GBP">5747.00</BaseAmount>
+							<TaxSummary>
+								<TotalTaxAmount CurCode="GBP">727.61</TotalTaxAmount>
+							</TaxSummary>
+							<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+						</Price>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR7</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV15</ServiceID>
+						</Service>
+					</OfferItem>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+					</TotalPrice>
+				</Offer>
+				<Offer>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR8</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<BaggageAssociations>
+						<BaggageAllowanceRefID>CAB1</BaggageAllowanceRefID>
+						<OfferFlightAssociations>
+							<PaxJourneyRef>
+								<PaxJourneyRefID>JOUR8</PaxJourneyRefID>
+							</PaxJourneyRef>
+						</OfferFlightAssociations>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</BaggageAssociations>
+					<JourneyOverview>
+						<JourneyPriceClass>
+							<PaxJourneyRefID>JOUR8</PaxJourneyRefID>
+							<PriceClassRefID>PC1</PriceClassRefID>
+						</JourneyPriceClass>
+					</JourneyOverview>
+					<OfferExpirationTimeLimitDateTime>2023-04-14T17:40:24Z</OfferExpirationTimeLimitDateTime>
+					<OfferID>VDrvCoF3GvGOI3juxp5KS3008|6f84bd0d-3b77-45c5-99b4-13ecfc614c62</OfferID>
+					<OfferItem>
+						<FareDetail>
+							<FareComponent>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<CancelRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</CancelRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>Prior To Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<ChangeRestrictions>
+									<AllowedModificationInd>true</AllowedModificationInd>
+									<DescText>LHR-JFK</DescText>
+									<Fee>
+										<Amount CurCode="GBP">0.00</Amount>
+									</Fee>
+									<JourneyStageCode>After Departure</JourneyStageCode>
+								</ChangeRestrictions>
+								<FareBasisCode>DS04BENX</FareBasisCode>
+								<PaxSegmentRefID>SEG8</PaxSegmentRefID>
+								<PriceClassRefID>PC1</PriceClassRefID>
+							</FareComponent>
+							<PaxRefID>ADULT_1</PaxRefID>
+						</FareDetail>
+						<OfferItemID>VDrvCoF3GvGOI3juxp5KS3008|6f84bd0d-3b77-45c5-99b4-13ecfc614c62-1</OfferItemID>
+						<PaymentTimeLimit>
+							<PaymentTimeLimitDate>
+								<PaymentTimeLimitDateTime>2023-04-17T23:59:00Z</PaymentTimeLimitDateTime>
+							</PaymentTimeLimitDate>
+						</PaymentTimeLimit>
+						<Price>
+							<BaseAmount CurCode="GBP">5747.00</BaseAmount>
+							<TaxSummary>
+								<TotalTaxAmount CurCode="GBP">727.61</TotalTaxAmount>
+							</TaxSummary>
+							<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+						</Price>
+						<Service>
+							<OfferServiceAssociation>
+								<PaxJourneyRef>
+									<PaxJourneyRefID>JOUR8</PaxJourneyRefID>
+								</PaxJourneyRef>
+							</OfferServiceAssociation>
+							<PaxRefID>ADULT_1</PaxRefID>
+							<ServiceID>SV16</ServiceID>
+						</Service>
+					</OfferItem>
+					<OwnerCode>VS</OwnerCode>
+					<TotalPrice>
+						<TotalAmount CurCode="GBP">6474.61</TotalAmount>
+					</TotalPrice>
+				</Offer>
+			</CarrierOffers>
+		</OffersGroup>
+	</Response>
+</IATA_AirShoppingRS>

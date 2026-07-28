@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IATA_ServiceListRQ xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <DistributionChain>
+      <DistributionChainLink xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+         <Ordinal>0</Ordinal>
+         <OrgRole>Seller</OrgRole>
+         <ParticipatingOrg>
+            <Name>NDC USER</Name>
+            <OrgID>91281035</OrgID>
+         </ParticipatingOrg>
+      </DistributionChainLink>
+   </DistributionChain>
+   <Request>
+      <ServiceListCoreRequest xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+         <OfferRequest>
+            <Offer>
+               <OfferID>15b41dd0-0841-401a-b291-52fae0f95a45|EMJcOxM0OsRQzUR1wSXYGL001</OfferID>
+               <OwnerCode>VS</OwnerCode>
+            </Offer>
+         </OfferRequest>
+      </ServiceListCoreRequest>
+   </Request>
+</IATA_ServiceListRQ>

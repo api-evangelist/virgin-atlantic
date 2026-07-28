@@ -1,0 +1,191 @@
+generated: '2026-07-28'
+method: derived
+source: >-
+  Derived from Virgin Atlantic's own published DataLists / Common Types reference on VS NDC Connect
+  (https://ndc.virginatlantic.com/docs, DataLists section), the generated-identifier syntax table at
+  https://ndc.virginatlantic.com/docs/orderchangenotif, the Error and Warning common types at
+  https://ndc.virginatlantic.com/docs/DataLists/Error and .../Warning, the certification tiers at
+  https://ndc.virginatlantic.com/certification, the testing pages at
+  https://ndc.virginatlantic.com/docs/testing-your-build, and the harvested IATA NDC 21.3.3 XSDs in
+  schemas/. Every term below appears in Virgin Atlantic's published documentation or in the IATA
+  schemas it distributes - nothing was invented.
+description: >-
+  The controlled vocabulary a developer needs in order to read or build a Virgin Atlantic IATA NDC
+  21.3 payload. Virgin Atlantic does not publish a "glossary" page as such; what it publishes is a
+  DataLists / Common Types reference plus an identifier-syntax table, which together function as the
+  API's data dictionary. This file consolidates those published terms into one machine-readable
+  vocabulary. The domain terms are IATA's (NDC OffersAndOrders); the identifier patterns,
+  certification tiers, fare-brand names and test-value code sets are Virgin Atlantic's own.
+standard:
+  name: IATA NDC
+  version: '21.3'
+  schema_release: 21.3.3 (XSD version 9.001, id IATA2021.3)
+  namespace: http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage
+  schemas: schemas/
+terms:
+- term: Offer
+  kind: entity
+  definition: A priced, bookable proposal returned by AirShopping and firmed by OfferPrice. Carries a PaymentTimeLimit and is single-use and time-limited.
+- term: OfferItem
+  kind: entity
+  definition: A line within an Offer. OrderCreate consumes the selected OfferID plus its OfferItemIDs.
+- term: Order
+  kind: entity
+  definition: The airline record created by OrderCreate and returned as OrderView. Virgin Atlantic remains the system of record.
+- term: Pax
+  kind: entity
+  datalist: PaxList
+  docs: https://ndc.virginatlantic.com/docs/DataLists/PaxList
+  definition: A passenger, typed by Passenger Type Code.
+- term: PaxJourney
+  kind: entity
+  datalist: PaxJourneyList
+  definition: One direction of an itinerary, composed of segments.
+- term: PaxSegment
+  kind: entity
+  datalist: PaxSegmentList
+  definition: A marketed flight segment flown by a passenger.
+- term: OriginDest
+  kind: entity
+  datalist: OriginDestList
+  definition: An origin/destination pair. A routing may carry no more than 6.
+- term: DatedMarketingSegment
+  kind: entity
+  datalist: DatedMarketingSegmentList
+  definition: The marketing carrier view of a dated flight segment.
+- term: DatedOperatingSegment
+  kind: entity
+  datalist: DatedOperatingSegmentList
+  definition: The operating carrier view of a dated flight segment.
+- term: DatedOperatingLeg
+  kind: entity
+  datalist: DatedOperatingLegList
+  definition: A single leg of an operating segment.
+- term: BaggageAllowance
+  kind: entity
+  datalist: BaggageAllowanceList
+  docs: https://ndc.virginatlantic.com/docs/DataLists/BaggageAllowanceList
+  definition: Checked and cabin baggage entitlement attached to an offer or an order.
+- term: ServiceDefinition
+  kind: entity
+  datalist: ServiceDefinitionList
+  definition: The catalogue definition of an ancillary service (bag, seat, paid service).
+- term: Service
+  kind: entity
+  definition: An instance of a ServiceDefinition applied to a passenger and segment on an offer or order.
+- term: SeatProfile
+  kind: entity
+  datalist: SeatProfileList
+  definition: Seat characteristics used by SeatAvailability seat maps.
+- term: PriceClass
+  kind: entity
+  datalist: PriceClassList
+  definition: The fare product or brand attached to an offer.
+- term: Penalty
+  kind: entity
+  datalist: PenaltyList
+  definition: Change and cancel penalties by fare condition, before and after departure.
+- term: Disclosure
+  kind: entity
+  datalist: DisclosureList
+  definition: Regulatory and commercial disclosure text attached to offers and orders.
+- term: ContactInfo
+  kind: entity
+  datalist: ContactInfoList
+  definition: Passenger and agency contact details.
+- term: DistributionChain
+  kind: entity
+  datalist: DistributionChain
+  definition: The selling chain - agency, aggregator and system identifiers (IATA or TIDS numbers). Missing or invalid values return error 717.
+- term: Error
+  kind: entity
+  datalist: Error
+  docs: https://ndc.virginatlantic.com/docs/DataLists/Error
+  definition: A returned error carrying a PADIS 9321 code, a description, a language code and a processing status.
+- term: Warning
+  kind: entity
+  datalist: Warning
+  docs: https://ndc.virginatlantic.com/docs/DataLists/Warning
+  definition: A non-fatal advisory returned alongside a processed response.
+- term: AugmentationPoint
+  kind: element
+  definition: The IATA NDC extension element present throughout the 21.3 schemas, used to carry airline-specific data without breaking the standard shape.
+  source: schemas/IATA_OffersAndOrdersCommonTypes.xsd
+identifier_syntax:
+  docs: https://ndc.virginatlantic.com/docs/orderchangenotif
+  note: Virgin Atlantic publishes the generated-identifier syntax for the core reference types.
+  patterns:
+  - {id: PaxJourneyID, ref: PaxJourneyRefID, pattern: '"JOUR" + <counter>', example: JOUR1}
+  - {id: PaxSegmentID, ref: PaxSegmentRefID / SegmentRefs, pattern: '"SEG" + <counter>', example: SEG1}
+  - {id: PaxID, ref: PaxRefID / PassengerRefs, pattern: PaxID based on Passenger Type Code, example: ADULT_1}
+  - {id: ServiceID, ref: ServiceRefID, pattern: '"SV" + <counter>', example: SV1}
+  - {id: ServiceDefinitionID, ref: ServiceDefinitionRefID, pattern: '"BAGSRV" + <counter>', example: BAGSV01}
+code_sets:
+- name: Message set
+  note: The twelve IATA NDC 21.3 messages Virgin Atlantic documents publicly.
+  values: [AirShopping, OfferPrice, OrderCreate, SeatAvailability, ServiceList, OrderRetrieve,
+    OrderReshop, OrderQuote, OrderChange, OrderChangeNotif, OrderList, OrderHistory]
+- name: Passenger Type Code
+  note: Published passenger typing on the PaxList reference.
+  values:
+  - {code: ADT, meaning: Adult, detail: 16 years and over}
+  - {code: CHD, meaning: Child, detail: 2 to 12 years}
+  - {code: GBE, meaning: Young adult, detail: 12 to 16 years}
+  - meaning: Infant
+    detail: >-
+      Under 2 years. Infants may not exceed the number of adults (error 324), and infant-with-seat
+      bookings are not supported.
+    note: >-
+      The published PaxList reference describes the infant type without naming its code, so no code
+      is asserted here.
+- name: Processing status (Error/Warning TypeCode, StatusText)
+  docs: https://ndc.virginatlantic.com/docs/DataLists/Error
+  values: [NotProcessed, Processed, Unavailable, Unknown, Retry]
+- name: Fare brand (PriceClass)
+  note: Virgin Atlantic's own fare products returned in PriceClassList.
+  values: [Economy Light, Economy Classic, Economy Delight, Premium, Upper Class]
+- name: Payment card code
+  note: IATA/PADIS card scheme codes sent in the NDC payment element, as published on the test-card page.
+  docs: https://ndc.virginatlantic.com/docs/testing-your-build/test-credit-card-numbers
+  values:
+  - {code: VI, meaning: Visa}
+  - {code: CA, meaning: MasterCard}
+  - {code: AX, meaning: American Express}
+  - {code: DS, meaning: Discover}
+  - {code: DC, meaning: Diners Club}
+- name: Form of payment
+  values: [Card (3DS2 authenticated for online agents), IATA BSP Cash, IATA BSP EasyPay]
+- name: Environment
+  values: [Test, PreLive, Live]
+- name: Certification tier
+  docs: https://ndc.virginatlantic.com/certification
+  values:
+  - {tier: RED, status: live, note: Minimum tier to apply for a production API key; use cases Cert-1-1 to Cert-1-6}
+  - {tier: SILVER, status: live, note: Use cases Cert-2-1 to Cert-2-5}
+  - {tier: GOLD, status: scheduled February 2026}
+acronyms:
+- {term: NDC, expansion: New Distribution Capability, note: The IATA XML message standard this API implements}
+- {term: PADIS, expansion: Passenger and Airport Data Interchange Standards, note: Source of the 9321 error code set}
+- {term: ARM Index, expansion: Airline Retailing Maturity Index, note: The IATA certification Virgin Atlantic holds on 21.3}
+- {term: PNR, expansion: Passenger Name Record, note: The booking reference or record locator - accepted as an alternative to OrderID on OrderRetrieve}
+- {term: TIDS, expansion: Travel Industry Designator Service, note: Non-accredited seller identifier carried in DistributionChain}
+- {term: TUA, expansion: Technical User Agreement, note: Mandatory signed agreement for production access}
+- {term: DPA, expansion: Data Processing Agreement, note: Mandatory signed agreement for production access}
+- {term: ASA, expansion: Agency Sales Agreement, note: Mandatory signed agreement for agents}
+- {term: FQTV, expansion: Frequent Traveller, note: The Flying Club membership number carried for loyalty accrual}
+- {term: APIS, expansion: Advance Passenger Information System, note: Passenger document data amended through OrderChange}
+- {term: IROP, expansion: Irregular Operations, note: A trigger for airline-initiated OrderChangeNotif}
+- {term: OCN, expansion: OrderChangeNotif, note: The airline-to-seller push surface}
+- {term: BSP, expansion: Billing and Settlement Plan, note: IATA settlement channel used for Cash and EasyPay forms of payment}
+- {term: ARC, expansion: Airlines Reporting Corporation, note: US settlement channel; enablement is on the 2026 roadmap}
+- {term: RFC / Non-RFC, expansion: Risk-Free Cancellation / Non Risk-Free Cancellation, note: The two published voluntary cancellation paths}
+- {term: ECI, expansion: Electronic Commerce Indicator, note: Card authentication indicator published with the test cards}
+cross_links:
+  data_model: data-model/virgin-atlantic-data-model.yml
+  errors: errors/virgin-atlantic-error-codes.yml
+  conventions: conventions/virgin-atlantic-conventions.yml
+  sandbox: sandbox/virgin-atlantic-sandbox.yml
+  schemas: schemas/
+not_published:
+- A single consolidated glossary page (the vocabulary is spread across the DataLists reference pages)
+- SKOS, RDF, OWL or JSON-LD serialisation of the vocabulary

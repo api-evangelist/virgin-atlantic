@@ -1,0 +1,62 @@
+generated: '2026-07-28'
+method: searched
+description: >-
+  Results of probing the /.well-known/ discovery surface on every Virgin Atlantic host in apis.yml
+  and every host named in the review. Nothing was found: no security.txt, no OIDC or OAuth metadata,
+  no api-catalog, no ai-plugin manifest, and no /llms.txt. ndc.virginatlantic.com answers 200 with
+  the portal's HTML catch-all page (6,449 bytes, identical for every unknown path) for some
+  /.well-known/ paths - those are recorded as a soft 404, not as documents, and nothing was saved.
+  No WellKnown or SecurityTxt pointer is emitted because no real document exists.
+soft_404_signature:
+  host: ndc.virginatlantic.com
+  bytes: 6449
+  content_type: text/html; charset=utf-8
+  note: The portal returns this same HTML shell with HTTP 200 for any unrecognised path.
+hosts:
+  - host: https://ndc.virginatlantic.com
+    role: VS NDC Connect developer portal / documentation
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 200, type: text/html, note: soft 404 - portal HTML shell, not saved}
+      - {path: /.well-known/oauth-authorization-server, status: 200, type: text/html, note: soft 404 - portal HTML shell, not saved}
+      - {path: /.well-known/oauth-protected-resource, status: 200, type: text/html, note: soft 404 - portal HTML shell, not saved}
+      - {path: /.well-known/api-catalog, status: 200, type: text/html, note: soft 404 - portal HTML shell, not saved}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /llms.txt, status: 404}
+      - {path: /openapi.json, status: 404}
+      - {path: /swagger.json, status: 404}
+      - {path: /api-docs, status: 200, type: text/html, note: soft 404 - portal HTML shell}
+      - {path: /robots.txt, status: 404}
+      - {path: /sitemap.xml, status: 404}
+  - host: https://www.virginatlantic.com
+    role: Consumer website (runs on Delta Air Lines platform infrastructure)
+    documents:
+      - {path: /.well-known/security.txt, status: 403, type: application/xml, note: 'S3-style AccessDenied response'}
+      - {path: /.well-known/openid-configuration, status: 403}
+      - {path: /.well-known/api-catalog, status: 403}
+      - {path: /.well-known/ai-plugin.json, status: 403}
+      - {path: /llms.txt, status: 404}
+  - host: https://virginatlantic.com
+    role: Apex domain (redirects to www)
+    documents:
+      - {path: /.well-known/security.txt, status: 403}
+  - host: https://api.virginatlantic.com
+    role: Akamai-fronted host that serves the consumer marketing site; no public API
+    documents:
+      - {path: /.well-known/security.txt, status: 444, note: 'Akamai "Access Denied" page'}
+      - {path: /openapi.json, status: 444}
+  - host: https://flywith.virginatlantic.com
+    role: Trade / partner hub (policies, agreements)
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+findings:
+  security_txt: none
+  openid_configuration: none
+  oauth_authorization_server: none
+  api_catalog: none
+  ai_plugin: none
+  llms_txt: none
+  note: >-
+    Consistent with authentication/virgin-atlantic-authentication.yml - the API is API-key only, so
+    there is no OAuth or OIDC metadata to discover. The absence of a security.txt is recorded in
+    conformance/virgin-atlantic-conformance.yml as rfc9116-security-txt conforms:false.

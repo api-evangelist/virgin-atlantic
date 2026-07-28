@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IATA_OrderChangeRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage">
+	<DistributionChain>
+		<DistributionChainLink xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<Ordinal>1</Ordinal>
+			<OrgRole>Seller</OrgRole>
+			<ParticipatingOrg>
+				<Name>Skyscanner</Name>
+				<OrgID>91281035</OrgID>
+			</ParticipatingOrg>
+		</DistributionChainLink>
+	</DistributionChain>
+	<Request>
+		<BookingRef xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<BookingID>DA779P</BookingID>
+		</BookingRef>
+		<ChangeOrderChoice xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<AcceptSelectedQuotedOfferList>
+				<SelectedPricedOffer>
+					<OfferRefID>573c3540-61a5-4720-b764-46672496c1b6</OfferRefID>
+					<OwnerCode>VS</OwnerCode>
+					<SelectedOfferItem>
+						<OfferItemRefID>573c3540-61a5-4720-b764-46672496c1b6|1</OfferItemRefID>
+						<PaxRefID>ADULT_1</PaxRefID>
+						<SelectedALaCarteOfferItem>
+							<OfferFlightAssociations>
+								<PaxSegmentReferences>
+									<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+									<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+								</PaxSegmentReferences>
+							</OfferFlightAssociations>
+							<Qty>1</Qty>
+						</SelectedALaCarteOfferItem>
+					</SelectedOfferItem>
+					<SelectedOfferItem>
+						<OfferItemRefID>573c3540-61a5-4720-b764-46672496c1b6|3</OfferItemRefID>
+						<PaxRefID>ADULT_1</PaxRefID>
+						<SelectedALaCarteOfferItem>
+							<OfferFlightAssociations>
+								<PaxSegmentReferences>
+									<PaxSegmentRefID>SEG1</PaxSegmentRefID>
+									<PaxSegmentRefID>SEG2</PaxSegmentRefID>
+								</PaxSegmentReferences>
+							</OfferFlightAssociations>
+							<Qty>1</Qty>
+						</SelectedALaCarteOfferItem>
+					</SelectedOfferItem>
+				</SelectedPricedOffer>
+			</AcceptSelectedQuotedOfferList>
+		</ChangeOrderChoice>
+		<DataLists xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<PaxList>
+				<Pax>
+					<PaxID>ADULT_1</PaxID>
+				</Pax>
+			</PaxList>
+		</DataLists>
+		<Order xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<OrderID>VS932DA779P24</OrderID>
+			<OwnerCode>VS</OwnerCode>
+		</Order>
+	</Request>
+</IATA_OrderChangeRQ>

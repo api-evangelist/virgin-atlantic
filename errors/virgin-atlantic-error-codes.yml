@@ -1,0 +1,1743 @@
+generated: '2026-07-28'
+method: searched
+source: https://ndc.virginatlantic.com/docs — the per-message 'Error Response' reference pages on VS NDC
+  Connect (one per NDC message), plus the Error and Warning common-type definitions at https://ndc.virginatlantic.com/docs/DataLists/Error
+  and https://ndc.virginatlantic.com/docs/DataLists/Warning
+description: Published error and warning code registry for the Virgin Atlantic IATA NDC 21.3 API. Virgin
+  Atlantic does not use RFC 9457 problem+json; errors are returned inside the IATA NDC XML response as
+  repeating <Error> (and <Warning>) elements carrying a PADIS code, a description, and a processing StatusText.
+  Codes are documented per message, so the same numeric code can carry different descriptions in different
+  messages - every published (message, code, description) row is recorded verbatim below.
+format: iata-ndc-xml
+rfc9457: false
+envelope:
+  element: <Error>
+  repeating: true
+  docs: https://ndc.virginatlantic.com/docs/DataLists/Error
+  fields:
+  - element: <Code>
+    datatype: Alphanumeric
+    required: O
+    description: PADIS error code based on IATA/PADIS code set 9321
+  - element: <DescText>
+    datatype: String
+    required: O
+    description: PADIS error message / Virgin Atlantic custom message
+  - element: <LangCode>
+    datatype: String
+    required: M
+    description: By default 'EN'. Virgin Atlantic supports error messages only in English.
+  - element: <TagText>
+    datatype: String
+    required: O
+    description: Short description text
+  - element: <TypeCode>
+    datatype: String
+    required: M
+    description: 'Processing status code: Not Processed | Processed | Unavailable | Unknown | Retry'
+  - element: <URL>
+    datatype: String
+    required: O
+    description: Link for additional information
+  warning_element:
+    element: <Warning>
+    docs: https://ndc.virginatlantic.com/docs/DataLists/Warning
+    note: Warnings are returned alongside a processed response (StatusText 'Processed') and do not fail
+      the request.
+status_text_values:
+- NotProcessed
+- Processed
+- Unavailable
+- Unknown
+- Retry
+mandatory_element_rule:
+  code: '912'
+  message: Please complete all mandatory fields as per given Specifications
+  note: Returned when a mandatory element/attribute defined in the XSD is missing from the request.
+auth_error:
+  code: '111'
+  message: Invalid Agent's IATA API Key
+  note: The API-key rejection code; the key is passed in the Ocp-Apim-Subscription-Key header.
+counts:
+  messages_with_error_pages: 11
+  error_rows: 258
+  warning_rows: 38
+  distinct_codes: 71
+messages:
+- message: AirShopping
+  docs: https://ndc.virginatlantic.com/docs/airshopping/error-response
+  error_count: 37
+  warning_count: 3
+  errors:
+  - code: '8'
+    description: Invalid days of operation (for Past or +1 year dates)
+    status_text: NotProcessed
+    kind: error
+  - code: '12'
+    description: 'Invalid product details qualifier coded (example: cabin code specified is invalid)'
+    status_text: NotProcessed
+    kind: error
+  - code: '68'
+    description: Max accepted non-infant passengers is 9
+    status_text: NotProcessed
+    kind: error
+  - code: '100'
+    description: No available flights for the requested query - Invalid route
+    status_text: NotProcessed
+    kind: error
+  - code: '111'
+    description: Invalid Agent's IATA API Key
+    status_text: NotProcessed
+    kind: error
+  - code: '130'
+    description: Invalid Origin and Destination Pair
+    status_text: NotProcessed
+    kind: error
+  - code: '143'
+    description: No passenger/ traveller list specified or empty
+    status_text: NotProcessed
+    kind: error
+  - code: '143'
+    description: Invalid or Ineligible Passenger Type Code
+    status_text: NotProcessed
+    kind: error
+  - code: '324'
+    description: Number of infants exceeds maximum allowed per adult passenger (Cannot be more infants
+      than adults)
+    status_text: NotProcessed
+    kind: error
+  - code: '386'
+    description: Invalid days of operation
+    status_text: NotProcessed
+    kind: error
+  - code: '476'
+    description: Duplicate PaxID entered for PaxID
+    status_text: NotProcessed
+    kind: error
+  - code: '496'
+    description: No available flights for the requested query
+    status_text: Unavailable
+    kind: error
+  - code: '496'
+    description: No flight options were found for this trip
+    status_text: NotProcessed
+    kind: error
+  - code: '496'
+    description: No Offers found
+    status_text: NotProcessed
+    kind: error
+  - code: '496'
+    description: No Offers Available
+    status_text: NotProcessed
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid travel agent and/or system identification
+    status_text: NotProcessed
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid travel agent and/or Aggregator information
+    status_text: NotProcessed
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid Agency and/or Aggregator information
+    status_text: NotProcessed
+    kind: error
+  - code: '724'
+    description: Invalid routing with more than 6 occurrences of Origins and Destinations
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: Please complete all mandatory fields in AirshoppingRQ as per given Specifications
+    status_text: NotProcessed
+    kind: error
+  - code: '913'
+    description: Invalid or Timed-out Request/PricedOffer/SelectedOffer value is entered (Call again AirShoppingRQ)
+    status_text: Unavailable
+    kind: error
+  - code: '913'
+    description: Invalid or Timed-out Request/PricedOffer/SelectedOffer/OfferRefID value is entered (Call
+      again AirShoppingRQ)
+    status_text: Unavailable
+    kind: error
+  - code: '913'
+    description: We cannot find an answer because the flights we found for your trip do not have enough
+      seats available
+    status_text: Unavailable
+    kind: error
+  - code: '913'
+    description: Invalid or Timed-out OfferID is entered
+    status_text: Unavailable
+    kind: error
+  - code: '913'
+    description: OfferID is not present in the request
+    status_text: Unavailable
+    kind: error
+  - code: '914'
+    description: Invalid or missing count of Passenger Type Code
+    status_text: NotProcessed
+    kind: error
+  - code: '102'
+    description: Please provide both DaysBeforeNumber and DaysAfterNumber
+    status_text: NotProcessed
+    kind: error
+  - code: '102'
+    description: DaysBeforeNumber and DaysAfterNumber value can only be 3
+    status_text: NotProcessed
+    kind: error
+  - code: '103'
+    description: Invalid/ Missing Departure Time
+    status_text: NotProcessed
+    kind: error
+  - code: '903'
+    description: Calendar search cannot be combined with the departure time or direct flight search
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: Invalid ordinal number - should start from 1
+    status_text: NotProcessed
+    kind: error
+  - code: 75G
+    description: Unable to process requested option. Agency not authorized to sell this fare
+    status_text: NotProcessed
+    kind: error
+  - code: '143'
+    description: Fare type code is mandatory in the request. Please resend the request with the appropriate
+      Fare Type Code
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: Invalid request – Mandatory to send FareSubType code for Private Fares/Corporate Fares
+      in Airshopping Request
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: Invalid request – Only one Fare Sub type Code is supported
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: Invalid request – Incorrect Sub type Code mentioned in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: Invalid request – Fare Sub type Code is not required in Airshopping request for public
+      fares
+    status_text: NotProcessed
+    kind: error
+  warnings:
+  - code: 76H
+    description: Calendar Search not applicable for Multi City search
+    status_text: Processed
+    kind: warning
+  - code: 71A
+    description: The requested currency is not applicable for the agent location. Prices are quoted in
+      the currency applicable for the agent location.
+    status_text: Processed
+    kind: warning
+  - code: 71B
+    description: Currency type mismatch exists between Fare and Fare rule
+    status_text: Processed
+    kind: warning
+- message: OfferPrice
+  docs: https://ndc.virginatlantic.com/docs/offerprice/error-response
+  error_count: 15
+  warning_count: 2
+  errors:
+  - code: '912'
+    description: Please complete all mandatory fields in OfferPriceRQ as per given Specifications
+    status_text: NotProcessed
+    kind: error
+  - code: '913'
+    description: Invalid or Timed-out Request/PricedOffer/SelectedOffer/OfferRefID value is entered (Call
+      again AirShoppingRQ)
+    status_text: Unavailable
+    kind: error
+  - code: '914'
+    description: Invalid or missing count of Passenger Type Code
+    status_text: NotProcessed
+    kind: error
+  - code: '476'
+    description: Duplicate PaxID entered for {PaxID}
+    status_text: NotProcessed
+    kind: error
+  - code: '143'
+    description: Invalid or Ineligible Passenger Type Code
+    status_text: NotProcessed
+    kind: error
+  - code: '143'
+    description: No passenger/ traveller list specified or empty
+    status_text: NotProcessed
+    kind: error
+  - code: '324'
+    description: Number of infants exceeds maximum allowed per adult passenger
+    status_text: NotProcessed
+    kind: error
+  - code: '68'
+    description: Max accepted non-infant passengers is 9
+    status_text: NotProcessed
+    kind: error
+  - code: '911'
+    description: Internal error (unknown internal technical error)
+    status_text: Unknown
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid Corporate and/or system identification
+    status_text: NotProcessed
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid travel agent and/or Aggregator information
+    status_text: NotProcessed
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid travel agent and/or system identification
+    status_text: NotProcessed
+    kind: error
+  - code: '496'
+    description: No Offers found
+    status_text: NotProcessed
+    kind: error
+  - code: '368'
+    description: Seller not authorised to access this service - No ticketing authority
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: Invalid ordinal number - should start from 1
+    status_text: NotProcessed
+    kind: error
+  warnings:
+  - code: '711'
+    description: Selected Offer Price changed
+    status_text: Processed
+    kind: warning
+  - code: 71B
+    description: Currency type mismatch exists between Fare and Fare rule
+    status_text: Processed
+    kind: warning
+- message: OrderCreate
+  docs: https://ndc.virginatlantic.com/docs/ordercreate/error-response
+  error_count: 56
+  warning_count: 20
+  errors:
+  - code: '73'
+    description: Invalid age for PTC
+    status_text: NotProcessed
+    kind: error
+  - code: '149'
+    description: Surname too long
+    status_text: NotProcessed
+    kind: error
+  - code: '151'
+    description: Surname Mandatory and must be more than 2 characters.
+    status_text: NotProcessed
+    kind: error
+  - code: '152'
+    description: GivenName Mandatory
+    status_text: NotProcessed
+    kind: error
+  - code: '314'
+    description: Name element data invalid. Enter only letters, blanks in the name field (applies for
+      Title, Given, Surname)
+    status_text: NotProcessed
+    kind: error
+  - code: '316'
+    description: Phone mandatory in the CreateOrderRQ for Primary passenger or Payer (PaymentInfo/PayerContactInfo/Phone)
+    status_text: NotProcessed
+    kind: error
+  - code: '316'
+    description: Missing billing address data
+    status_text: NotProcessed
+    kind: error
+  - code: '317'
+    description: Contact element (phone and/or address) invalid
+    status_text: NotProcessed
+    kind: error
+  - code: '386'
+    description: Not authorized (combination of Corporate and/or Participant IDs not valid)
+    status_text: NotProcessed
+    kind: error
+  - code: '399'
+    description: Duplicate names are not allowed in the same booking
+    status_text: NotProcessed
+    kind: error
+  - code: '495'
+    description: Delayed payment not supported for orders containing ancillaries
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: Incorrect credit card information
+    status_text: NotProcessed
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid travel agent and/or system identification
+    status_text: NotProcessed
+    kind: error
+  - code: '727'
+    description: Invalid amount/ currency
+    status_text: NotProcessed
+    kind: error
+  - code: '921'
+    description: The cardholder entered incorrect Password/ Passcode - Authentication failed
+    status_text: Retry
+    kind: error
+  - code: '923'
+    description: Cardholder Authentication is temporarily unavailable
+    status_text: Unavailable
+    kind: error
+  - code: '476'
+    description: Multiple passengers found with the same identifier
+    status_text: NotProcessed
+    kind: error
+  - code: '911'
+    description: Internal error (unknown internal technical error)
+    status_text: Unknown
+    kind: error
+  - code: '912'
+    description: Incomplete message - data missing in query/ request
+    status_text: NotProcessed
+    kind: error
+  - code: '913'
+    description: Item/data not found or data not existing in processing host
+    status_text: Unavailable
+    kind: error
+  - code: '914'
+    description: Invalid format/data - data does not match syntax rules
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: Missing CAVV data in request
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: Missing/Incorrect ECI in request
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: Missing 3DS Transaction Id in request
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: Missing 3DS Authentication status in request
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: GST Details Validation - Invalid Country Code in the request.
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: GST Details Validation - Organisation Name in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: GST Details Validation - GST Number in the request.
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: GST Details Validation - Invalid E-Mail details in the request.
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: GST Details Validation - Invalid address details in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: GST Details Validation - Invalid Phone number in the request.
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: 'APIS data: Invalid data found for <<PAX n>>'
+    status_text: NotProcessed
+    kind: error
+  - code: '368'
+    description: Seller not authorised to access this service - No ticketing authority
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: Invalid ordinal number - should start from 1
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: Invalid ordinal number - should start from 1
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Entered Card number is invalid'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Mandatory card fields are missing'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Invalid CVC/CVN provided'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Invalid expiry date provided'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Invalid 3DS secure values provided'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Amount more than permitted limit'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Insufficient funds or over credit limit'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Card used is expired'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Amount exceeds Withdrawal Limit'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Card cannot be honoured for payment'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Transaction is not permitted for the cardholder'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: Payment request timed out, please retry after some time
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Card is restricted for usage'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Entered Card number is invalid'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Invalid Card Expiry'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Card not supported'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Card Authorisation Failed'
+    status_text: NotProcessed
+    kind: error
+  - code: '913'
+    description: Missing or invalid attributes present in payment request
+    status_text: NotProcessed
+    kind: error
+  - code: '913'
+    description: 'Payment declined: Currency not supported for payment'
+    status_text: NotProcessed
+    kind: error
+  - code: '466'
+    description: Credit Card form of payment is not supported for the requested market
+    status_text: NotProcessed
+    kind: error
+  - code: '466'
+    description: Credit card FOP is not applicable for Private fares
+    status_text: NotProcessed
+    kind: error
+  warnings:
+  - code: '150'
+    description: Your First and Middle name will be shortened and joined together on your Virgin Atlantic
+      ticket. This is due to the character limit and won’t cause any check in or boarding issues
+    status_text: Processed
+    kind: warning
+  - code: '424'
+    description: Loyalty Card number does not match with the Name. Please retry adding Frequent Flyer/
+      Loyalty details in Manage My Booking
+    status_text: Unavailable
+    kind: warning
+  - code: '914'
+    description: We currently support only one Email address. Considered Email address is <<value>>
+    status_text: Processed
+    kind: warning
+  - code: '914'
+    description: We currently support only one Primary Pax. Considered Primary Pax <<value>>
+    status_text: Processed
+    kind: warning
+  - code: '914'
+    description: Invalid Loyalty Program code was used. Please retry adding Frequent Flyer/ Loyalty details
+      in Manage My Booking
+    status_text: Unavailable
+    kind: warning
+  - code: '256'
+    description: Invalid Seat Number for Aircraft Type. <<Seat Number >> doesn’t exist
+    status_text: NotProcessed
+    kind: warning
+  - code: '257'
+    description: Invalid Seat Number Format <<Seat Number >>
+    status_text: NotProcessed
+    kind: warning
+  - code: '271'
+    description: Number of Seats Requested Exceeds Maximum Allowed
+    status_text: NotProcessed
+    kind: warning
+  - code: '272'
+    description: Number of Seats Requested Does Not Equal the Number in Party
+    status_text: NotProcessed
+    kind: warning
+  - code: '281'
+    description: Specific Seat <<Seat Number >> Requested Not Available
+    status_text: NotProcessed
+    kind: warning
+  - code: '290'
+    description: Unable to Process Advance Seat Request. Price Mismatch - Total Amount for Seats should
+      be <<Total Amount + Currency>>
+    status_text: NotProcessed
+    kind: warning
+  - code: '992'
+    description: Price mismatch – Total Amount charged for seats <<Total Amount + Currency>>
+    status_text: Processed
+    kind: warning
+  - code: '993'
+    description: Partial Seat Assigned << Seat Numbers>>. Failed to purchase & assign Seat <Seat Numbers>
+    status_text: NotProcessed
+    kind: warning
+  - code: '997'
+    description: Seat purchase failed to execute <<return ErrorCode>>
+    status_text: NotProcessed
+    kind: warning
+  - code: '998'
+    description: Payment for Seat failed <<return ErrorCode>>
+    status_text: NotProcessed
+    kind: warning
+  - code: '999'
+    description: Seat Assignment failed <<return ErrorCode>>
+    status_text: NotProcessed
+    kind: warning
+  - code: '727'
+    description: Mismatch in currency for the selected seat for this flight - <<FlightNumber>>
+    status_text: NotProcessed
+    kind: warning
+  - code: '185'
+    description: Some service selection failed due to Incompatible Service Request
+    status_text: NotProcessed
+    kind: warning
+  - code: '182'
+    description: SSR Selection Failed. The Selected Service has been waitlisted
+    status_text: Retry
+    kind: warning
+  - code: 76H
+    description: Payment processing is pending
+    status_text: Processed
+    kind: warning
+- message: SeatAvailability
+  docs: https://ndc.virginatlantic.com/docs/seatavailability/error-response
+  error_count: 11
+  warning_count: 4
+  errors:
+  - code: '111'
+    description: Invalid Agent's Code.
+    status_text: NotProcessed
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid travel agent and/or system identification.
+    status_text: NotProcessed
+    kind: error
+  - code: '911'
+    description: Internal error (unknown internal technical error).
+    status_text: Unknown
+    kind: error
+  - code: '912'
+    description: Incomplete message - data missing in query/request.
+    status_text: NotProcessed
+    kind: error
+  - code: '913'
+    description: Item/data not found or data not existing in processing host.
+    status_text: Unavailable
+    kind: error
+  - code: '129'
+    description: No PNR or Order ID match found.
+    status_text: Unavailable
+    kind: error
+  - code: '219'
+    description: Unable to return seat map - All flight segments within the order are operated by Non-VS
+      carriers.
+    status_text: Unavailable
+    kind: error
+  - code: '197'
+    description: Unable to return seat map - All passengers have already reserved seats.
+    status_text: Unavailable
+    kind: error
+  - code: '129'
+    description: PNR not eligible for processing in NDC.
+    status_text: Unavailable
+    kind: error
+  - code: '912'
+    description: Invalid ordinal number - should start from 1
+    status_text: NotProcessed
+    kind: error
+  - code: '208'
+    description: Request Validation - Advance Seat Selection Not Available, Flight Already Departed
+    status_text: Unavailable
+    kind: error
+  warnings:
+  - code: '200'
+    description: Advance Seat Selection Not Available for this Flight - <Flightnumber>
+    status_text: Unavailable
+    kind: warning
+  - code: '727'
+    description: Mismatch in Currency between selected OfferPrice and Seat Price for this flight - <Flightnumber>
+    status_text: NotProcessed
+    kind: warning
+  - code: '207'
+    description: One or more passenger(s) within the order have already reserved seats - Change seat is
+      not allowed.
+    status_text: Unavailable
+    kind: warning
+  - code: '466'
+    description: Only credit card payment is supported for paid seat selection
+    status_text: Processed
+    kind: warning
+- message: ServiceList
+  docs: https://ndc.virginatlantic.com/docs/servicelist/error-response
+  error_count: 11
+  warning_count: 1
+  errors:
+  - code: '912'
+    description: Please complete all mandatory fields in ServiceListRQ as per given Specifications.
+    status_text: NotProcessed
+    kind: error
+  - code: '913'
+    description: Invalid Request/OrderChange/SelectedPricedOffer/OfferID value is entered.
+    status_text: Unavailable
+    kind: error
+  - code: '911'
+    description: Internal error (unknown internal technical error).
+    status_text: Unknown
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid Corporate and/or system identification
+    status_text: NotProcessed
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid travel agent and/or Aggregator information.
+    status_text: NotProcessed
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid travel agent and/or system identification.
+    status_text: NotProcessed
+    kind: error
+  - code: '911'
+    description: Invalid OfferID.
+    status_text: NotProcessed
+    kind: error
+  - code: '129'
+    description: No Order ID match found.
+    status_text: Unavailable
+    kind: error
+  - code: 76H
+    description: Ancillary Services not available for the request Order/Priced Offer.
+    status_text: Unavailable
+    kind: error
+  - code: '368'
+    description: The requested Seller is not authorised to access the service.
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: Invalid ordinal number - should start from 1
+    status_text: NotProcessed
+    kind: error
+  warnings:
+  - code: 76H
+    description: Ancillary Services not available for the request flight segment <flight Number>.
+    status_text: Unavailable
+    kind: warning
+- message: OrderRetrieve
+  docs: https://ndc.virginatlantic.com/docs/orderretrieve/error-response
+  error_count: 13
+  warning_count: 2
+  errors:
+  - code: '912'
+    description: Please complete all mandatory fields in request as per given specifications
+    status_text: NotProcessed
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid travel agent and/or system identification
+    status_text: NotProcessed
+    kind: error
+  - code: '911'
+    description: Internal Error
+    status_text: Unknown
+    kind: error
+  - code: '914'
+    description: Invalid format/data - data does not match syntax rules
+    status_text: NotProcessed
+    kind: error
+  - code: '314'
+    description: Name element data invalid. Enter only letters or blanks in the name field (applies for
+      Title, Given, Surname)
+    status_text: NotProcessed
+    kind: error
+  - code: '150'
+    description: GivenName too long
+    status_text: NotProcessed
+    kind: error
+  - code: '149'
+    description: Surname too long
+    status_text: NotProcessed
+    kind: error
+  - code: '129'
+    description: No PNR or Order ID match found
+    status_text: Unavailable
+    kind: error
+  - code: '368'
+    description: Not authorized (combination of Corporate and/or Participant IDs not valid)
+    status_text: NotProcessed
+    kind: error
+  - code: '160'
+    description: Passenger name in message does not match name in booking file/PNR
+    status_text: NotProcessed
+    kind: error
+  - code: '303'
+    description: Unable to retrieve Order - Payment Time Limit has expired and the itinerary has been
+      cancelled
+    status_text: Unavailable
+    kind: error
+  - code: '129'
+    description: PNR not eligible for processing in NDC
+    status_text: Unavailable
+    kind: error
+  - code: '912'
+    description: Invalid ordinal number - should start from 1
+    status_text: NotProcessed
+    kind: error
+  warnings:
+  - code: '214'
+    description: Your selected seats and services will be cancelled due to Flight Disruption
+    status_text: Processed
+    kind: warning
+  - code: 76H
+    description: Payment processing is pending.
+    status_text: Processed
+    kind: warning
+- message: OrderReshop
+  docs: https://ndc.virginatlantic.com/docs/orderreshop/error-response
+  error_count: 20
+  warning_count: 2
+  errors:
+  - code: '129'
+    description: No Order ID match found
+    status_text: Unavailable
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid travel agent and/or system identification
+    status_text: NotProcessed
+    kind: error
+  - code: '129'
+    description: No PNR match found
+    status_text: Unavailable
+    kind: error
+  - code: '12'
+    description: Request Validation - Wrong Cabin code in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '129'
+    description: Requested Journey not OPEN - Associated Service ID's not OPEN
+    status_text: Unavailable
+    kind: error
+  - code: '914'
+    description: Invalid or missing count of OrderItem
+    status_text: NotProcessed
+    kind: error
+  - code: '129'
+    description: No Service ID or Service ID match found
+    status_text: Unavailable
+    kind: error
+  - code: '914'
+    description: Invalid OrderItem found
+    status_text: NotProcessed
+    kind: error
+  - code: '129'
+    description: Invalid Request. Retain Service ID is not expected in the Reshop request
+    status_text: Unavailable
+    kind: error
+  - code: '102'
+    description: Invalid Date - Not in Chronological Order
+    status_text: NotProcessed
+    kind: error
+  - code: '496'
+    description: No Offers found
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: Please complete all mandatory fields in OrderReshop as per given Specifications.
+    status_text: NotProcessed
+    kind: error
+  - code: '102'
+    description: Please provide valid TimeAfterDuration and TimeBeforeDuration
+    status_text: NotProcessed
+    kind: error
+  - code: '102'
+    description: TimeAfterDuration and TimeBeforeDuration should be within the same day as the requested
+      date
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: Invalid ordinal number - should start from 1
+    status_text: NotProcessed
+    kind: error
+  - code: '137'
+    description: Name Correction not permitted on partially flown bookings
+    status_text: NotProcessed
+    kind: error
+  - code: '137'
+    description: Name Correction permitted only on VS and DL operated flights
+    status_text: NotProcessed
+    kind: error
+  - code: '137'
+    description: Full surname changes are only permitted in exceptional circumstances. Please refer to
+      the Airline’s policy or contact the Airline directly
+    status_text: NotProcessed
+    kind: error
+  - code: '137'
+    description: Name Correction not permitted more than once per booking
+    status_text: NotProcessed
+    kind: error
+  - code: '368'
+    description: The requested Seller is not authorised to access the service
+    status_text: NotProcessed
+    kind: error
+  warnings:
+  - code: '214'
+    description: Your selected seats will be cancelled due to flight segment changes. Please select new
+      seats for your revised booking
+    status_text: Processed
+    kind: warning
+  - code: '142'
+    description: Name Correction will remove your APIS information from the PNR. Please resubmit APIS
+      after the correction
+    status_text: Processed
+    kind: warning
+- message: OrderQuote
+  docs: https://ndc.virginatlantic.com/docs/orderquote/error-response
+  error_count: 17
+  warning_count: 1
+  errors:
+  - code: '912'
+    description: Please complete all mandatory fields in OfferPriceRQ as per given Specifications
+    status_text: NotProcessed
+    kind: error
+  - code: '129'
+    description: No PNR or Order ID match found
+    status_text: NotProcessed
+    kind: error
+  - code: '913'
+    description: Invalid Offer ID/OfferItemID for the Selected Offer
+    status_text: NotProcessed
+    kind: error
+  - code: '368'
+    description: Request Validation - Invalid Travel Agent calling OrderID in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: Invalid or missing count of Passenger Type Code
+    status_text: NotProcessed
+    kind: error
+  - code: '476'
+    description: Duplicate PaxID entered for {PaxID}
+    status_text: NotProcessed
+    kind: error
+  - code: '143'
+    description: Invalid or Ineligible Passenger Type Code
+    status_text: NotProcessed
+    kind: error
+  - code: '143'
+    description: No passenger/ traveller list specified or empty
+    status_text: NotProcessed
+    kind: error
+  - code: '324'
+    description: Number of infants exceeds maximum allowed per adult passenger
+    status_text: NotProcessed
+    kind: error
+  - code: '68'
+    description: Max accepted non-infant passengers is 9
+    status_text: NotProcessed
+    kind: error
+  - code: '911'
+    description: Internal error (unknown internal technical error)
+    status_text: Unknown
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid Corporate and/or system identification
+    status_text: NotProcessed
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid travel agent and/or Aggregator information
+    status_text: NotProcessed
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid travel agent and/or system identification
+    status_text: NotProcessed
+    kind: error
+  - code: '303'
+    description: Unable to retrieve Order - Payment Time Limit has expired and the itinerary has been
+      cancelled
+    status_text: Unavailable
+    kind: error
+  - code: '368'
+    description: Seller not authorised to access this service - No ticketing authority
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: Invalid ordinal number - should start from 1
+    status_text: NotProcessed
+    kind: error
+  warnings:
+  - code: '157'
+    description: Business Function Not Supported
+    status_text: Processed
+    kind: warning
+- message: OrderChange
+  docs: https://ndc.virginatlantic.com/docs/orderchange/error-response
+  error_count: 66
+  warning_count: 3
+  errors:
+  - code: '912'
+    description: Ordinal/OrgRole/Participant Name is mandatory in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: OfferRefID is mandatory in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: OwnerCode is mandatory in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: OfferItemRefID is mandatory in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: PaxRefID is mandatory in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: OrderID is mandatory in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '913'
+    description: Invalid OfferItemID for the SelectedOffer/OfferID (Call again OrderChangeRQ)
+    status_text: Unavailable
+    kind: error
+  - code: '727'
+    description: Invalid Organization Role /or system identification
+    status_text: NotProcessed
+    kind: error
+  - code: '129'
+    description: No PNR match found
+    status_text: Unavailable
+    kind: error
+  - code: '913'
+    description: Invalid Request/OrderChange/SelectedPricedOffer/OfferID value is entered
+    status_text: Unavailable
+    kind: error
+  - code: '727'
+    description: Invalid Owner Code information
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: The selected offer requires additional amount to be paid. Contact airline to process
+      the change
+    status_text: NotProcessed
+    kind: error
+  - code: '913'
+    description: Invalid PaxRefID for the SelectedOffer/OfferID (Call again OrderChangeRQ)
+    status_text: Unavailable
+    kind: error
+  - code: '368'
+    description: Request Validation - Invalid Travel Agent calling OrderID in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '73'
+    description: Invalid age for PTC
+    status_text: NotProcessed
+    kind: error
+  - code: '303'
+    description: Unable to retrieve Order - Payment Time Limit has expired and the itinerary has been
+      cancelled
+    status_text: Unavailable
+    kind: error
+  - code: '912'
+    description: Incomplete message - data missing in query. Missing Date of Birth for passenger
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: Incomplete message - data missing in query. Missing Gender for passenger
+    status_text: NotProcessed
+    kind: error
+  - code: '395'
+    description: Order/PNR already ticketed
+    status_text: NotProcessed
+    kind: error
+  - code: '290'
+    description: Unable to Process Advance Seat Request. Price Mismatch - Total Amount for Seats does
+      not match
+    status_text: NotProcessed
+    kind: error
+  - code: '729'
+    description: Incorrect Currency code in the request for the Selected seat Offer.
+    status_text: NotProcessed
+    kind: error
+  - code: '290'
+    description: Unable to Process Advance Seat Request - Seat ColumnID format passed in the request is
+      not valid.
+    status_text: NotProcessed
+    kind: error
+  - code: '290'
+    description: Unable to Process Advance Seat Request - more than one seat is requested per passenger
+      per flight segment.
+    status_text: NotProcessed
+    kind: error
+  - code: '290'
+    description: Unable to Process Advance Seat Request - same seat is requested for more than one passenger
+      for the same flight segment.
+    status_text: NotProcessed
+    kind: error
+  - code: '290'
+    description: Unable to Process Advance Seat Request - requested seat number is not valid.
+    status_text: NotProcessed
+    kind: error
+  - code: '290'
+    description: Unable to Process Advance Seat Request - the requested seat(s) have already been reserved.
+    status_text: NotProcessed
+    kind: error
+  - code: '290'
+    description: Unable to Process Advance Seat Request - Technical error.
+    status_text: NotProcessed
+    kind: error
+  - code: '290'
+    description: Unable to Process Advance Seat Request - one or more of the requested seats are not available.
+    status_text: NotProcessed
+    kind: error
+  - code: '129'
+    description: PNR not eligible for processing in NDC
+    status_text: Unavailable
+    kind: error
+  - code: '914'
+    description: GST Details Validation - Invalid Country Code in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: GST Details Validation - Invalid Organisation Name in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: GST Details Validation – Invalid GST Number in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: GST Details Validation - Invalid E-Mail details in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: GST Details Validation - Invalid address details in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: GST Details Validation - Invalid Phone number in the request
+    status_text: NotProcessed
+    kind: error
+  - code: '914'
+    description: 'APIS data: Invalid data found for <<PAX n>>'
+    status_text: NotProcessed
+    kind: error
+  - code: '368'
+    description: Seller not authorised to access this service - No ticketing authority.
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: Invalid ordinal number - should start from 1
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Entered Card number is invalid'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Mandatory card fields are missing'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Invalid CVC/CVN provided'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Invalid expiry date provided'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Invalid 3DS secure values provided'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Amount more than permitted limit'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Insufficient funds or over credit limit'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Card used is expired'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Amount exceeds Withdrawal Limit'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Card cannot be honoured for payment'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Transaction is not permitted for the cardholder'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: Payment request timed out, please retry after some time
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Card is restricted for usage'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Entered Card number is invalid'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Invalid Card Expiry'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Card not supported'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Card Authorization Failed'
+    status_text: NotProcessed
+    kind: error
+  - code: '708'
+    description: 'Payment declined: Card Authorisation Failed'
+    status_text: NotProcessed
+    kind: error
+  - code: '913'
+    description: Missing or invalid attributes present in payment request
+    status_text: NotProcessed
+    kind: error
+  - code: '913'
+    description: 'Payment declined: Currency not supported for payment'
+    status_text: NotProcessed
+    kind: error
+  - code: '466'
+    description: Credit Card form of payment is not supported for the requested market
+    status_text: NotProcessed
+    kind: error
+  - code: 76H
+    description: Divide is not allowed for PNRs with a single passenger
+    status_text: NotProcessed
+    kind: error
+  - code: 76H
+    description: Divide is not allowed for PNRs with an infant associated with a single adult
+    status_text: NotProcessed
+    kind: error
+  - code: 76H
+    description: Divide is not allowed for PNRs where an adult with an associated infant is selected for
+      split
+    status_text: NotProcessed
+    kind: error
+  - code: 76H
+    description: Divide is not allowed for PNRs where child or young adult is selected without an accompanying
+      adult
+    status_text: NotProcessed
+    kind: error
+  - code: 76H
+    description: Divide is not allowed for PNRs with partially flown segments
+    status_text: NotProcessed
+    kind: error
+  - code: 76H
+    description: 'Invalid divide request: No valid passengers selected for split'
+    status_text: NotProcessed
+    kind: error
+  - code: '318'
+    description: Provide Contact details - Add at least one ContactInfo record to proceed with the child
+      Order
+    status_text: NotProcessed
+    kind: error
+  warnings:
+  - code: '290'
+    description: Unable to Process Advance Seat Request for <<Flight number>>.
+    status_text: Processed
+    kind: warning
+  - code: '185'
+    description: Some service selection failed due to Incompatible Service Request
+    status_text: NotProcessed
+    kind: warning
+  - code: '785'
+    description: Please initiate the {XX.XX}{CurrencyCode} Refund Amount by submitting the airline’s manual
+      form. Kindly use the URL provided
+    status_text: Processed
+    kind: warning
+- message: OrderList
+  docs: https://ndc.virginatlantic.com/docs/orderlist/error-response
+  error_count: 6
+  warning_count: 0
+  errors:
+  - code: '912'
+    description: Invalid date range in search filter. Please select a range within <DateRange> days
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: The selected flight date is in the past. Please choose a valid upcoming date
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: Invalid search filter combination in Order List request. Please review and adjust the
+      selected criteria
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: Invalid search filter criteria. Acceptable values are 'PAID' or 'UNPAID
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: 'Invalid search filter: Use ''CreationDateTime'' filter along with payment filter criteria'
+    status_text: NotProcessed
+    kind: error
+  - code: '912'
+    description: No Matched Order ID found for the search criteria
+    status_text: Unavailable
+    kind: error
+  warnings: []
+- message: OrderHistory
+  docs: https://ndc.virginatlantic.com/docs/orderhistory/error-response
+  error_count: 6
+  warning_count: 0
+  errors:
+  - code: '912'
+    description: Please complete all mandatory fields in request as per given specifications
+    status_text: NotProcessed
+    kind: error
+  - code: '717'
+    description: Missing and/or invalid travel agent and/or system identification
+    status_text: NotProcessed
+    kind: error
+  - code: '911'
+    description: Internal Error
+    status_text: Unknown
+    kind: error
+  - code: '914'
+    description: Invalid format/data - data does not match syntax rules
+    status_text: NotProcessed
+    kind: error
+  - code: '129'
+    description: No PNR or Order ID match found
+    status_text: Unavailable
+    kind: error
+  - code: '912'
+    description: Invalid ordinal number - should start from 1
+    status_text: NotProcessed
+    kind: error
+  warnings: []
+codes_by_message:
+- code: '100'
+  kind: error
+  messages:
+  - AirShopping
+- code: '102'
+  kind: error
+  messages:
+  - AirShopping
+  - OrderReshop
+- code: '103'
+  kind: error
+  messages:
+  - AirShopping
+- code: '111'
+  kind: error
+  messages:
+  - AirShopping
+  - SeatAvailability
+- code: '12'
+  kind: error
+  messages:
+  - AirShopping
+  - OrderReshop
+- code: '129'
+  kind: error
+  messages:
+  - OrderChange
+  - OrderHistory
+  - OrderQuote
+  - OrderReshop
+  - OrderRetrieve
+  - SeatAvailability
+  - ServiceList
+- code: '130'
+  kind: error
+  messages:
+  - AirShopping
+- code: '137'
+  kind: error
+  messages:
+  - OrderReshop
+- code: '143'
+  kind: error
+  messages:
+  - AirShopping
+  - OfferPrice
+  - OrderQuote
+- code: '149'
+  kind: error
+  messages:
+  - OrderCreate
+  - OrderRetrieve
+- code: '150'
+  kind: error
+  messages:
+  - OrderRetrieve
+- code: '151'
+  kind: error
+  messages:
+  - OrderCreate
+- code: '152'
+  kind: error
+  messages:
+  - OrderCreate
+- code: '160'
+  kind: error
+  messages:
+  - OrderRetrieve
+- code: '197'
+  kind: error
+  messages:
+  - SeatAvailability
+- code: '208'
+  kind: error
+  messages:
+  - SeatAvailability
+- code: '219'
+  kind: error
+  messages:
+  - SeatAvailability
+- code: '290'
+  kind: error
+  messages:
+  - OrderChange
+- code: '303'
+  kind: error
+  messages:
+  - OrderChange
+  - OrderQuote
+  - OrderRetrieve
+- code: '314'
+  kind: error
+  messages:
+  - OrderCreate
+  - OrderRetrieve
+- code: '316'
+  kind: error
+  messages:
+  - OrderCreate
+- code: '317'
+  kind: error
+  messages:
+  - OrderCreate
+- code: '318'
+  kind: error
+  messages:
+  - OrderChange
+- code: '324'
+  kind: error
+  messages:
+  - AirShopping
+  - OfferPrice
+  - OrderQuote
+- code: '368'
+  kind: error
+  messages:
+  - OfferPrice
+  - OrderChange
+  - OrderCreate
+  - OrderQuote
+  - OrderReshop
+  - OrderRetrieve
+  - ServiceList
+- code: '386'
+  kind: error
+  messages:
+  - AirShopping
+  - OrderCreate
+- code: '395'
+  kind: error
+  messages:
+  - OrderChange
+- code: '399'
+  kind: error
+  messages:
+  - OrderCreate
+- code: '466'
+  kind: error
+  messages:
+  - OrderChange
+  - OrderCreate
+- code: '476'
+  kind: error
+  messages:
+  - AirShopping
+  - OfferPrice
+  - OrderCreate
+  - OrderQuote
+- code: '495'
+  kind: error
+  messages:
+  - OrderCreate
+- code: '496'
+  kind: error
+  messages:
+  - AirShopping
+  - OfferPrice
+  - OrderReshop
+- code: '68'
+  kind: error
+  messages:
+  - AirShopping
+  - OfferPrice
+  - OrderQuote
+- code: '708'
+  kind: error
+  messages:
+  - OrderChange
+  - OrderCreate
+- code: '717'
+  kind: error
+  messages:
+  - AirShopping
+  - OfferPrice
+  - OrderCreate
+  - OrderHistory
+  - OrderQuote
+  - OrderReshop
+  - OrderRetrieve
+  - SeatAvailability
+  - ServiceList
+- code: '724'
+  kind: error
+  messages:
+  - AirShopping
+- code: '727'
+  kind: error
+  messages:
+  - OrderChange
+  - OrderCreate
+- code: '729'
+  kind: error
+  messages:
+  - OrderChange
+- code: '73'
+  kind: error
+  messages:
+  - OrderChange
+  - OrderCreate
+- code: 75G
+  kind: error
+  messages:
+  - AirShopping
+- code: 76H
+  kind: error
+  messages:
+  - OrderChange
+  - ServiceList
+- code: '8'
+  kind: error
+  messages:
+  - AirShopping
+- code: '903'
+  kind: error
+  messages:
+  - AirShopping
+- code: '911'
+  kind: error
+  messages:
+  - OfferPrice
+  - OrderCreate
+  - OrderHistory
+  - OrderQuote
+  - OrderRetrieve
+  - SeatAvailability
+  - ServiceList
+- code: '912'
+  kind: error
+  messages:
+  - AirShopping
+  - OfferPrice
+  - OrderChange
+  - OrderCreate
+  - OrderHistory
+  - OrderList
+  - OrderQuote
+  - OrderReshop
+  - OrderRetrieve
+  - SeatAvailability
+  - ServiceList
+- code: '913'
+  kind: error
+  messages:
+  - AirShopping
+  - OfferPrice
+  - OrderChange
+  - OrderCreate
+  - OrderQuote
+  - SeatAvailability
+  - ServiceList
+- code: '914'
+  kind: error
+  messages:
+  - AirShopping
+  - OfferPrice
+  - OrderChange
+  - OrderCreate
+  - OrderHistory
+  - OrderQuote
+  - OrderReshop
+  - OrderRetrieve
+- code: '921'
+  kind: error
+  messages:
+  - OrderCreate
+- code: '923'
+  kind: error
+  messages:
+  - OrderCreate
+- code: '142'
+  kind: warning
+  messages:
+  - OrderReshop
+- code: '150'
+  kind: warning
+  messages:
+  - OrderCreate
+- code: '157'
+  kind: warning
+  messages:
+  - OrderQuote
+- code: '182'
+  kind: warning
+  messages:
+  - OrderCreate
+- code: '185'
+  kind: warning
+  messages:
+  - OrderChange
+  - OrderCreate
+- code: '200'
+  kind: warning
+  messages:
+  - SeatAvailability
+- code: '207'
+  kind: warning
+  messages:
+  - SeatAvailability
+- code: '214'
+  kind: warning
+  messages:
+  - OrderReshop
+  - OrderRetrieve
+- code: '256'
+  kind: warning
+  messages:
+  - OrderCreate
+- code: '257'
+  kind: warning
+  messages:
+  - OrderCreate
+- code: '271'
+  kind: warning
+  messages:
+  - OrderCreate
+- code: '272'
+  kind: warning
+  messages:
+  - OrderCreate
+- code: '281'
+  kind: warning
+  messages:
+  - OrderCreate
+- code: '290'
+  kind: warning
+  messages:
+  - OrderChange
+  - OrderCreate
+- code: '424'
+  kind: warning
+  messages:
+  - OrderCreate
+- code: '466'
+  kind: warning
+  messages:
+  - SeatAvailability
+- code: '711'
+  kind: warning
+  messages:
+  - OfferPrice
+- code: 71A
+  kind: warning
+  messages:
+  - AirShopping
+- code: 71B
+  kind: warning
+  messages:
+  - AirShopping
+  - OfferPrice
+- code: '727'
+  kind: warning
+  messages:
+  - OrderCreate
+  - SeatAvailability
+- code: 76H
+  kind: warning
+  messages:
+  - AirShopping
+  - OrderCreate
+  - OrderRetrieve
+  - ServiceList
+- code: '785'
+  kind: warning
+  messages:
+  - OrderChange
+- code: '914'
+  kind: warning
+  messages:
+  - OrderCreate
+- code: '992'
+  kind: warning
+  messages:
+  - OrderCreate
+- code: '993'
+  kind: warning
+  messages:
+  - OrderCreate
+- code: '997'
+  kind: warning
+  messages:
+  - OrderCreate
+- code: '998'
+  kind: warning
+  messages:
+  - OrderCreate
+- code: '999'
+  kind: warning
+  messages:
+  - OrderCreate
+not_documented:
+- message: OrderChangeNotif
+  note: 'No Error Response page is published for OrderChangeNotif - it is an airline-initiated push message
+    with no seller response defined (Response: N/A).'

@@ -1,0 +1,48 @@
+generated: '2026-07-28'
+method: searched
+source: >-
+  npm registry search, PyPI, GitHub org lookup (api.github.com/orgs/virginatlantic and
+  /orgs/virgin-atlantic, both 404), and the VS NDC Connect documentation
+  (https://ndc.virginatlantic.com/docs, https://ndc.virginatlantic.com/help/how-to-start-your-build)
+description: >-
+  Virgin Atlantic publishes no first-party client library, SDK or CLI for its NDC APIs in any
+  package registry, and operates no public GitHub organisation. Partners are expected to build
+  directly against the IATA NDC 21.3 XSDs (schemas/) with their own XML tooling - the build guide's
+  only integration instruction is to set three HTTP headers on a POST and use UTF-8. One
+  third-party community package exists on PyPI and is recorded here for completeness; it is
+  explicitly not affiliated with the airline and targets the consumer website, not the NDC API.
+official_sdks: false
+packages:
+  - language: python
+    registry: pypi
+    name: virgin-atlantic
+    version: 0.1.1
+    url: https://pypi.org/project/virgin-atlantic/
+    source: https://github.com/alexechoi/virgin-atlantic-py
+    install: pip install virgin-atlantic
+    official: false
+    author: Alex Choi
+    summary: A Python package for fetching Virgin Atlantic flight prices.
+    note: >-
+      Community package. Its own README states "This package is not affiliated with Virgin
+      Atlantic." It queries an undocumented GraphQL surface behind the consumer website to scrape
+      flight prices - it is not a client for the IATA NDC distribution API described in this repo,
+      and Virgin Atlantic publishes no such consumer API.
+registries_probed:
+  - {registry: npm, query: virgin-atlantic, first_party_results: 0}
+  - {registry: pypi, query: virgin-atlantic, first_party_results: 0, third_party_results: 1}
+  - {registry: github, query: 'orgs/virginatlantic, orgs/virgin-atlantic', status: 404,
+     note: No public Virgin Atlantic GitHub organisation exists; no GitHubOrganization pointer is emitted.}
+recommended_tooling:
+  note: >-
+    In the absence of an SDK, the practical build path published by Virgin Atlantic is standard XML
+    tooling against the IATA schemas.
+  assets:
+    - {kind: XSD schema set, path: schemas/, source: https://ndc.virginatlantic.com/file-lists/schema-assets}
+    - {kind: XML request/response samples, path: examples/, count: 92}
+    - {kind: IATA XSD viewer, url: 'https://retailing.iata.org/tools/xsd_viewer/'}
+not_published:
+  - First-party SDK in any language (no SDKs pointer is emitted)
+  - CLI (no cli/ artifact)
+  - Embedded/UI components (no components/ artifact)
+  - Public Postman collection or workspace (Postman public search returns zero results)

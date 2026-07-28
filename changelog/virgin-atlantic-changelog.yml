@@ -1,0 +1,90 @@
+generated: '2026-07-28'
+method: searched
+source: >-
+  https://ndc.virginatlantic.com/product-release,
+  https://ndc.virginatlantic.com/capability/ndc-roadmap,
+  https://ndc.virginatlantic.com/news,
+  https://ndc.virginatlantic.com/docs
+description: >-
+  Virgin Atlantic's change communication for the NDC APIs runs through three surfaces: a Release
+  Notes system on VS NDC Connect (public page, login-gated content), a dated public roadmap that
+  carries PreLive and Live dates per capability, and a public newsroom for programme-level
+  announcements. Only the roadmap and newsroom are readable anonymously, so the structured entries
+  below are drawn from those plus the documentation's own page-version stamps. No entry has been
+  invented.
+scheme: >-
+  Named releases with a Release Id, an Environment (PreLive/Live) and a Release Date, filed against
+  the IATA NDC 21.3 schema version rather than an API version number of Virgin Atlantic's own.
+current_version: IATA NDC 21.3 (schema assets release 21.3.3)
+release_notes:
+  url: https://ndc.virginatlantic.com/product-release
+  public_page: true
+  content_gated: true
+  columns: [Release Id, Environment, Title, Release Date]
+  filter: start date / end date range
+  note: >-
+    Anonymously the table renders headers and "No matching Records"; loading rows triggers the
+    portal login. Release history is available to registered partners only.
+docs_version_stamps:
+  note: >-
+    Every documentation page carries its own version and last-updated stamp, which is the only
+    public change signal on the reference itself.
+  observed:
+    - {page: https://ndc.virginatlantic.com/docs, version: '12.0', last_updated: '2026-07-23'}
+    - {page: https://ndc.virginatlantic.com/docs/orderchangenotif, version: '1.0', last_updated: '2026-06-15'}
+    - {page: https://ndc.virginatlantic.com/capability/order, version: '11.0'}
+    - {page: https://ndc.virginatlantic.com/capability/offer, version: '10.0'}
+    - {page: https://ndc.virginatlantic.com/certification, version: '6.0'}
+    - {page: https://ndc.virginatlantic.com/help/how-to-start-your-build, version: '3.0'}
+    - {page: https://ndc.virginatlantic.com/docs/testing-your-build/test-credit-card-numbers, version: '2.0'}
+entries:
+  - version: OrderHistory Phase 1 & Servicing Foundations
+    date: '2026-04-26'
+    prelive: '2026-04-09'
+    environment: Live
+    breaking: false
+    additions: [OrderHistory API - retrieval of historical order/booking data, NDC-orchestrated changes]
+    source: https://ndc.virginatlantic.com/capability/ndc-roadmap
+  - version: GOLD certification tier
+    date: '2026-02'
+    environment: Programme
+    breaking: false
+    additions: [Third partner certification tier above RED and SILVER]
+    source: https://ndc.virginatlantic.com/certification
+  - version: Sample refresh - Post Sale Seat Purchase flow
+    date: '2025-07-05'
+    environment: Documentation
+    breaking: false
+    additions: [Full-flow XML samples for AirShopping, OfferPrice, OrderCreate, OrderRetrieve, SeatAvailability and OrderChange]
+    source: https://ndc.virginatlantic.com/capability/order/post-sale-seat-purchase-flow
+  - version: Sample refresh - Voluntary Cancellation flow
+    date: '2025-04-11'
+    environment: Documentation
+    breaking: false
+    additions: [Risk-Free and Non Risk-Free cancellation XML samples across OrderRetrieve, OrderReshop and OrderChange]
+    source: https://ndc.virginatlantic.com/capability/order/voluntary-cancellation-flow
+  - version: IATA Airline Retailing Maturity certification on 21.3
+    date: '2023-04-21'
+    environment: Programme
+    breaking: false
+    additions: [Certification across 18 capabilities using the 21.3 NDC schema]
+    source: https://ndc.virginatlantic.com/news/2023/news-virgin-atlantic-iata-certification
+  - version: VS NDC Connect portal launch
+    date: '2023-07-01'
+    environment: Programme
+    breaking: false
+    additions: [Self-serve registration, full 21.3 technical documentation, integrated NDC technical helpdesk]
+    source: https://ndc.virginatlantic.com/news/2023/news-vs-ndc-connect-portal-launch
+  - version: Dedicated NDC Technical Support Desk launch
+    date: '2023-07-01'
+    environment: Programme
+    breaking: false
+    additions: [Dedicated NDC technical sales support desk for connected partners]
+    source: https://ndc.virginatlantic.com/news/2023/news-vs-technical-sales-support-desk
+upcoming:
+  note: Dated and undated forward items are recorded in lifecycle/virgin-atlantic-lifecycle.yml (roadmap block).
+  url: https://ndc.virginatlantic.com/capability/ndc-roadmap
+not_published:
+  - Public release-note bodies (login required)
+  - Breaking-change policy or advance-notice period
+  - RSS/Atom feed or email subscription for API changes

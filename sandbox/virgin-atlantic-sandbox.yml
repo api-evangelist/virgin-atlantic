@@ -1,0 +1,117 @@
+generated: '2026-07-28'
+method: searched
+source: >-
+  https://ndc.virginatlantic.com/docs/testing-your-build,
+  https://ndc.virginatlantic.com/docs/testing-your-build/test-credit-card-numbers,
+  https://ndc.virginatlantic.com/docs/testing-your-build/flying-club-card-numbers,
+  https://ndc.virginatlantic.com/help/how-to-start-your-build,
+  https://ndc.virginatlantic.com/certification,
+  https://ndc.virginatlantic.com/capability/ndc-roadmap
+description: >-
+  Virgin Atlantic runs a real, publicly documented test surface for its IATA NDC 21.3 APIs. Test
+  API keys are issued on portal registration - before, and independently of, the accreditation
+  gate on production - and the airline publishes verbatim test credit card numbers, 3DS
+  authentication values and test Flying Club (loyalty) card numbers so a seller can exercise the
+  full shop-price-book-service flow. Environments are named PreLive and Live on the roadmap.
+  Everything recorded here is published anonymously on VS NDC Connect; no value was invented.
+environments:
+  - name: Test
+    key_type: Test API Key
+    how_to_get: >-
+      Self-serve. Register an organisation on VS NDC Connect
+      (https://ndc.virginatlantic.com/account/register), add an IATA or TIDS number, then retrieve
+      the test API keys through the NDC API Access journey. Verbatim from the build guide -
+      "Please ensure you are registered and have accessed the test API keys."
+    base_url: null
+    note: No test base URL is published; endpoints are supplied with the key.
+  - name: PreLive
+    key_type: null
+    note: >-
+      Named as a distinct pre-production stage on the NDC roadmap, where each capability carries a
+      separate "PreLive:" and "Live:" date (for example OrderHistory Phase 1 - PreLive 09/04/2026,
+      Live 26/04/2026).
+    docs: https://ndc.virginatlantic.com/capability/ndc-roadmap
+  - name: Production
+    key_type: Production API Key
+    how_to_get: >-
+      Gated. "To be eligible to apply for a Production API Key, partners must be certified to at
+      least RED Tier" - plus valid IATA accreditation and Virgin Atlantic ticketing authority (or an
+      approved Service Provider connection), and the signed TUA / DPA / ASA.
+    docs: https://ndc.virginatlantic.com/certification
+    base_url: null
+key_separation:
+  mechanism: Separate test and production API keys presented in the same header
+  header: 'Ocp-Apim-Subscription-Key: [API-KEY-VALUE]'
+  prefixes: null
+  note: >-
+    Virgin Atlantic does not publish key prefixes (no sk_test_/sk_live_ equivalent); the environment
+    is determined by which issued key and endpoint you use.
+  auth_failure_code: '111 - Invalid Agent''s IATA API Key (see errors/virgin-atlantic-error-codes.yml)'
+test_cards:
+  docs: https://ndc.virginatlantic.com/docs/testing-your-build/test-credit-card-numbers
+  note: >-
+    Published verbatim by Virgin Atlantic for build testing. Card Code is the IATA/PADIS card scheme
+    code sent in the NDC payment element; ECI is the electronic commerce indicator.
+  three_ds:
+    supported: true
+    rule: >-
+      "For 3DS testing, the following AuthenticationValue and DirectoryServerTrxID values below must
+      be used in combination with the test credit card numbers available under 3DS Supported. All
+      other cards below this section are not 3DS supported. If any other values are provided in the
+      specified fields (e.g. ECI, security code, or card details), the 3DS authentication will fail.
+      This allows partners to test both successful and negative authentication scenarios."
+    authentication_value: ODQzNjgwNjU0ZjM3N2JmYTg0NTM
+    directory_server_trx_id: c272b04f-6e7b-43a2-bb78-90f4fb94aa25
+    cards:
+      - {scheme: Visa, card_code: VI, security_code: '123', eci: '05', number: '4444333322221111'}
+      - {scheme: MasterCard, card_code: CA, security_code: '123', eci: '02', number: '2221008123677736'}
+  non_three_ds_cards:
+    - {scheme: Visa Debit, card_code: VI, security_code: '123', eci: '05', number: '4000287447386587'}
+    - {scheme: Visa Credit, card_code: VI, security_code: '123', eci: '05', number: '4761344136141390'}
+    - {scheme: Visa Credit, card_code: VI, security_code: '123', eci: '05', number: '4761201381475297'}
+    - {scheme: Visa Credit, card_code: VI, security_code: '123', eci: '05', number: '4159129252458086'}
+    - {scheme: MasterCard Credit, card_code: CA, security_code: '123', eci: '02', number: '5101081046006034'}
+    - {scheme: MasterCard Credit, card_code: CA, security_code: '123', eci: '02', number: '5101084411423750'}
+    - {scheme: MasterCard Credit, card_code: CA, security_code: '123', eci: '02', number: '5333304500657872'}
+    - {scheme: AMEX, card_code: AX, security_code: '1234', eci: '05', number: '375510513169537'}
+    - {scheme: AMEX, card_code: AX, security_code: '1234', eci: '05', number: '375510288656924'}
+    - {scheme: AMEX, card_code: AX, security_code: '1234', eci: '05', number: '375510379996452'}
+    - {scheme: AMEX, card_code: AX, security_code: '1234', eci: '05', number: '375510082116984'}
+    - {scheme: Discover, card_code: DS, security_code: '123', eci: '05', number: '6509821665351005'}
+    - {scheme: Discover, card_code: DS, security_code: '123', eci: '05', number: '6221267465440274'}
+    - {scheme: Discover, card_code: DS, security_code: '123', eci: '05', number: '6500217278165735'}
+    - {scheme: Diners Club, card_code: DC, security_code: '123', eci: '05', number: '361253433727425'}
+    - {scheme: Diners Club, card_code: DC, security_code: '123', eci: '05', number: '386009540225286'}
+    - {scheme: Diners Club, card_code: DC, security_code: '123', eci: '05', number: '369116638070887'}
+test_loyalty_accounts:
+  docs: https://ndc.virginatlantic.com/docs/testing-your-build/flying-club-card-numbers
+  programme: Flying Club
+  note: Test Flying Club (FQTV) membership numbers, one per tier, for testing loyalty accrual and tier benefits.
+  accounts:
+    - {tier: Red, points: '166799060', fc_number: '9999998173', first_name: Twentyeight, last_name: Axistest}
+    - {tier: Silver, points: '165114352', fc_number: '9999998025', first_name: Five, last_name: Axistest}
+    - {tier: Gold, points: '177030608', fc_number: '9999998868', first_name: Hundrednine, last_name: Axistest}
+fixtures:
+  xml_samples:
+    detail: examples/_index.yml
+    count: 92
+    note: >-
+      92 airline-authored NDC request/response XML samples covering every documented message and the
+      published end-to-end workflows - the practical fixture set for a build.
+  schema_assets:
+    detail: schemas/
+    docs: https://ndc.virginatlantic.com/file-lists/schema-assets
+    note: IATA NDC 21.3.3 XSDs (18 files plus the official zip) for local request validation.
+  xsd_viewer: https://retailing.iata.org/tools/xsd_viewer/
+certification:
+  docs: https://ndc.virginatlantic.com/certification
+  note: >-
+    Certification is the promotion path out of test. Three tiers - RED and SILVER are live, GOLD is
+    scheduled for February 2026. RED Tier is the minimum for a production key; each tier requires
+    submitting sample implementations for its published use cases (RED Cert-1-1 to Cert-1-6, SILVER
+    Cert-2-1 to Cert-2-5). An NDC Certification Tool is on the 2026 roadmap.
+not_published:
+  - Test/PreLive base URLs (issued with the key, never published)
+  - Test clocks or time simulation
+  - Decline/failure simulation card numbers beyond the 3DS negative-authentication rule
+  - A hosted request console or "try it" playground on the portal

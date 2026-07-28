@@ -1,0 +1,85 @@
+generated: '2026-07-28'
+method: searched
+source: >-
+  https://ndc.virginatlantic.com/docs/orderchangenotif,
+  https://ndc.virginatlantic.com/docs/orderchangenotif/rq,
+  https://ndc.virginatlantic.com/docs/orderchangenotif/samples,
+  https://ndc.virginatlantic.com/capability/ndc-roadmap
+spec_type: Webhooks
+asyncapi_published: false
+description: >-
+  Virgin Atlantic operates one asynchronous, airline-initiated push surface: the IATA NDC 21.3
+  OrderChangeNotif message. The airline POSTs an OrderChangeNotifRQ to a seller-registered endpoint
+  when an order changes without the seller asking - schedule changes, cancellations and IROP
+  (irregular operations). It is a real subscribe-and-receive webhook contract with a registration
+  process, not merely a documented message. No AsyncAPI document is published for it, and none was
+  authored here; this file captures the published event surface verbatim.
+direction: airline-to-seller (inbound to the partner)
+transport:
+  protocol: HTTPS POST to a seller-supplied endpoint
+  payload: IATA NDC 21.3 OrderChangeNotifRQ XML
+  soap_action: required at registration (the registration form asks for a SOAP Action)
+  response: 'none - the documentation states "Response: N/A"; the message is fire-and-forget from the seller''s perspective'
+  schema: schemas/IATA_OrderChangeNotifRQ.xsd
+subscription:
+  required: true
+  verbatim: >-
+    "The seller or aggregator must support receiving and processing OrderChangeNotifRQ messages
+    asynchronously by subscribing to the service."
+  how: >-
+    Submit an OCN registration application through VS NDC Connect. The documentation links to
+    "[Link to OCN Registration]" - a placeholder in the published page rather than a live URL at
+    probe time.
+  registration_fields:
+    - API details - username and key, specific to the environment
+    - IATA number / Aggregator ID
+    - Endpoint URL (the seller's receiving endpoint)
+    - SOAP Action
+    - API login credentials - UserID and Password
+  authentication_note: >-
+    Inbound calls are authenticated with the seller's own supplied credentials; Virgin Atlantic
+    publishes no signature header, HMAC scheme or replay-protection contract for the callback.
+events:
+  - name: OrderChangeNotif
+    message: OrderChangeNotifRQ
+    docs: https://ndc.virginatlantic.com/docs/orderchangenotif
+    reference: https://ndc.virginatlantic.com/docs/orderchangenotif/rq
+    samples: examples/orderchangenotif/
+    trigger: >-
+      An involuntary change happens to an order due to a schedule change, cancellation or IROP
+      (irregular operations).
+    preconditions:
+      - Order created in VS NDC by the authorised agent
+      - An involuntary change occurs on that order
+      - The seller or aggregator has subscribed and can receive the message asynchronously
+    payload_elements:
+      - name: ChangeGroup
+        description: Describes the type of change (e.g. schedule change, cancellation), the reason, and the time
+      - name: CurrentOrder
+        description: The updated order data - order ID, flight segments, passengers and services
+      - name: ChangeTypeCode
+        description: In scope on the request
+      - name: ReasonCode
+        description: In scope on the request
+    out_of_scope: [Follow-up action]
+    error_responses_published: false
+coverage:
+  events_documented: 1
+  events_with_schema: 1
+  events_with_samples: 2
+roadmap:
+  - item: OrderChangeNotification - Phase 2
+    status: Selected for Development (Q2 2026)
+    note: >-
+      "This release will provide notifications for voluntary changes made within the NDC channel" -
+      extending the surface beyond involuntary/IROP changes. Live and PreLive dates are TBC.
+    source: https://ndc.virginatlantic.com/capability/ndc-roadmap
+  - item: Involuntary Change
+    status: Future Delivery
+    source: https://ndc.virginatlantic.com/capability/ndc-roadmap
+not_published:
+  - An AsyncAPI (or any machine-readable event) document
+  - The OCN registration URL (the docs carry a placeholder link)
+  - Retry, backoff or delivery-guarantee semantics
+  - Callback signing / verification scheme
+  - Event catalog beyond the single OrderChangeNotif message

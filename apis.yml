@@ -303,12 +303,18 @@ common:
   url: https://www.virginatlantic.com/
 - type: Portal
   url: https://ndc.virginatlantic.com/
+- type: DeveloperPortal
+  url: https://ndc.virginatlantic.com/
 - type: Documentation
+  url: https://ndc.virginatlantic.com/docs
+- type: APIReference
   url: https://ndc.virginatlantic.com/docs
 - type: SignUp
   url: https://ndc.virginatlantic.com/account/register
 - type: Authentication
   url: https://ndc.virginatlantic.com/help/how-to-start-your-build
+- type: Authentication
+  url: authentication/virgin-atlantic-authentication.yml
 - type: GettingStarted
   url: https://ndc.virginatlantic.com/help/how-to-access-ndc-apis
 - type: Certification
@@ -317,12 +323,44 @@ common:
   url: https://ndc.virginatlantic.com/capability/ndc-roadmap
 - type: ChangeLog
   url: https://ndc.virginatlantic.com/product-release
+- type: ChangeLog
+  url: changelog/virgin-atlantic-changelog.yml
 - type: Support
   url: https://ndc.virginatlantic.com/support
+- type: FAQ
+  url: https://ndc.virginatlantic.com/faq
 - type: Blog
   url: https://ndc.virginatlantic.com/news
 - type: XMLSchema
   url: schemas/21_3_3_NDC_Schema.zip
+- type: Conventions
+  url: conventions/virgin-atlantic-conventions.yml
+- type: ErrorCatalog
+  url: errors/virgin-atlantic-error-codes.yml
+- type: DataModel
+  url: data-model/virgin-atlantic-data-model.yml
+- type: Vocabulary
+  url: vocabulary/virgin-atlantic-vocabulary.yml
+- type: Examples
+  url: examples/_index.yml
+- type: Webhooks
+  url: asyncapi/virgin-atlantic-orderchangenotif-webhooks.yml
+- type: Sandbox
+  url: https://ndc.virginatlantic.com/docs/testing-your-build
+- type: Sandbox
+  url: sandbox/virgin-atlantic-sandbox.yml
+- type: Lifecycle
+  url: lifecycle/virgin-atlantic-lifecycle.yml
+- type: Conformance
+  url: conformance/virgin-atlantic-conformance.yml
+- type: Packages
+  url: packages/virgin-atlantic-packages.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/virgin-atlantic-llms.txt
+- type: DomainSecurity
+  url: security/virgin-atlantic-domain-security.yml
 - type: TermsOfService
   url: https://flywith.virginatlantic.com/gb/en/partner-hub/policies.html
 - type: Policy

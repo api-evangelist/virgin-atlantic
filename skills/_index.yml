@@ -1,0 +1,52 @@
+generated: '2026-07-28'
+method: generated
+source: >-
+  Generated from Virgin Atlantic's own published workflow pages on VS NDC Connect
+  (https://ndc.virginatlantic.com/capability/offer, https://ndc.virginatlantic.com/capability/order,
+  https://ndc.virginatlantic.com/docs/orderchangenotif) plus the artifacts in this repo - the IATA
+  NDC 21.3 XSDs in schemas/, the harvested XML samples in examples/, the published error registry in
+  errors/ and the runtime conventions in conventions/.
+description: >-
+  Packaged agent skills for the Virgin Atlantic IATA NDC 21.3 distribution API. Virgin Atlantic
+  publishes no OpenAPI, so these skills are grounded in the airline's own documented message names
+  (the twelve NDC 21.3 messages), its published step-by-step workflow pages, its published error
+  codes and its published test data. Every step, limit and rule quoted in a skill appears in the
+  public documentation - nothing about the API was invented. Virgin Atlantic publishes no AGENTS.md
+  or provider-authored skill files; a search of the portal found none.
+provider_published_skills: false
+skills:
+  - file: virgin-atlantic-shop-price-and-book.md
+    name: Shop, price and book a Virgin Atlantic flight
+    workflow: Prime Sale Without Seat (Instant Payment)
+    docs: https://ndc.virginatlantic.com/capability/offer/prime-sale-without-seat
+    operations: [AirShopping, OfferPrice, OrderCreate]
+  - file: virgin-atlantic-post-sale-seat-purchase.md
+    name: Buy seats on an existing Virgin Atlantic order
+    workflow: Post Sale Seat Purchase Flow
+    docs: https://ndc.virginatlantic.com/capability/order/post-sale-seat-purchase-flow
+    operations: [OrderRetrieve, SeatAvailability, OrderChange]
+  - file: virgin-atlantic-voluntary-cancellation.md
+    name: Cancel a Virgin Atlantic order
+    workflow: Voluntary Cancellation Flow (Risk-Free and Non Risk-Free)
+    docs: https://ndc.virginatlantic.com/capability/order/voluntary-cancellation-flow
+    operations: [OrderRetrieve, OrderReshop, OrderChange]
+  - file: virgin-atlantic-receive-order-change-notifications.md
+    name: Receive Virgin Atlantic order change notifications
+    workflow: OrderChangeNotif subscription (airline-initiated push)
+    docs: https://ndc.virginatlantic.com/docs/orderchangenotif
+    operations: [OrderChangeNotif, OrderRetrieve]
+other_published_workflows:
+  note: >-
+    Virgin Atlantic documents further flows that are not yet packaged as skills. Each is a real,
+    public page and a candidate for the next round.
+  workflows:
+    - {name: Prime Sale With Seat, url: 'https://ndc.virginatlantic.com/capability/offer/prime-sale-with-seat'}
+    - {name: Prime Sale With Service, url: 'https://ndc.virginatlantic.com/capability/offer/prime-sale-with-service'}
+    - {name: Private/Corporate Fares, url: 'https://ndc.virginatlantic.com/capability/offer/private-corporate-fares'}
+    - {name: Voluntary Change Date/Time, url: 'https://ndc.virginatlantic.com/capability/order/voluntary-change-itinerary'}
+    - {name: Hold Booking Creation Flow, url: 'https://ndc.virginatlantic.com/capability/order/hold-booking-creation-flow'}
+    - {name: Requote/Confirm Held Booking, url: 'https://ndc.virginatlantic.com/capability/order/requote-confirm-held-booking'}
+    - {name: Post Sale Service Purchase Flow, url: 'https://ndc.virginatlantic.com/capability/order/post-sale-service-purchase-flow'}
+    - {name: Name Correction Flow, url: 'https://ndc.virginatlantic.com/capability/order/name-correction-amendment'}
+    - {name: Split Order Flow, url: 'https://ndc.virginatlantic.com/capability/order/split-order'}
+    - {name: APIS Amend Info, url: 'https://ndc.virginatlantic.com/capability/order/amend-apis-info'}

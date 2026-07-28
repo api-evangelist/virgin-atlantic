@@ -1,0 +1,348 @@
+generated: '2026-07-28'
+method: searched
+source: https://ndc.virginatlantic.com/docs — the per-message 'Samples' pages on VS NDC Connect; files
+  served from https://ndc.virginatlantic.com/SiteRoot/virgin/fileassets/samples/
+description: 'Virgin Atlantic''s own published IATA NDC 21.3 XML request and response samples, harvested
+  verbatim from the VS NDC Connect sample pages. These are the closest thing the provider publishes to
+  a machine-readable contract instance: there is no OpenAPI, so the XSDs in schemas/ define the shape
+  and these documents show real, airline-authored payloads for every documented message and workflow.
+  Anonymous download, no login required.'
+format: IATA NDC 21.3 XML
+validation: Every saved file parses as XML (xml.etree.ElementTree) as of the harvest date.
+count: 92
+groups:
+- message: AirShopping
+  docs: https://ndc.virginatlantic.com/docs/airshopping/samples
+  count: 19
+  files:
+  - file: examples/airshopping/AirShoppingRQ_Instant_Purchase_Service_Added_Order.xml
+    kind: request
+    bytes: 2057
+  - file: examples/airshopping/AirShoppingRS_Instant_Purchase_Service_Added_Order.xml
+    kind: response
+    bytes: 83861
+  - file: examples/airshopping/airshoppingrq_specific_currency_code.xml
+    kind: request
+    bytes: 2115
+  - file: examples/airshopping/airshoppingrq_with_corpID.xml
+    kind: request
+    bytes: 3281
+  - file: examples/airshopping/shop_by_departure_time_RQ.xml
+    kind: request
+    bytes: 1940
+  - file: examples/airshopping/shop_by_departure_time_RS.xml
+    kind: response
+    bytes: 58656
+  - file: examples/airshopping/shop_by_specific_date_return_journey_RQ.xml
+    kind: request
+    bytes: 2760
+  - file: examples/airshopping/shop_by_specific_date_return_journey_RS.xml
+    kind: response
+    bytes: 457038
+  - file: examples/airshopping/shop_by_taxonomy_code_RQ.xml
+    kind: request
+    bytes: 2381
+  - file: examples/airshopping/shop_by_taxonomy_code_RS.xml
+    kind: response
+    bytes: 33929
+  - file: examples/airshopping/shop_calendar_search_RQ.xml
+    kind: request
+    bytes: 2318
+  - file: examples/airshopping/shop_calendar_search_RS.xml
+    kind: response
+    bytes: 950438
+  - file: examples/airshopping/shop_for_flexible_fares_RQ.xml
+    kind: request
+    bytes: 2205
+  - file: examples/airshopping/shop_for_flexible_fares_RS.xml
+    kind: response
+    bytes: 80310
+  - file: examples/airshopping/shop_for_multicity_RQ.xml
+    kind: request
+    bytes: 2974
+  - file: examples/airshopping/shop_for_multicity_RS.xml
+    kind: response
+    bytes: 4987272
+  - file: examples/airshopping/shop_for_openjaw_itinerary_RQ.xml
+    kind: request
+    bytes: 2372
+  - file: examples/airshopping/shop_with_direct_flight_filter_RQ.xml
+    kind: request
+    bytes: 1812
+  - file: examples/airshopping/shop_with_direct_flight_filter_RS.xml
+    kind: response
+    bytes: 73818
+- message: OfferPrice
+  docs: https://ndc.virginatlantic.com/docs/offerprice/samples
+  count: 4
+  files:
+  - file: examples/offerprice/OfferPriceRS_Instant_Purchase_Service_Added_Order.xml
+    kind: response
+    bytes: 96215
+  - file: examples/offerprice/OfferpriceRQ_Instant_Purchase_Service_Added_Order.xml
+    kind: request
+    bytes: 1887
+  - file: examples/offerprice/offerprice_multipax_with_upsell_offers_RQ.xml
+    kind: request
+    bytes: 2883
+  - file: examples/offerprice/offerprice_multipax_with_upsell_offers_RS.xml
+    kind: response
+    bytes: 181687
+- message: OrderCreate
+  docs: https://ndc.virginatlantic.com/docs/ordercreate/samples
+  count: 13
+  files:
+  - file: examples/ordercreate/OrderCreateRQ_Instant_Purchase_Service_Added_Order.xml
+    kind: request
+    bytes: 6266
+  - file: examples/ordercreate/OrderCreateRS_Instant_Purchase_Service_Added_Order.xml
+    kind: response
+    bytes: 50253
+  - file: examples/ordercreate/ordercreateRQ_free_seats.xml
+    kind: request
+    bytes: 4675
+  - file: examples/ordercreate/ordercreateRQ_hold_booking.xml
+    kind: request
+    bytes: 3077
+  - file: examples/ordercreate/ordercreateRQ_offline_seller.xml
+    kind: request
+    bytes: 5153
+  - file: examples/ordercreate/ordercreateRQ_online_seller_with_agent_email_address.xml
+    kind: request
+    bytes: 5706
+  - file: examples/ordercreate/ordercreateRQ_paid_seats_and_FF_number.xml
+    kind: request
+    bytes: 4879
+  - file: examples/ordercreate/orderviewRS_free_seats.xml
+    kind: response
+    bytes: 15405
+  - file: examples/ordercreate/orderviewRS_hold_booking.xml
+    kind: response
+    bytes: 23698
+  - file: examples/ordercreate/orderviewRS_offline_seller.xml
+    kind: response
+    bytes: 39244
+  - file: examples/ordercreate/orderviewRS_online_seller_with_agent_email_address.xml
+    kind: response
+    bytes: 44803
+  - file: examples/ordercreate/orderviewRS_paid_seats_and_FF_number.xml
+    kind: response
+    bytes: 17236
+  - file: examples/ordercreate/orderviewRS_with_cabin_and_selling_class.xml
+    kind: response
+    bytes: 14511
+- message: SeatAvailability
+  docs: https://ndc.virginatlantic.com/docs/seatavailability/samples
+  count: 4
+  files:
+  - file: examples/seatavailability/seatavailabilityRQ.xml
+    kind: request
+    bytes: 1017
+  - file: examples/seatavailability/seatavailabilityRQ_by_orderid.xml
+    kind: request
+    bytes: 859
+  - file: examples/seatavailability/seatavailabilityRS_multiple_seat_maps.xml
+    kind: response
+    bytes: 122830
+  - file: examples/seatavailability/seatavailabilityRS_single_seat_map.xml
+    kind: response
+    bytes: 96189
+- message: ServiceList
+  docs: https://ndc.virginatlantic.com/docs/servicelist/samples
+  count: 8
+  files:
+  - file: examples/servicelist/ServiceListRQ_Instant_Purchase_Service_Added_Order.xml
+    kind: request
+    bytes: 940
+  - file: examples/servicelist/ServiceListRQ_With_Service_Only.xml
+    kind: request
+    bytes: 891
+  - file: examples/servicelist/ServiceListRS_Instant_Purchase_Service_Added_Order.xml
+    kind: response
+    bytes: 27005
+  - file: examples/servicelist/ServiceListRS_With_Service_Only.xml
+    kind: response
+    bytes: 25038
+  - file: examples/servicelist/ServiceList_RQ_OfferID.xml
+    kind: request
+    bytes: 1050
+  - file: examples/servicelist/ServiceList_RQ_OrderID.xml
+    kind: request
+    bytes: 1001
+  - file: examples/servicelist/ServiceList_RS_OfferID.xml
+    kind: response
+    bytes: 35221
+  - file: examples/servicelist/ServiceList_RS_OrderID.xml
+    kind: response
+    bytes: 32249
+- message: OrderRetrieve
+  docs: https://ndc.virginatlantic.com/docs/orderretrieve/samples
+  count: 7
+  files:
+  - file: examples/orderretrieve/orderretrieveRQ_retrieve_by_booking_reference.xml
+    kind: request
+    bytes: 1016
+  - file: examples/orderretrieve/orderretrieveRQ_retrieve_by_orderID.xml
+    kind: request
+    bytes: 1057
+  - file: examples/orderretrieve/orderretrieveRQ_retrieve_by_orderID_and_booking_reference.xml
+    kind: request
+    bytes: 1206
+  - file: examples/orderretrieve/orderviewRS_conjunction_ticket.xml
+    kind: response
+    bytes: 59209
+  - file: examples/orderretrieve/orderviewRS_hold_booking.xml
+    kind: response
+    bytes: 22765
+  - file: examples/orderretrieve/orderviewRS_paid_seats_and_ff_number.xml
+    kind: response
+    bytes: 16970
+  - file: examples/orderretrieve/orderviewRS_with_cabin_and_selling_class.xml
+    kind: response
+    bytes: 14511
+- message: OrderReshop
+  docs: https://ndc.virginatlantic.com/docs/orderreshop/samples
+  count: 7
+  files:
+  - file: examples/orderreshop/OC_NonRFC_OrderReshopCancelRQ.xml
+    kind: request
+    bytes: 982
+  - file: examples/orderreshop/OC_NonRFC_OrderReshopCancelRS.xml
+    kind: response
+    bytes: 6312
+  - file: examples/orderreshop/OC_RFC_OrderReshopCancelRQ.xml
+    kind: request
+    bytes: 982
+  - file: examples/orderreshop/OC_RFC_OrderReshopCancelRS.xml
+    kind: response
+    bytes: 5485
+  - file: examples/orderreshop/orderreshopRQ_change_both_outbound_and_inbound_date.xml
+    kind: request
+    bytes: 2718
+  - file: examples/orderreshop/orderreshopRQ_change_outbound_date_and_retain_inbound.xml
+    kind: request
+    bytes: 2326
+  - file: examples/orderreshop/orderreshopRS_change_both_outbound_and_inbound_date.xml
+    kind: response
+    bytes: 42042
+- message: OrderQuote
+  docs: https://ndc.virginatlantic.com/docs/orderquote/samples
+  count: 4
+  files:
+  - file: examples/orderquote/orderquoteRQ_change_itinerary_date_multipax.xml
+    kind: request
+    bytes: 1957
+  - file: examples/orderquote/orderquoteRQ_reprice_held_booking_unticketed_booking.xml
+    kind: request
+    bytes: 834
+  - file: examples/orderquote/orderreshopRS_change_itinerary_date_multipax.xml
+    kind: response
+    bytes: 54103
+  - file: examples/orderquote/orderreshopRS_reprice_held_booking_unticketed_booking.xml
+    kind: response
+    bytes: 654
+- message: OrderChange
+  docs: https://ndc.virginatlantic.com/docs/orderchange/samples
+  count: 17
+  files:
+  - file: examples/orderchange/OC_NonRFC_OrderChangeCancelRQ.xml
+    kind: request
+    bytes: 1334
+  - file: examples/orderchange/OC_NonRFC_OrderChangeCancelRS.xml
+    kind: response
+    bytes: 18041
+  - file: examples/orderchange/OC_RFC_OrderChangeCancelRQ.xml
+    kind: request
+    bytes: 1334
+  - file: examples/orderchange/OC_RFC_OrderChangeCancelRS.xml
+    kind: response
+    bytes: 16836
+  - file: examples/orderchange/OrderChangeRQ_With_Service_Only.xml
+    kind: request
+    bytes: 2463
+  - file: examples/orderchange/orderchangeRQ_change_itinerary_date_multipax.xml
+    kind: request
+    bytes: 2598
+  - file: examples/orderchange/orderchangeRQ_change_itinerary_date_paid_seat_unchanged_segment.xml
+    kind: request
+    bytes: 1890
+  - file: examples/orderchange/orderchangeRQ_confirm_held_booking_with_gender_and_dob_offline_seller.xml
+    kind: request
+    bytes: 2690
+  - file: examples/orderchange/orderchangeRQ_confirm_held_booking_with_gender_and_dob_online_seller.xml
+    kind: request
+    bytes: 3224
+  - file: examples/orderchange/orderchangeRQ_free_seats.xml
+    kind: request
+    bytes: 2632
+  - file: examples/orderchange/orderchangeRQ_paid_seats_3DS2.xml
+    kind: request
+    bytes: 4091
+  - file: examples/orderchange/orderchangeRQ_paid_seats_offline_card.xml
+    kind: request
+    bytes: 3760
+  - file: examples/orderchange/orderchangeRS_orderviewRS_change_itinerary_date_multipax.xml
+    kind: response
+    bytes: 41683
+  - file: examples/orderchange/orderchangeRS_orderviewRS_change_itinerary_date_paid_seat_unchanged_segment.xml
+    kind: response
+    bytes: 17526
+  - file: examples/orderchange/orderchangeRS_orderviewRS_confirm_held_booking_with_gender_and_dob_offline_seller.xml
+    kind: response
+    bytes: 16760
+  - file: examples/orderchange/orderchangeRS_orderviewRS_confirm_held_booking_with_gender_and_dob_online_seller.xml
+    kind: response
+    bytes: 20301
+  - file: examples/orderchange/orderviewRS_with_cabin_and_selling_class.xml
+    kind: response
+    bytes: 14511
+- message: OrderChangeNotif
+  docs: https://ndc.virginatlantic.com/docs/orderchangenotif/samples
+  count: 2
+  files:
+  - file: examples/orderchangenotif/ocn_flight_cancel_rq.xml
+    kind: request
+    bytes: 12319
+  - file: examples/orderchangenotif/ocn_time_change_rq.xml
+    kind: request
+    bytes: 38174
+- message: OrderList
+  docs: https://ndc.virginatlantic.com/docs/orderlist/samples
+  count: 5
+  files:
+  - file: examples/orderlist/OrderListRQ_creation_cancellation_payment_combination.xml
+    kind: request
+    bytes: 1669
+  - file: examples/orderlist/OrderListRQ_creation_lastmodified_payment_travelcombination.xml
+    kind: request
+    bytes: 1834
+  - file: examples/orderlist/OrderListRQ_creation_payment_travelcombination.xml
+    kind: request
+    bytes: 1961
+  - file: examples/orderlist/OrderListRS_creation_cancellation_payment_combination.xml
+    kind: response
+    bytes: 1001
+  - file: examples/orderlist/OrderListRS_creation_payment_travelcombination.xml
+    kind: response
+    bytes: 643
+- message: OrderHistory
+  docs: https://ndc.virginatlantic.com/docs/orderhistory/samples
+  count: 2
+  files:
+  - file: examples/orderhistory/orderhistoryRQ.xml
+    kind: request
+    bytes: 1129
+  - file: examples/orderhistory/orderhistoryRS.xml
+    kind: response
+    bytes: 26420
+broken_links:
+- url: https://ndc.virginatlantic.com/SiteRoot/virgin/fileassets/samples/airshopping/shop_for_openjaw_itinerary_RS.xml
+  status: 404
+  note: Linked from the AirShopping samples page but returns 404.
+- url: https://ndc.virginatlantic.com/SiteRoot/virgin/fileassets/samples/orderchnage/OC_RFC_OrderChangeCancelRS.xml
+  status: 404
+  note: Linked from the OrderChange samples page (note the misspelled 'orderchnage' path segment) but
+    returns 404.
+- url: https://ndc.virginatlantic.com/SiteRoot/virgin/fileassets/samples/orderchnage/OC_NonRFC_OrderChangeCancelRS.xml
+  status: 404
+  note: Linked from the OrderChange samples page but returns 404.

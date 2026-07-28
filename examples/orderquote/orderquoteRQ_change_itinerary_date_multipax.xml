@@ -1,0 +1,43 @@
+<IATA_OrderQuoteRQ xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<DistributionChain>
+		<DistributionChainLink xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<Ordinal>1</Ordinal>
+			<OrgRole>Seller</OrgRole>
+			<ParticipatingOrg>
+				<Name>ABCTravel</Name>
+				<OrgID>12345678</OrgID>
+			</ParticipatingOrg>
+		</DistributionChainLink>
+	</DistributionChain>
+	<Payload>
+		<ExistingOrder xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<OrderID>VS932C66PHV23</OrderID>
+			<OwnerCode>VS</OwnerCode>
+		</ExistingOrder>
+		<PaxList xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<PaxID>ADULT_1</PaxID>
+		</PaxList>
+		<PaxList xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<PaxID>CHILD_1</PaxID>
+		</PaxList>
+		<PaxList xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<PaxID>YOUNG_1</PaxID>
+		</PaxList>
+		<SelectedOffers xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<OfferRefID>60a019c1-949e-4ea5-a9f9-130230081d62|9mUz6gOd5q1Nsftlbw6tyR001</OfferRefID>
+			<OwnerCode>VS</OwnerCode>
+			<SelectedOfferItem>
+				<OfferItemRefID>60a019c1-949e-4ea5-a9f9-130230081d62|9mUz6gOd5q1Nsftlbw6tyR001-1</OfferItemRefID>
+				<PaxRefID>ADULT_1</PaxRefID>
+			</SelectedOfferItem>
+			<SelectedOfferItem>
+				<OfferItemRefID>60a019c1-949e-4ea5-a9f9-130230081d62|9mUz6gOd5q1Nsftlbw6tyR001-2</OfferItemRefID>
+				<PaxRefID>CHILD_1</PaxRefID>
+			</SelectedOfferItem>
+			<SelectedOfferItem>
+				<OfferItemRefID>60a019c1-949e-4ea5-a9f9-130230081d62|9mUz6gOd5q1Nsftlbw6tyR001-3</OfferItemRefID>
+				<PaxRefID>YOUNG_1</PaxRefID>
+			</SelectedOfferItem>
+		</SelectedOffers>
+	</Payload>
+</IATA_OrderQuoteRQ>

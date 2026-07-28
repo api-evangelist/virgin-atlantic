@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IATA_OrderReshopRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage">
+  <Response>
+    <DataLists xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+      <PaxList>
+        <Pax>
+          <PaxID>ADULT_1</PaxID>
+          <PTC>ADT</PTC>
+        </Pax>
+      </PaxList>
+    </DataLists>
+    <Order xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+      <OrderID>VS932PQPTHD25</OrderID>
+      <OwnerCode>VS</OwnerCode>
+    </Order>
+    <ReshopResults xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+      <ReshopOffers>
+        <Offer>
+          <DeleteOrderItem>
+            <ExistingOrderItem>
+              <ExistingService>
+                <FutureStatusCode>CANCELLED</FutureStatusCode>
+                <ServiceRefID>SV1</ServiceRefID>
+              </ExistingService>
+              <OrderItemRefID>VS932PQPTHD25-1</OrderItemRefID>
+            </ExistingOrderItem>
+            <OfferItemID>4ae1215e-5e82-4d45-ba3d-3ef0c617fcb8-1</OfferItemID>
+            <PriceDifferential>
+              <DifferentialTypeCode>Refund</DifferentialTypeCode>
+              <DiffPrice>
+                <FareDetail>
+                  <PaxRefID>ADULT_1</PaxRefID>
+                  <Price>
+                    <BaseAmount CurCode="GBP">-972.00</BaseAmount>
+                    <DueByAirlineAmount CurCode="GBP">1293.32</DueByAirlineAmount>
+                    <TaxSummary>
+                      <Tax>
+                        <Amount CurCode="GBP">-90.00</Amount>
+                      </Tax>
+                      <Tax>
+                        <Amount CurCode="GBP">-51.72</Amount>
+                      </Tax>
+                      <Tax>
+                        <Amount CurCode="GBP">-17.70</Amount>
+                      </Tax>
+                      <Tax>
+                        <Amount CurCode="GBP">-2.90</Amount>
+                      </Tax>
+                      <Tax>
+                        <Amount CurCode="GBP">-5.40</Amount>
+                      </Tax>
+                      <Tax>
+                        <Amount CurCode="GBP">-5.60</Amount>
+                      </Tax>
+                      <Tax>
+                        <Amount CurCode="GBP">-140.00</Amount>
+                      </Tax>
+                      <Tax>
+                        <Amount CurCode="GBP">-8.00</Amount>
+                      </Tax>
+                      <TotalRefundableTaxAmount CurCode="GBP">-321.32</TotalRefundableTaxAmount>
+                      <TotalTaxAmount CurCode="GBP">-321.32</TotalTaxAmount>
+                    </TaxSummary>
+                    <TotalAmount CurCode="GBP">-1293.32</TotalAmount>
+                  </Price>
+                </FareDetail>
+              </DiffPrice>
+              <NewPrice>
+                <FareDetail>
+                  <PaxRefID>ADULT_1</PaxRefID>
+                  <Price>
+                    <BaseAmount CurCode="GBP">0</BaseAmount>
+                    <TaxSummary>
+                      <TotalRefundableTaxAmount CurCode="GBP">0</TotalRefundableTaxAmount>
+                      <TotalTaxAmount CurCode="GBP">0</TotalTaxAmount>
+                    </TaxSummary>
+                    <TotalAmount CurCode="GBP">0</TotalAmount>
+                  </Price>
+                </FareDetail>
+              </NewPrice>
+              <OldPrice>
+                <FareDetail>
+                  <PaxRefID>ADULT_1</PaxRefID>
+                  <Price>
+                    <BaseAmount CurCode="GBP">972.00</BaseAmount>
+                    <TaxSummary>
+                      <Tax>
+                        <Amount CurCode="GBP">90.00</Amount>
+                      </Tax>
+                      <Tax>
+                        <Amount CurCode="GBP">51.72</Amount>
+                      </Tax>
+                      <Tax>
+                        <Amount CurCode="GBP">17.70</Amount>
+                      </Tax>
+                      <Tax>
+                        <Amount CurCode="GBP">2.90</Amount>
+                      </Tax>
+                      <Tax>
+                        <Amount CurCode="GBP">5.40</Amount>
+                      </Tax>
+                      <Tax>
+                        <Amount CurCode="GBP">5.60</Amount>
+                      </Tax>
+                      <Tax>
+                        <Amount CurCode="GBP">140.00</Amount>
+                      </Tax>
+                      <Tax>
+                        <Amount CurCode="GBP">8.00</Amount>
+                      </Tax>
+                      <TotalRefundableTaxAmount CurCode="GBP">0</TotalRefundableTaxAmount>
+                      <TotalTaxAmount CurCode="GBP">321.32</TotalTaxAmount>
+                    </TaxSummary>
+                    <TotalAmount CurCode="GBP">1293.32</TotalAmount>
+                  </Price>
+                </FareDetail>
+              </OldPrice>
+            </PriceDifferential>
+          </DeleteOrderItem>
+          <OfferExpirationTimeLimitDateTime>2025-04-04T13:29:18Z</OfferExpirationTimeLimitDateTime>
+          <OfferID>4ae1215e-5e82-4d45-ba3d-3ef0c617fcb8</OfferID>
+          <OwnerCode>VS</OwnerCode>
+        </Offer>
+      </ReshopOffers>
+    </ReshopResults>
+  </Response>
+</IATA_OrderReshopRS>

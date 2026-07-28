@@ -1,0 +1,122 @@
+generated: '2026-07-28'
+method: searched
+source: >-
+  https://ndc.virginatlantic.com/help/how-to-start-your-build,
+  https://ndc.virginatlantic.com/docs,
+  https://ndc.virginatlantic.com/docs/orderchangenotif,
+  https://ndc.virginatlantic.com/docs/DataLists/Error,
+  https://ndc.virginatlantic.com/capability/offer,
+  https://ndc.virginatlantic.com/capability/order
+description: >-
+  Cross-cutting request/response semantics for the Virgin Atlantic IATA NDC 21.3 API - the runtime
+  rules that apply to every message rather than to any one of them. Because the contract is IATA
+  NDC XML rather than REST/JSON, several conventions a REST reader expects (idempotency keys,
+  cursor pagination, JSON error envelopes) genuinely do not exist here; that absence is recorded
+  rather than papered over.
+base_url: null
+base_url_note: >-
+  Virgin Atlantic publishes no production or test base URL anywhere in its public documentation.
+  Endpoints are supplied to the partner with the API key after approval.
+api_style: >-
+  HTTP POST to every endpoint with an IATA NDC 21.3 XML request body and an XML response body. The
+  portal describes it as "a RESTful connection" but it is a message-oriented XML API, not a
+  resource-oriented REST API - there are no path parameters, no HTTP verb semantics and no
+  resource URLs.
+standard:
+  name: IATA NDC
+  version: '21.3'
+  schema_release: 21.3.3 (XSD version 9.001, id IATA2021.3)
+  namespace: http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage
+  schemas: schemas/
+authentication:
+  scheme: API key in HTTP header
+  header: Ocp-Apim-Subscription-Key
+  detail: authentication/virgin-atlantic-authentication.yml
+content_negotiation:
+  request_content_type: application/xml
+  response_accept: application/xml
+  charset: UTF-8 ("Please use UTF-8 encoding in your requests and response code.")
+idempotency:
+  supported: false
+  mechanism: null
+  note: >-
+    No Idempotency-Key header, no client-supplied request identifier and no replay/retry contract is
+    documented anywhere on VS NDC Connect. Safety against duplicate orders is instead handled by the
+    NDC offer lifecycle - an OfferID is single-use and time-limited, and replaying a consumed or
+    expired offer returns error 913 ("Invalid or Timed-out OfferID is entered", StatusText
+    Unavailable) rather than creating a second order. That is an expiry contract, not an idempotency
+    contract, so no Idempotency pointer is emitted for this provider.
+pagination:
+  style: none
+  note: >-
+    No page/offset/cursor parameters are documented on any message. Result-set size is bounded by
+    business rules instead - for example AirShopping accepts a maximum of 9 passengers and rejects
+    routings with more than 6 origin/destination pairs (error 724), and OrderList returns orders
+    matching search criteria for the authenticated seller with no documented paging.
+identifiers:
+  docs: https://ndc.virginatlantic.com/docs/orderchangenotif
+  note: >-
+    NDC uses in-document ID/RefID pointers rather than URLs. Virgin Atlantic publishes its own
+    syntax for the generated identifiers, which is the practical key to reading and building any
+    request or response payload.
+  syntax:
+    - {id: PaxJourneyID, ref: PaxJourneyRefID, pattern: '"JOUR" + <number counter>', example: JOUR1}
+    - {id: PaxSegmentID, ref: PaxSegmentRefID / SegmentRefs, pattern: '"SEG" + <number counter>', example: SEG1}
+    - {id: PaxID, ref: PaxRefID / PassengerRefs, pattern: PaxID based on Passenger Type Code, example: ADULT_1}
+    - {id: ServiceID, ref: ServiceRefID, pattern: '"SV" + <number counter>', example: SV1}
+    - {id: ServiceDefinitionID, ref: ServiceDefinitionRefID, pattern: '"BAGSRV" + <number counter>', example: BAGSV01}
+  business_identifiers:
+    - OrderID (IATA NDC 21.3 order identifier)
+    - Booking reference / PNR record locator
+    - IATA accreditation number or TIDS number (seller identity, sent in DistributionChain)
+    - BSP ticket numbers and settlement identifiers
+  detail: data-model/virgin-atlantic-data-model.yml
+offer_lifecycle:
+  note: >-
+    Offers are the unit of state. AirShopping returns OfferIDs with a PaymentTimeLimit; OfferPrice
+    firms one of them; OrderCreate consumes the priced OfferID and OfferItemIDs. Offer references
+    expire - error 913 (StatusText Unavailable) instructs the caller to "Call again AirShoppingRQ".
+    Passenger count and passenger types must match between AirShopping and OfferPrice.
+error_envelope:
+  media_type: application/xml
+  rfc9457: false
+  shape: >-
+    Repeating <Error> elements (and <Warning> elements) inside the NDC response, each carrying
+    <Code> (PADIS 9321), <DescText>, <LangCode>, <TagText>, <TypeCode> and optional <URL>.
+  processing_status_values: [NotProcessed, Processed, Unavailable, Unknown, Retry]
+  detail: errors/virgin-atlantic-error-codes.yml
+  docs: https://ndc.virginatlantic.com/docs/DataLists/Error
+versioning:
+  scheme: standard-version
+  mechanism: >-
+    The API is versioned by the IATA NDC schema release it implements (currently 21.3, schema assets
+    21.3.3). There is no version header, no URI version segment and no date-based version pin. The
+    documentation pages themselves carry independent page version stamps (for example the API
+    reference index is "v 12.0", last updated 23 Jul 2026).
+  detail: lifecycle/virgin-atlantic-lifecycle.yml
+rate_limits:
+  documented: false
+  note: No rate limit, quota, throttling policy or 429-equivalent signal is published on VS NDC Connect.
+request_tracing:
+  documented: false
+  note: >-
+    No request-id/correlation header is documented. Support is handled through the portal ticketing
+    journey ("How to Create Support Ticket") and the dedicated NDC Technical Sales Support Desk.
+events:
+  surface: OrderChangeNotif (airline-initiated push to the seller)
+  subscription_required: true
+  detail: asyncapi/virgin-atlantic-orderchangenotif-webhooks.yml
+payments:
+  forms_of_payment: [Card (3DS2 authenticated for online agents; unauthenticated for offline agents), IATA BSP Cash, IATA BSP EasyPay]
+  rules:
+    - Only one payment card can be used per transaction
+    - Online travel agents are expected to complete 3DS2 authentication upfront and then call OrderCreate
+    - Partners implement only the Forms of Payment applicable to them; implementing all FOP types is not mandatory
+  test_values: sandbox/virgin-atlantic-sandbox.yml
+cross_links:
+  errors: errors/virgin-atlantic-error-codes.yml
+  authentication: authentication/virgin-atlantic-authentication.yml
+  lifecycle: lifecycle/virgin-atlantic-lifecycle.yml
+  sandbox: sandbox/virgin-atlantic-sandbox.yml
+  examples: examples/_index.yml
+  schemas: schemas/

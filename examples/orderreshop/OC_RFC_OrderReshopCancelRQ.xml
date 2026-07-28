@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IATA_OrderReshopRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage">
+  <DistributionChain>
+    <DistributionChainLink xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+      <Ordinal>1</Ordinal>
+      <OrgRole>Seller</OrgRole>
+      <ParticipatingOrg>
+        <Name>TestAgent</Name>
+        <OrgID>12345678</OrgID>
+      </ParticipatingOrg>
+    </DistributionChainLink>
+  </DistributionChain>
+  <Request>
+    <OrderRefID xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">VS932PQPTHD25</OrderRefID>
+    <UpdateOrder xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+      <CancelOrderRef>
+        <OrderRefID>VS932PQPTHD25</OrderRefID>
+      </CancelOrderRef>
+    </UpdateOrder>
+  </Request>
+</IATA_OrderReshopRQ>

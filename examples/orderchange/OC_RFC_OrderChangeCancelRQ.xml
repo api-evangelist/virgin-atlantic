@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IATA_OrderChangeRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage">
+  <DistributionChain>
+    <DistributionChainLink xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+      <ContactInfo>
+        <ContactInfoID>AgentContactInfoID</ContactInfoID>
+        <EmailAddress>
+          <EmailAddressText>agentemail@gmail.com</EmailAddressText>
+        </EmailAddress>
+      </ContactInfo>
+      <Ordinal>1</Ordinal>
+      <OrgRole>Seller</OrgRole>
+      <ParticipatingOrg>
+        <Name>TestAgent</Name>
+        <OrgID>12345678</OrgID>
+      </ParticipatingOrg>
+    </DistributionChainLink>
+  </DistributionChain>
+  <Request>
+    <ChangeOrderChoice xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+      <AcceptCancelledOffer>
+        <OfferID>4ae1215e-5e82-4d45-ba3d-3ef0c617fcb8</OfferID>
+        <OwnerCode>VS</OwnerCode>
+      </AcceptCancelledOffer>
+    </ChangeOrderChoice>
+    <Order xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+      <OrderID>VS932PQPTHD25</OrderID>
+      <OwnerCode>VS</OwnerCode>
+    </Order>
+  </Request>
+</IATA_OrderChangeRQ>

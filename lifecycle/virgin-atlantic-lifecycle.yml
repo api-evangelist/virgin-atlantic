@@ -1,0 +1,95 @@
+generated: '2026-07-28'
+method: searched
+source: >-
+  https://ndc.virginatlantic.com/capability/ndc-roadmap,
+  https://ndc.virginatlantic.com/product-release,
+  https://ndc.virginatlantic.com/certification,
+  https://ndc.virginatlantic.com/docs,
+  https://ndc.virginatlantic.com/help/how-to-start-your-build,
+  https://virginatlantic.statuspage.io/
+description: >-
+  How the Virgin Atlantic NDC API is versioned, released and retired. The airline runs a real,
+  dated, public roadmap and a per-release notes system, but the release notes themselves sit behind
+  the portal login and there is no public status page, no SLA and no published deprecation policy.
+versioning:
+  scheme: standard-version
+  current: IATA NDC 21.3 (schema assets release 21.3.3, XSD version 9.001, id IATA2021.3)
+  mechanism: >-
+    The API version is the IATA NDC schema release it implements. There is no version request
+    header, no URI version segment and no per-account version pin. Documentation pages carry
+    independent page-version stamps and a "Last Updated" date (the 21.3 API Reference index was
+    v 12.0, last updated 23 Jul 2026, when probed).
+  docs: https://ndc.virginatlantic.com/docs
+  previous: >-
+    Virgin Atlantic previously certified on the IATA NDC 18.1 standard (first airline to achieve NDC
+    Level 3 on 18.1) before moving to 21.3.
+deprecation:
+  policy_url: null
+  policy_published: false
+  sunset_header: false
+  note: >-
+    No deprecation policy, notice period, sunset schedule or RFC 8594 Sunset/Deprecation header
+    support is published anywhere on VS NDC Connect or the partner hub. The one lifecycle guarantee
+    that is published runs the other way - on termination of access "credentials may be revoked or
+    rotated; system access may be disabled; APIs and connectivity permissions may be withdrawn"
+    (NDC Novation Policy 11.1). No Deprecation pointer is emitted.
+  deprecated_operations: []
+release_notes:
+  url: https://ndc.virginatlantic.com/product-release
+  public: false
+  note: >-
+    The Release Notes page is publicly reachable and renders a Release Id / Environment / Title /
+    Release Date table with a date-range filter, but the rows require a portal login to load
+    ("No matching Records" anonymously). Release cadence and content are therefore partner-visible,
+    not public.
+  detail: changelog/virgin-atlantic-changelog.yml
+roadmap:
+  url: https://ndc.virginatlantic.com/capability/ndc-roadmap
+  public: true
+  note: >-
+    A genuinely dated public roadmap. Items are grouped "Selected for Development" (Q2 2026) and
+    "Future Delivery", and each carries separate PreLive and Live dates.
+  entries:
+    - {item: 'OrderHistory - Phase 1 & Servicing Foundations', quarter: Q2 2026, prelive: '2026-04-09', live: '2026-04-26'}
+    - {item: ARC Reporting & Settlement Enablement, quarter: Q2 2026, prelive: TBC, live: TBC,
+       note: 'ARC settlement (cash FOP for US agents) for Instant Purchase, Change Booking and Cancel flows'}
+    - {item: Disruption Handling, quarter: Q2 2026, prelive: TBC, live: TBC,
+       note: 'Accept, cancel & refund, and rebook flows for disrupted bookings; updated follow-up actions in OrderView RS'}
+    - {item: Corporate Fares, quarter: Q2 2026, prelive: TBC, live: TBC}
+    - {item: OrderChangeNotification - Phase 2, quarter: Q2 2026, prelive: TBC, live: TBC,
+       note: Notifications for voluntary changes made within the NDC channel}
+    - {item: Residual value in NDC, quarter: Q2 2026, prelive: TBC, live: TBC}
+    - {item: Airline Profile, quarter: Future Delivery, prelive: TBC, live: TBC,
+       note: Reference data and supported routes aligned with NDC 21.3}
+    - {item: Involuntary Change, quarter: Future Delivery, prelive: TBC, live: TBC}
+    - {item: NDC Certification Tool, quarter: '2026', prelive: TBC, live: TBC,
+       note: 'Announced on the certification page: "For 2026, we are planning to provide an NDC Certification Tool."'}
+    - {item: GOLD certification tier, quarter: February 2026, prelive: null, live: '2026-02',
+       note: 'Third certification tier; RED and SILVER are already live'}
+environments:
+  detail: sandbox/virgin-atlantic-sandbox.yml
+  stages:
+    - {name: PreLive, note: Pre-production stage with its own dated release milestones on the roadmap}
+    - {name: Live, note: Production; requires RED tier certification and accreditation}
+status_page:
+  url: null
+  public: false
+  note: >-
+    An Atlassian Statuspage exists at https://virginatlantic.statuspage.io/ but it is INACTIVE and
+    private - "This page is currently inactive and can only be viewed by team members." No public
+    status or incident history is published for the NDC APIs, and status.virginatlantic.com does not
+    resolve. No StatusPage pointer is emitted.
+sla:
+  url: null
+  uptime_target: null
+  note: >-
+    No uptime target, availability commitment or support-response SLA is published. Support runs
+    through the portal ticketing journey and the dedicated NDC Technical Sales Support Desk
+    (launched 1 July 2023), with an "Integrated NDC Dedicated Technical Helpdesk" advertised as a
+    portal feature.
+message_availability:
+  note: >-
+    The API reference marks the original launch set (AirShopping, OfferPrice, OrderCreate,
+    SeatAvailability, OrderRetrieve, OrderReshop, OrderQuote, OrderChange) as available, with
+    ServiceList, OrderList, OrderHistory, OrderChangeNotif and post-sale SeatAvailability listed as
+    a later delivery wave. OrderHistory Phase 1 went live 26 April 2026 per the roadmap.

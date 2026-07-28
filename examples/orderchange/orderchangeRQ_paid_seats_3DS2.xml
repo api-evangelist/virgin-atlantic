@@ -1,0 +1,105 @@
+<!-- edited with XMLSpy v2019 rel. 3 sp1 (x64) (http://www.altova.com) by Mahendar Thooyamani (Virgin Atlantic Airways Ltd) -->
+<IATA_OrderChangeRQ xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<DistributionChain>
+		<DistributionChainLink xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<Ordinal>1</Ordinal>
+			<OrgRole>Seller</OrgRole>
+			<ParticipatingOrg>
+				<Name>Skyscanner</Name>
+				<OrgID>12345678</OrgID>
+			</ParticipatingOrg>
+		</DistributionChainLink>
+	</DistributionChain>
+	<Request>
+		<BookingRef xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<BookingID>C66PHV</BookingID>
+		</BookingRef>
+		<ChangeOrderChoice xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<AcceptSelectedQuotedOfferList>
+				<SelectedPricedOffer>
+					<OfferRefID>60a019c1-949e-4ea5-a9f9-130230081d62|9mUz6gOd5q1Nsftlbw6tyR001</OfferRefID>
+					<OwnerCode>VS</OwnerCode>
+					<SelectedOfferItem>
+						<OfferItemRefID>60a019c1-949e-4ea5-a9f9-130230081d62|9mUz6gOd5q1Nsftlbw6tyR001-1</OfferItemRefID>
+						<PaxRefID>ADULT_1</PaxRefID>
+						<SelectedSeat>
+							<ColumnID>A</ColumnID>
+							<SeatRowNumber>41</SeatRowNumber>
+						</SelectedSeat>
+					</SelectedOfferItem>
+					<SelectedOfferItem>
+						<OfferItemRefID>60a019c1-949e-4ea5-a9f9-130230081d62|9mUz6gOd5q1Nsftlbw6tyR001-2</OfferItemRefID>
+						<PaxRefID>CHILD_1</PaxRefID>
+						<SelectedSeat>
+							<ColumnID>B</ColumnID>
+							<SeatRowNumber>41</SeatRowNumber>
+						</SelectedSeat>
+					</SelectedOfferItem>
+					<SelectedOfferItem>
+						<OfferItemRefID>60a019c1-949e-4ea5-a9f9-130230081d62|9mUz6gOd5q1Nsftlbw6tyR001-3</OfferItemRefID>
+						<PaxRefID>YOUNG_1</PaxRefID>
+						<SelectedSeat>
+							<ColumnID>C</ColumnID>
+							<SeatRowNumber>41</SeatRowNumber>
+						</SelectedSeat>
+					</SelectedOfferItem>
+					<TotalOfferPriceAmount CurCode="GBP">150.00</TotalOfferPriceAmount>
+				</SelectedPricedOffer>
+			</AcceptSelectedQuotedOfferList>
+		</ChangeOrderChoice>
+		<DataLists xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<PaxList>
+				<Pax>
+					<PaxID>ADULT_1</PaxID>
+				</Pax>
+				<Pax>
+					<PaxID>CHILD_1</PaxID>
+				</Pax>
+				<Pax>
+					<PaxID>YOUNG_1</PaxID>
+				</Pax>
+			</PaxList>
+		</DataLists>
+		<Order xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<OrderID>VS932C66PHV23</OrderID>
+			<OwnerCode>VS</OwnerCode>
+		</Order>
+		<PaymentFunctions xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<PaymentProcessingDetails>
+				<Amount CurCode="GBP">150.00</Amount>
+				<Payer>
+					<PayerName>
+						<IndividualName>
+							<GivenName>David</GivenName>
+							<Surname>Smith</Surname>
+						</IndividualName>
+					</PayerName>
+				</Payer>
+				<PaymentMethod>
+					<PaymentCard>
+						<CardholderAddress>
+							<CityName>Crawley</CityName>
+							<CountryCode>GB</CountryCode>
+							<PostalCode>RH108HA</PostalCode>
+							<StreetText>8</StreetText>
+							<StreetText>Cobbles Crescent</StreetText>
+						</CardholderAddress>
+						<CardNumber>52012Y1HNJGI9736</CardNumber>
+						<CardSecurityCode>123</CardSecurityCode>
+						<CardTypeText>CA</CardTypeText>
+						<ExpirationDate>1223</ExpirationDate>
+						<SecurePaymentVersion2>
+							<AuthenticationValue>ODQzNjgwNjU0ZjM3N2JmYTg0NTM</AuthenticationValue>
+							<DirectoryServerTrxID>c272b04f-6e7b-43a2-bb78-90f4fb94aa25</DirectoryServerTrxID>
+							<ElectronicCommerceInd>02</ElectronicCommerceInd>
+							<TrxStatusText>Y</TrxStatusText>
+						</SecurePaymentVersion2>
+						<SecureProgram>
+							<EnrollmentStatusText>CardEnrolled3DS2.1.0</EnrollmentStatusText>
+						</SecureProgram>
+					</PaymentCard>
+				</PaymentMethod>
+			</PaymentProcessingDetails>
+		</PaymentFunctions>
+	</Request>
+</IATA_OrderChangeRQ>

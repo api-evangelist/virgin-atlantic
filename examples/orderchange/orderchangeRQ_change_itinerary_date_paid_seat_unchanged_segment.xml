@@ -1,0 +1,40 @@
+<IATA_OrderChangeRQ xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <DistributionChain>
+      <DistributionChainLink xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+         <Ordinal>1</Ordinal>
+         <OrgRole>Seller</OrgRole>
+         <ParticipatingOrg>
+            <Name>ABCTravel</Name>
+            <OrgID>12345678</OrgID>
+         </ParticipatingOrg>
+      </DistributionChainLink>
+   </DistributionChain>
+   <Request>
+      <BookingRef xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+         <BookingID>GXTEFH</BookingID>
+      </BookingRef>
+      <ChangeOrderChoice xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+         <AcceptSelectedQuotedOfferList>
+            <SelectedPricedOffer>
+               <OfferRefID>63367a66-21af-4eb0-990a-cba5e9b84000|8xCWc4oMCQCVSIaGcvLiLV001</OfferRefID>
+               <OwnerCode>VS</OwnerCode>
+               <SelectedOfferItem>
+                  <OfferItemRefID>63367a66-21af-4eb0-990a-cba5e9b84000|8xCWc4oMCQCVSIaGcvLiLV001-1</OfferItemRefID>
+                  <PaxRefID>ADULT_1</PaxRefID>
+               </SelectedOfferItem>
+            </SelectedPricedOffer>
+         </AcceptSelectedQuotedOfferList>
+      </ChangeOrderChoice>
+      <DataLists xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+         <PaxList>
+            <Pax>
+               <PaxID>ADULT_1</PaxID>
+            </Pax>
+         </PaxList>
+      </DataLists>
+      <Order xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+         <OrderID>VS932GXTEFH23</OrderID>
+         <OwnerCode>VS</OwnerCode>
+      </Order>
+   </Request>
+</IATA_OrderChangeRQ>

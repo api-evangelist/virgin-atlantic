@@ -1,0 +1,84 @@
+<!-- edited with XMLSpy v2019 rel. 3 sp1 (x64) (http://www.altova.com) by Mahendar Thooyamani (Virgin Atlantic Airways Ltd) -->
+<IATA_OrderCreateRQ xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<DistributionChain>
+		<DistributionChainLink xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<Ordinal>1</Ordinal>
+			<OrgRole>Seller</OrgRole>
+			<ParticipatingOrg>
+				<Name>ABCTravel</Name>
+				<OrgID>12345678</OrgID>
+			</ParticipatingOrg>
+		</DistributionChainLink>
+	</DistributionChain>
+	<Request>
+		<CreateOrder xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<AcceptSelectedQuotedOfferList>
+				<SelectedPricedOffer>
+					<OfferRefID>V0iduDIJW9JPdtIWZeearE001|afeaa2d1-ae5a-4494-b868-7498d4682c94</OfferRefID>
+					<OwnerCode>VS</OwnerCode>
+					<SelectedOfferItem>
+						<OfferItemRefID>V0iduDIJW9JPdtIWZeearE001|afeaa2d1-ae5a-4494-b868-7498d4682c94-1</OfferItemRefID>
+						<PaxRefID>ADULT_1</PaxRefID>
+					</SelectedOfferItem>
+					<SelectedOfferItem>
+						<OfferItemRefID>V0iduDIJW9JPdtIWZeearE001|afeaa2d1-ae5a-4494-b868-7498d4682c94-2</OfferItemRefID>
+						<PaxRefID>CHILD_1</PaxRefID>
+					</SelectedOfferItem>
+					<SelectedOfferItem>
+						<OfferItemRefID>V0iduDIJW9JPdtIWZeearE001|afeaa2d1-ae5a-4494-b868-7498d4682c94-3</OfferItemRefID>
+						<PaxRefID>YOUTH_1</PaxRefID>
+					</SelectedOfferItem>
+					<TotalOfferPriceAmount CurCode="GBP">1795.83</TotalOfferPriceAmount>
+				</SelectedPricedOffer>
+			</AcceptSelectedQuotedOfferList>
+		</CreateOrder>
+		<DataLists xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<ContactInfoList>
+				<ContactInfo>
+					<ContactInfoID>CID_1</ContactInfoID>
+					<EmailAddress>
+						<EmailAddressText>test@virgin.com</EmailAddressText>
+					</EmailAddress>
+					<Phone>
+						<ContactTypeText>HOME</ContactTypeText>
+						<CountryDialingCode>44</CountryDialingCode>
+						<PhoneNumber>123456</PhoneNumber>
+					</Phone>
+				</ContactInfo>
+			</ContactInfoList>
+			<PaxList>
+				<Pax>
+					<ContactInfoRefID>CID_1</ContactInfoRefID>
+					<Individual>
+						<Birthdate>1995-05-18</Birthdate>
+						<GenderCode>M</GenderCode>
+						<GivenName>David</GivenName>
+						<Surname>Smith</Surname>
+					</Individual>
+					<PaxID>ADULT_1</PaxID>
+					<PTC>ADT</PTC>
+				</Pax>
+				<Pax>
+					<Individual>
+						<Birthdate>2019-06-23</Birthdate>
+						<GenderCode>F</GenderCode>
+						<GivenName>Sa</GivenName>
+						<Surname>Smith</Surname>
+					</Individual>
+					<PaxID>CHILD_1</PaxID>
+					<PTC>CHD</PTC>
+				</Pax>
+				<Pax>
+					<Individual>
+						<Birthdate>2009-06-23</Birthdate>
+						<GenderCode>M</GenderCode>
+						<GivenName>Yo</GivenName>
+						<Surname>Smith</Surname>
+					</Individual>
+					<PaxID>YOUTH_1</PaxID>
+					<PTC>GBE</PTC>
+				</Pax>
+			</PaxList>
+		</DataLists>
+	</Request>
+</IATA_OrderCreateRQ>

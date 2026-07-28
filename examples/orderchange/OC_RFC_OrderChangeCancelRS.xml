@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IATA_OrderViewRS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage">
+  <Response>
+    <DataLists xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+      <BaggageAllowanceList>
+        <BaggageAllowance>
+          <BaggageAllowanceID>BAGA1</BaggageAllowanceID>
+          <MaximumDimensionAllowance>
+            <HeightMeasure>75</HeightMeasure>
+            <LengthMeasure>90</LengthMeasure>
+            <LengthUnitOfMeasurement>CMT</LengthUnitOfMeasurement>
+            <LinearMeasure>208</LinearMeasure>
+            <WidthMeasure>43</WidthMeasure>
+          </MaximumDimensionAllowance>
+          <MaximumDimensionAllowance>
+            <HeightMeasure>29.5</HeightMeasure>
+            <LengthMeasure>35.5</LengthMeasure>
+            <LengthUnitOfMeasurement>INH</LengthUnitOfMeasurement>
+            <LinearMeasure>81</LinearMeasure>
+            <WidthMeasure>16</WidthMeasure>
+          </MaximumDimensionAllowance>
+          <PieceAllowance>
+            <TotalQty>1</TotalQty>
+          </PieceAllowance>
+          <TypeCode>Checked</TypeCode>
+          <WeightAllowance>
+            <MaximumWeightMeasure>23</MaximumWeightMeasure>
+            <TotalMaximumWeightMeasure>23</TotalMaximumWeightMeasure>
+            <WeightUnitOfMeasurement>KGM</WeightUnitOfMeasurement>
+          </WeightAllowance>
+          <WeightAllowance>
+            <MaximumWeightMeasure>50</MaximumWeightMeasure>
+            <TotalMaximumWeightMeasure>50</TotalMaximumWeightMeasure>
+            <WeightUnitOfMeasurement>LBR</WeightUnitOfMeasurement>
+          </WeightAllowance>
+        </BaggageAllowance>
+        <BaggageAllowance>
+          <BaggageAllowanceID>CAB1</BaggageAllowanceID>
+          <MaximumDimensionAllowance>
+            <HeightMeasure>56</HeightMeasure>
+            <LengthMeasure>36</LengthMeasure>
+            <LengthUnitOfMeasurement>CMT</LengthUnitOfMeasurement>
+            <LinearMeasure>115</LinearMeasure>
+            <WidthMeasure>23</WidthMeasure>
+          </MaximumDimensionAllowance>
+          <MaximumDimensionAllowance>
+            <HeightMeasure>22</HeightMeasure>
+            <LengthMeasure>14</LengthMeasure>
+            <LengthUnitOfMeasurement>INH</LengthUnitOfMeasurement>
+            <LinearMeasure>45</LinearMeasure>
+            <WidthMeasure>9</WidthMeasure>
+          </MaximumDimensionAllowance>
+          <PieceAllowance>
+            <TotalQty>1</TotalQty>
+          </PieceAllowance>
+          <TypeCode>CarryOn</TypeCode>
+          <WeightAllowance>
+            <MaximumWeightMeasure>10</MaximumWeightMeasure>
+            <TotalMaximumWeightMeasure>10</TotalMaximumWeightMeasure>
+            <WeightUnitOfMeasurement>KGM</WeightUnitOfMeasurement>
+          </WeightAllowance>
+          <WeightAllowance>
+            <MaximumWeightMeasure>22</MaximumWeightMeasure>
+            <TotalMaximumWeightMeasure>22</TotalMaximumWeightMeasure>
+            <WeightUnitOfMeasurement>LBR</WeightUnitOfMeasurement>
+          </WeightAllowance>
+        </BaggageAllowance>
+      </BaggageAllowanceList>
+      <ContactInfoList>
+        <ContactInfo>
+          <ContactInfoID>CID_1</ContactInfoID>
+          <EmailAddress>
+            <EmailAddressText>TEST.TESTAGENT@FLY.VIRGIN.COM</EmailAddressText>
+          </EmailAddress>
+          <Phone>
+            <ContactTypeText>HOME</ContactTypeText>
+            <CountryDialingCode>44</CountryDialingCode>
+            <PhoneNumber>123456</PhoneNumber>
+          </Phone>
+        </ContactInfo>
+      </ContactInfoList>
+      <DatedMarketingSegmentList>
+        <DatedMarketingSegment>
+          <Arrival>
+            <AircraftScheduledDateTime>2025-10-05T15:35:00</AircraftScheduledDateTime>
+            <IATA_LocationCode>ATL</IATA_LocationCode>
+          </Arrival>
+          <CarrierDesigCode>VS</CarrierDesigCode>
+          <CarrierName>Virgin Atlantic Airways</CarrierName>
+          <DatedMarketingSegmentId>DMS1</DatedMarketingSegmentId>
+          <DatedOperatingSegmentRefId>DOS1</DatedOperatingSegmentRefId>
+          <Dep>
+            <AircraftScheduledDateTime>2025-10-05T11:20:00</AircraftScheduledDateTime>
+            <IATA_LocationCode>LHR</IATA_LocationCode>
+          </Dep>
+          <MarketingCarrierFlightNumberText>103</MarketingCarrierFlightNumberText>
+        </DatedMarketingSegment>
+      </DatedMarketingSegmentList>
+      <DatedOperatingLegList>
+        <DatedOperatingLeg>
+          <Arrival>
+            <AircraftScheduledDateTime>2025-10-05T15:35:00</AircraftScheduledDateTime>
+            <IATA_LocationCode>ATL</IATA_LocationCode>
+          </Arrival>
+          <CarrierAircraftType>
+            <CarrierAircraftTypeCode>A350</CarrierAircraftTypeCode>
+            <CarrierAircraftTypeName>A350 (widebody)</CarrierAircraftTypeName>
+          </CarrierAircraftType>
+          <DatedOperatingLegID>DOL1</DatedOperatingLegID>
+          <Dep>
+            <AircraftScheduledDateTime>2025-10-05T11:20:00</AircraftScheduledDateTime>
+            <IATA_LocationCode>LHR</IATA_LocationCode>
+          </Dep>
+          <IATA_AircraftType>
+            <IATA_AircraftTypeCode>351</IATA_AircraftTypeCode>
+          </IATA_AircraftType>
+        </DatedOperatingLeg>
+      </DatedOperatingLegList>
+      <DatedOperatingSegmentList>
+        <DatedOperatingSegment>
+          <CarrierDesigCode>VS</CarrierDesigCode>
+          <CarrierName>Virgin Atlantic Airways</CarrierName>
+          <DatedOperatingLegRefID>DOL1</DatedOperatingLegRefID>
+          <DatedOperatingSegmentId>DOS1</DatedOperatingSegmentId>
+          <Duration>PT9H15M0S</Duration>
+          <OperatingCarrierFlightNumberText>103</OperatingCarrierFlightNumberText>
+        </DatedOperatingSegment>
+      </DatedOperatingSegmentList>
+      <OriginDestList>
+        <OriginDest>
+          <DestCode>ATL</DestCode>
+          <OriginCode>LHR</OriginCode>
+          <OriginDestID>OD1</OriginDestID>
+          <PaxJourneyRefID>JOUR1</PaxJourneyRefID>
+        </OriginDest>
+      </OriginDestList>
+      <PaxJourneyList>
+        <PaxJourney>
+          <Duration>PT9H15M0S</Duration>
+          <PaxJourneyID>JOUR1</PaxJourneyID>
+          <PaxSegmentRefID>SEG1</PaxSegmentRefID>
+        </PaxJourney>
+      </PaxJourneyList>
+      <PaxList>
+        <Pax>
+          <ContactInfoRefID>CID_1</ContactInfoRefID>
+          <Individual>
+            <GivenName>DAVID</GivenName>
+            <Surname>SMITH</Surname>
+          </Individual>
+          <PaxID>ADULT_1</PaxID>
+          <PTC>ADT</PTC>
+        </Pax>
+      </PaxList>
+      <PaxSegmentList>
+        <PaxSegment>
+          <CabinTypeAssociationChoice>
+            <SegmentCabinType>
+              <CabinTypeCode>5</CabinTypeCode>
+              <CabinTypeName>ECONOMY</CabinTypeName>
+            </SegmentCabinType>
+          </CabinTypeAssociationChoice>
+          <DatedMarketingSegmentRefId>DMS1</DatedMarketingSegmentRefId>
+          <MarketingCarrierRBD_Code>L</MarketingCarrierRBD_Code>
+          <PaxSegmentID>SEG1</PaxSegmentID>
+        </PaxSegment>
+      </PaxSegmentList>
+      <PriceClassList>
+        <PriceClass>
+          <FareBasisCode>LY5UBFFA</FareBasisCode>
+          <Name>Economy Classic Flex</Name>
+          <PriceClassID>PC1</PriceClassID>
+        </PriceClass>
+      </PriceClassList>
+      <ServiceDefinitionList>
+        <ServiceDefinition>
+          <Desc>
+            <DescText>A350 (widebody)</DescText>
+          </Desc>
+          <Desc>
+            <DescText>Alcohol &amp; beverages provided</DescText>
+          </Desc>
+          <Desc>
+            <DescText>Seatback on-demand video</DescText>
+          </Desc>
+          <Desc>
+            <DescText>Meals and drinks included</DescText>
+          </Desc>
+          <Desc>
+            <DescText>3-3-3 seat layout</DescText>
+          </Desc>
+          <Desc>
+            <DescText>USB outlet</DescText>
+          </Desc>
+          <Desc>
+            <DescText>Standard seat (31" pitch)</DescText>
+          </Desc>
+          <Desc>
+            <DescText>Fast web browsing (fee)</DescText>
+          </Desc>
+          <Name>Amenity</Name>
+          <OwnerCode>VS</OwnerCode>
+          <ServiceDefinitionID>SRV1</ServiceDefinitionID>
+        </ServiceDefinition>
+        <ServiceDefinition>
+          <Name>Free Checked Bag Allowance</Name>
+          <OwnerCode>VS</OwnerCode>
+          <ServiceDefinitionAssociation>
+            <BaggageAllowanceRef>
+              <BaggageAllowanceRefID>BAGA1</BaggageAllowanceRefID>
+            </BaggageAllowanceRef>
+          </ServiceDefinitionAssociation>
+          <ServiceDefinitionID>SRV2</ServiceDefinitionID>
+        </ServiceDefinition>
+        <ServiceDefinition>
+          <Name>Free Cabin Bag Allowance</Name>
+          <OwnerCode>VS</OwnerCode>
+          <ServiceDefinitionAssociation>
+            <BaggageAllowanceRef>
+              <BaggageAllowanceRefID>CAB1</BaggageAllowanceRefID>
+            </BaggageAllowanceRef>
+          </ServiceDefinitionAssociation>
+          <ServiceDefinitionID>SRV3</ServiceDefinitionID>
+        </ServiceDefinition>
+      </ServiceDefinitionList>
+    </DataLists>
+    <Order xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+      <OrderID>VS932PQPTHD25</OrderID>
+      <OrderItem>
+        <FareDetail>
+          <PaxRefID>ADULT_1</PaxRefID>
+        </FareDetail>
+        <OrderItemID>VS932PQPTHD25-1</OrderItemID>
+        <OwnerCode>VS</OwnerCode>
+        <PriceDifferential>
+          <DifferentialTypeCode>Refund</DifferentialTypeCode>
+          <DiffPrice>
+            <FareDetail>
+              <PaxRefID>ADULT_1</PaxRefID>
+              <Price>
+                <BaseAmount CurCode="GBP">-972.00</BaseAmount>
+                <DueByAirlineAmount CurCode="GBP">1293.32</DueByAirlineAmount>
+                <TaxSummary>
+                  <TotalTaxAmount CurCode="GBP">-321.32</TotalTaxAmount>
+                </TaxSummary>
+                <TotalAmount CurCode="GBP">-1293.32</TotalAmount>
+              </Price>
+            </FareDetail>
+          </DiffPrice>
+          <NewPrice>
+            <FareDetail>
+              <PaxRefID>ADULT_1</PaxRefID>
+              <Price>
+                <BaseAmount CurCode="GBP">0.00</BaseAmount>
+                <TaxSummary>
+                  <TotalTaxAmount CurCode="GBP">0.00</TotalTaxAmount>
+                </TaxSummary>
+                <TotalAmount CurCode="GBP">0.00</TotalAmount>
+              </Price>
+            </FareDetail>
+          </NewPrice>
+          <OldPrice>
+            <FareDetail>
+              <PaxRefID>ADULT_1</PaxRefID>
+              <Price>
+                <BaseAmount CurCode="GBP">972.00</BaseAmount>
+                <TaxSummary>
+                  <Tax>
+                    <Amount CurCode="GBP">90.00</Amount>
+                    <DescText>GB</DescText>
+                  </Tax>
+                  <Tax>
+                    <Amount CurCode="GBP">51.72</Amount>
+                    <DescText>UB</DescText>
+                  </Tax>
+                  <Tax>
+                    <Amount CurCode="GBP">17.70</Amount>
+                    <DescText>US</DescText>
+                  </Tax>
+                  <Tax>
+                    <Amount CurCode="GBP">2.90</Amount>
+                    <DescText>XA</DescText>
+                  </Tax>
+                  <Tax>
+                    <Amount CurCode="GBP">5.40</Amount>
+                    <DescText>XY</DescText>
+                  </Tax>
+                  <Tax>
+                    <Amount CurCode="GBP">5.60</Amount>
+                    <DescText>YC</DescText>
+                  </Tax>
+                  <Tax>
+                    <Amount CurCode="GBP">140.00</Amount>
+                    <DescText>YQ</DescText>
+                  </Tax>
+                  <Tax>
+                    <Amount CurCode="GBP">8.00</Amount>
+                    <DescText>YR</DescText>
+                  </Tax>
+                  <TotalTaxAmount CurCode="GBP">321.32</TotalTaxAmount>
+                </TaxSummary>
+                <TotalAmount CurCode="GBP">1293.32</TotalAmount>
+              </Price>
+            </FareDetail>
+          </OldPrice>
+        </PriceDifferential>
+        <Service>
+          <BookingRef>
+            <BookingEntity>
+              <Carrier>
+                <AirlineDesigCode>VS</AirlineDesigCode>
+              </Carrier>
+            </BookingEntity>
+            <BookingID>PQPTHD</BookingID>
+          </BookingRef>
+          <DeliveryStatusCode>REMOVED</DeliveryStatusCode>
+          <OrderServiceAssociation>
+            <PaxSegmentRef>
+              <PaxSegmentRefID>SEG1</PaxSegmentRefID>
+            </PaxSegmentRef>
+          </OrderServiceAssociation>
+          <PaxRefID>ADULT_1</PaxRefID>
+          <ServiceID>SV1</ServiceID>
+          <StatusCode>CANCELLED</StatusCode>
+        </Service>
+        <Service>
+          <BookingRef>
+            <BookingEntity>
+              <Carrier>
+                <AirlineDesigCode>VS</AirlineDesigCode>
+              </Carrier>
+            </BookingEntity>
+            <BookingID>PQPTHD</BookingID>
+          </BookingRef>
+          <DeliveryStatusCode>REMOVED</DeliveryStatusCode>
+          <OrderServiceAssociation>
+            <ServiceDefinitionRef>
+              <OrderFlightAssociations>
+                <PaxSegmentRef>
+                  <PaxSegmentRefID>SEG1</PaxSegmentRefID>
+                </PaxSegmentRef>
+              </OrderFlightAssociations>
+              <ServiceDefinitionRefID>SRV2</ServiceDefinitionRefID>
+            </ServiceDefinitionRef>
+          </OrderServiceAssociation>
+          <PaxRefID>ADULT_1</PaxRefID>
+          <ServiceID>SV2</ServiceID>
+          <ServiceRefID>SV1</ServiceRefID>
+          <StatusCode>CANCELLED</StatusCode>
+        </Service>
+        <Service>
+          <BookingRef>
+            <BookingEntity>
+              <Carrier>
+                <AirlineDesigCode>VS</AirlineDesigCode>
+              </Carrier>
+            </BookingEntity>
+            <BookingID>PQPTHD</BookingID>
+          </BookingRef>
+          <DeliveryStatusCode>REMOVED</DeliveryStatusCode>
+          <OrderServiceAssociation>
+            <ServiceDefinitionRef>
+              <OrderFlightAssociations>
+                <PaxSegmentRef>
+                  <PaxSegmentRefID>SEG1</PaxSegmentRefID>
+                </PaxSegmentRef>
+              </OrderFlightAssociations>
+              <ServiceDefinitionRefID>SRV3</ServiceDefinitionRefID>
+            </ServiceDefinitionRef>
+          </OrderServiceAssociation>
+          <PaxRefID>ADULT_1</PaxRefID>
+          <ServiceID>SV3</ServiceID>
+          <ServiceRefID>SV1</ServiceRefID>
+          <StatusCode>CANCELLED</StatusCode>
+        </Service>
+        <Service>
+          <BookingRef>
+            <BookingEntity>
+              <Carrier>
+                <AirlineDesigCode>VS</AirlineDesigCode>
+              </Carrier>
+            </BookingEntity>
+            <BookingID>PQPTHD</BookingID>
+          </BookingRef>
+          <DeliveryStatusCode>REMOVED</DeliveryStatusCode>
+          <OrderServiceAssociation>
+            <ServiceDefinitionRef>
+              <OrderFlightAssociations>
+                <PaxSegmentRef>
+                  <PaxSegmentRefID>SEG1</PaxSegmentRefID>
+                </PaxSegmentRef>
+              </OrderFlightAssociations>
+              <ServiceDefinitionRefID>SRV1</ServiceDefinitionRefID>
+            </ServiceDefinitionRef>
+          </OrderServiceAssociation>
+          <PaxRefID>ADULT_1</PaxRefID>
+          <ServiceID>SV4</ServiceID>
+          <ServiceRefID>SV1</ServiceRefID>
+          <StatusCode>CANCELLED</StatusCode>
+        </Service>
+        <StatusCode>CLOSED</StatusCode>
+      </OrderItem>
+      <OwnerCode>VS</OwnerCode>
+      <StatusCode>CLOSED</StatusCode>
+      <TotalPrice>
+        <TotalAmount CurCode="GBP">0.00</TotalAmount>
+      </TotalPrice>
+    </Order>
+  </Response>
+  <PaymentFunctions>
+    <OrderAssociation xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+      <OrderItemRefID>VS932PQPTHD25-1</OrderItemRefID>
+      <OrderRefID>VS932PQPTHD25</OrderRefID>
+    </OrderAssociation>
+    <PaymentProcessingSummary xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+      <Amount CurCode="GBP">0.00</Amount>
+      <PaymentID>80674648</PaymentID>
+    </PaymentProcessingSummary>
+  </PaymentFunctions>
+</IATA_OrderViewRS>

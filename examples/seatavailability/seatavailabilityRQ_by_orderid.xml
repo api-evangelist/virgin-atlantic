@@ -1,0 +1,22 @@
+<IATA_SeatAvailabilityRQ xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage">
+	<DistributionChain>
+		<DistributionChainLink xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<Ordinal>1</Ordinal>
+			<OrgRole>Seller</OrgRole>
+			<ParticipatingOrg>
+				<Name>Skyscanner</Name>
+				<OrgID>35200056</OrgID>
+			</ParticipatingOrg>
+		</DistributionChainLink>
+	</DistributionChain>
+	<Request>
+		<SeatAvailCoreRequest xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<OrderRequest>
+				<Order>
+					<OrderID>VS932ECY5IE23</OrderID>
+					<OwnerCode>VS</OwnerCode>
+				</Order>
+			</OrderRequest>
+		</SeatAvailCoreRequest>
+	</Request>
+</IATA_SeatAvailabilityRQ>

@@ -1,0 +1,18 @@
+<IATA_OrderQuoteRQ xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <DistributionChain>
+      <DistributionChainLink xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+         <Ordinal>1</Ordinal>
+         <OrgRole>Seller</OrgRole>
+         <ParticipatingOrg>
+            <Name>ABCTravel</Name>
+            <OrgID>12345678</OrgID>
+         </ParticipatingOrg>
+      </DistributionChainLink>
+   </DistributionChain>
+   <Payload>
+      <ExistingOrder xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+         <OrderID>VS932GXTJBS23</OrderID>
+         <OwnerCode>VS</OwnerCode>
+      </ExistingOrder>
+	</Payload>
+</IATA_OrderQuoteRQ>

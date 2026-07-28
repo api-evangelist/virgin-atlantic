@@ -1,0 +1,80 @@
+<IATA_OrderChangeRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage">
+	<DistributionChain>
+		<DistributionChainLink xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<Ordinal>1</Ordinal>
+			<OrgRole>Seller</OrgRole>
+			<ParticipatingOrg>
+				<Name>ABCTravel</Name>
+				<OrgID>12345678</OrgID>
+			</ParticipatingOrg>
+		</DistributionChainLink>
+	</DistributionChain>
+	<Request>
+		<BookingRef xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<BookingID>CIE3JB</BookingID>
+		</BookingRef>
+		<DataLists xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<PaxList>
+				<Pax>
+					<Individual>
+						<Birthdate>1930-04-11</Birthdate>
+						<GenderCode>X</GenderCode>
+						<Surname>SMITH</Surname>
+					</Individual>
+					<PaxID>ADULT_1</PaxID>
+				</Pax>
+				<Pax>
+					<Individual>
+						<Birthdate>1939-04-11</Birthdate>
+						<GenderCode>F</GenderCode>
+						<Surname>SMITHLVWZX</Surname>
+					</Individual>
+					<PaxID>ADULT_2</PaxID>
+				</Pax>
+				<Pax>
+					<Individual>
+						<Birthdate>2009-04-11</Birthdate>
+						<GenderCode>X</GenderCode>
+						<Surname>SMITHLGXRE</Surname>
+					</Individual>
+					<PaxID>YOUNG_1</PaxID>
+				</Pax>
+			</PaxList>
+		</DataLists>
+		<Order xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<OrderID>VS932CIE3JB23</OrderID>
+			<OwnerCode>VS</OwnerCode>
+		</Order>
+		<PaymentFunctions xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+			<PaymentProcessingDetails>
+				<Amount CurCode="GBP">1673.43</Amount>
+				<Payer>
+					<PayerName>
+						<IndividualName>
+							<GivenName>David</GivenName>
+							<Surname>Smith</Surname>
+						</IndividualName>
+					</PayerName>
+				</Payer>
+				<PaymentMethod>
+					<PaymentCard>
+						<CardholderAddress>
+							<CityName>Crawley</CityName>
+							<CountryCode>GB</CountryCode>
+							<PostalCode>RH108HA</PostalCode>
+							<StreetText>8</StreetText>
+							<StreetText>Cobbles Crescent</StreetText>
+						</CardholderAddress>
+						<CardNumber>42639X1LFFPQ1307</CardNumber>
+						<CardSecurityCode>123</CardSecurityCode>
+						<CardTypeText>VI</CardTypeText>
+						<ExpirationDate>1223</ExpirationDate>
+						<SecurePaymentVersion2>
+							<PaymentTrxChannelCode>TO</PaymentTrxChannelCode>
+						</SecurePaymentVersion2>
+					</PaymentCard>
+				</PaymentMethod>
+			</PaymentProcessingDetails>
+		</PaymentFunctions>
+	</Request>
+</IATA_OrderChangeRQ>

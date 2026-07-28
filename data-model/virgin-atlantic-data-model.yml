@@ -1,0 +1,140 @@
+generated: '2026-07-28'
+method: derived
+source: >-
+  Derived from the harvested IATA NDC 21.3.3 XSDs in schemas/ and the published DataLists / Common
+  Types reference at https://ndc.virginatlantic.com/docs (DataLists section), the ID<->RefID syntax
+  table at https://ndc.virginatlantic.com/docs/orderchangenotif, and the per-message Inputs/Outputs
+  published on https://ndc.virginatlantic.com/capability/offer and
+  https://ndc.virginatlantic.com/capability/order.
+description: >-
+  The entity graph of the Virgin Atlantic NDC 21.3 API. NDC is a list-and-reference model rather
+  than a REST resource model: a message body carries flat DataLists of entities, and the transaction
+  part of the document points into them by RefID. This file records the entities Virgin Atlantic
+  actually publishes, the ID prefixes it generates, and how they reference each other. Nothing here
+  is invented - every entity name appears in the published DataLists reference or the XSDs, and
+  every ID pattern is quoted from the airline's own syntax table.
+model_style: list-and-reference (IATA NDC OffersAndOrders)
+namespace: http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage
+schemas: schemas/
+id_conventions:
+  docs: https://ndc.virginatlantic.com/docs/orderchangenotif
+  note: Virgin Atlantic publishes the generated-identifier syntax for the core reference types.
+  patterns:
+    - {entity: PaxJourney, id: PaxJourneyID, ref: PaxJourneyRefID, pattern: '"JOUR" + <counter>', example: JOUR1}
+    - {entity: PaxSegment, id: PaxSegmentID, ref: PaxSegmentRefID / SegmentRefs, pattern: '"SEG" + <counter>', example: SEG1}
+    - {entity: Pax, id: PaxID, ref: PaxRefID / PassengerRefs, pattern: PaxID based on Passenger Type Code, example: ADULT_1}
+    - {entity: Service, id: ServiceID, ref: ServiceRefID, pattern: '"SV" + <counter>', example: SV1}
+    - {entity: ServiceDefinition, id: ServiceDefinitionID, ref: ServiceDefinitionRefID, pattern: '"BAGSRV" + <counter>', example: BAGSV01}
+business_keys:
+  - {key: OrderID, scope: Virgin Atlantic, note: IATA NDC 21.3 order identifier; the primary handle for all servicing messages}
+  - {key: Booking reference (PNR record locator), scope: industry, note: Accepted as an alternative to OrderID on OrderRetrieve}
+  - {key: OfferID / OfferItemID, scope: transaction, note: Single-use and time-limited; expiry returns error 913}
+  - {key: IATA accreditation number or TIDS number, scope: industry, note: Seller identity, carried in DistributionChain}
+  - {key: Ticket number / BSP settlement identifier, scope: industry}
+  - {key: Flying Club (FQTV) membership number, scope: Virgin Atlantic, note: Loyalty accrual on OrderCreate}
+entities:
+  - name: Offer
+    description: A priced, bookable proposal returned by AirShopping and firmed by OfferPrice. Carries a PaymentTimeLimit.
+    produced_by: [AirShopping, OfferPrice]
+    consumed_by: [OfferPrice, OrderCreate]
+  - name: OfferItem
+    description: A line within an Offer; OrderCreate consumes the selected OfferID plus its OfferItemIDs.
+    belongs_to: Offer
+  - name: Order
+    description: The airline record created by OrderCreate and returned as OrderView. Virgin Atlantic remains the system of record.
+    produced_by: [OrderCreate]
+    consumed_by: [OrderRetrieve, OrderReshop, OrderQuote, OrderChange, OrderList, OrderHistory, OrderChangeNotif]
+  - name: Pax
+    description: A passenger, typed by Passenger Type Code (ADT adult 16+, CHD child 2-12, GBE young adult 12-16, infant under 2).
+    datalist: PaxList
+    docs: https://ndc.virginatlantic.com/docs/DataLists/PaxList
+  - name: PaxJourney
+    description: A journey (one direction of an itinerary) composed of segments.
+    datalist: PaxJourneyList
+  - name: PaxSegment
+    description: A marketed flight segment flown by a passenger.
+    datalist: PaxSegmentList
+  - name: OriginDest
+    description: An origin/destination pair; AirShopping rejects routings with more than 6 (error 724).
+    datalist: OriginDestList
+  - name: DatedMarketingSegment
+    description: The marketing carrier view of a dated flight segment.
+    datalist: DatedMarketingSegmentList
+  - name: DatedOperatingSegment
+    description: The operating carrier view of a dated flight segment.
+    datalist: DatedOperatingSegmentList
+  - name: DatedOperatingLeg
+    description: A single leg of an operating segment.
+    datalist: DatedOperatingLegList
+  - name: BaggageAllowance
+    description: Checked and cabin baggage entitlement attached to an offer or an order.
+    datalist: BaggageAllowanceList
+    docs: https://ndc.virginatlantic.com/docs/DataLists/BaggageAllowanceList
+  - name: ServiceDefinition
+    description: The catalogue definition of an ancillary service (bag, seat, paid service).
+    datalist: ServiceDefinitionList
+  - name: Service
+    description: An instance of a ServiceDefinition applied to a passenger/segment on an offer or order.
+  - name: SeatProfile
+    description: Seat characteristics used by SeatAvailability seat maps.
+    datalist: SeatProfileList
+  - name: PriceClass
+    description: The fare product / brand (for example Economy Light, Economy Classic, Economy Delight, Premium, Upper Class).
+    datalist: PriceClassList
+  - name: Penalty
+    description: Change and cancel penalties by fare condition, before and after departure.
+    datalist: PenaltyList
+  - name: Disclosure
+    description: Regulatory and commercial disclosure text attached to offers and orders.
+    datalist: DisclosureList
+  - name: ContactInfo
+    description: Passenger and agency contact details.
+    datalist: ContactInfoList
+  - name: DistributionChain
+    description: The selling chain - agency, aggregator and system identifiers (IATA/TIDS numbers). Missing or invalid values return error 717.
+    datalist: DistributionChain
+  - name: Error
+    description: A returned error - PADIS code, description, language, processing status.
+    datalist: Error
+    detail: errors/virgin-atlantic-error-codes.yml
+  - name: Warning
+    description: A non-fatal advisory returned alongside a processed response.
+    datalist: Warning
+relationships:
+  - {from: Offer, to: OfferItem, kind: has_many, via: OfferItemID}
+  - {from: Offer, to: PaxJourney, kind: has_many, via: PaxJourneyRefID}
+  - {from: Offer, to: Pax, kind: has_many, via: PaxRefID}
+  - {from: Offer, to: PriceClass, kind: has_one, via: PriceClassRefID}
+  - {from: Offer, to: BaggageAllowance, kind: has_many, via: BaggageAllowanceRefID}
+  - {from: Offer, to: Penalty, kind: has_many, via: PenaltyRefID}
+  - {from: Order, to: Offer, kind: belongs_to, via: OfferID, note: An Order is created from a priced Offer}
+  - {from: Order, to: Pax, kind: has_many, via: PaxRefID}
+  - {from: Order, to: PaxSegment, kind: has_many, via: PaxSegmentRefID}
+  - {from: Order, to: Service, kind: has_many, via: ServiceRefID}
+  - {from: Order, to: ContactInfo, kind: has_many, via: ContactInfoRefID}
+  - {from: PaxJourney, to: PaxSegment, kind: has_many, via: PaxSegmentRefID}
+  - {from: PaxSegment, to: DatedMarketingSegment, kind: has_one, via: DatedMarketingSegmentRefID}
+  - {from: DatedMarketingSegment, to: DatedOperatingSegment, kind: has_one, via: DatedOperatingSegmentRefID}
+  - {from: DatedOperatingSegment, to: DatedOperatingLeg, kind: has_many, via: DatedOperatingLegRefID}
+  - {from: OriginDest, to: PaxJourney, kind: has_many, via: PaxJourneyRefID}
+  - {from: Service, to: ServiceDefinition, kind: belongs_to, via: ServiceDefinitionRefID}
+  - {from: Service, to: Pax, kind: belongs_to, via: PaxRefID}
+  - {from: Service, to: PaxSegment, kind: belongs_to, via: PaxSegmentRefID}
+  - {from: SeatProfile, to: PaxSegment, kind: belongs_to, via: PaxSegmentRefID}
+  - {from: Order, to: DistributionChain, kind: has_one, via: DistributionChain}
+lifecycle:
+  note: >-
+    Shop -> price -> order -> service. AirShopping produces Offers; OfferPrice firms one Offer;
+    OrderCreate turns the priced Offer into an Order and a PNR; OrderRetrieve, OrderReshop,
+    OrderQuote and OrderChange service that Order; OrderList and OrderHistory report on it; and
+    OrderChangeNotif pushes airline-initiated changes back to the seller.
+  workflows: skills/_index.yml
+constraints:
+  - Maximum 9 non-infant passengers per AirShopping request (error 68)
+  - Maximum 6 origin/destination pairs per routing (error 724)
+  - Infants may not exceed the number of adults (error 324)
+  - Only homogeneous offers are returned (same fare product outbound and inbound)
+  - Only one payment card per transaction
+  - Infant-with-seat and unaccompanied-minor bookings are not supported
+render: null
+render_note: No subway/ or ERD visual exists for this provider yet.
