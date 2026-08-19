@@ -45,7 +45,7 @@ tags:
 - GDS
 created: '2026-07-28'
 modified: '2026-07-28'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: virgin-atlantic:virgin-atlantic-ndc-airshopping-api
   name: Virgin Atlantic NDC AirShopping API
