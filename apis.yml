@@ -101,6 +101,10 @@ apis:
   humanURL: https://ndc.virginatlantic.com/docs/ordercreate
   tags:
   - NDC
+  - Order
+  - Booking
+  tags_raw:
+  - NDC
   - Orders
   - Booking
   properties:
@@ -162,6 +166,10 @@ apis:
     Order by order identifier or PNR record locator and returns an OrderView response.
   humanURL: https://ndc.virginatlantic.com/docs/orderretrieve
   tags:
+  - NDC
+  - Order
+  - Servicing
+  tags_raw:
   - NDC
   - Orders
   - Servicing
@@ -226,6 +234,10 @@ apis:
   humanURL: https://ndc.virginatlantic.com/docs/orderchange
   tags:
   - NDC
+  - Order
+  - Servicing
+  tags_raw:
+  - NDC
   - Orders
   - Servicing
   properties:
@@ -246,6 +258,10 @@ apis:
   humanURL: https://ndc.virginatlantic.com/docs/orderchangenotif
   tags:
   - NDC
+  - Notification
+  - Schedule Changes
+  tags_raw:
+  - NDC
   - Notifications
   - Schedule Changes
   properties:
@@ -263,6 +279,10 @@ apis:
     criteria for the authenticated seller.
   humanURL: https://ndc.virginatlantic.com/docs/orderlist
   tags:
+  - NDC
+  - Order
+  - Reporting
+  tags_raw:
   - NDC
   - Orders
   - Reporting
@@ -286,6 +306,10 @@ apis:
     operation; it is per-order and is not a bulk export.
   humanURL: https://ndc.virginatlantic.com/docs/orderhistory
   tags:
+  - NDC
+  - Order
+  - History
+  tags_raw:
   - NDC
   - Orders
   - History
