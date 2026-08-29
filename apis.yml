@@ -20,6 +20,17 @@ description: Virgin Atlantic Airways is a United Kingdom long-haul carrier (IATA
   a signed Technical User Agreement, Data Processing Agreement and Agency Sales Agreement,
   and at minimum RED tier certification. There is no bulk export operation and no published
   base URL - public docs, accreditation required, no exit path.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: approval
